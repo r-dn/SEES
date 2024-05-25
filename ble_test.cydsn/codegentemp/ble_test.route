@@ -14,6 +14,17 @@ net CPUSS_swj_swdio_tms
 	switch ":CPUSS[0]swj_swdio_tms_input_permute.CPUSS[0]swj_swdio_tms==>:CPUSScontainer:CPUSS[0].swj_swdio_tms"
 	term   ":CPUSScontainer:CPUSS[0].swj_swdio_tms"
 end CPUSS_swj_swdio_tms
+net Net_23_ff11
+	term   ":Clockcontainer:Clock[0].ff_div_11"
+	switch ":Clockcontainer:Clock[0].ff_div_11==>:Clockcontainer:ff_permute.ff_div_11"
+	switch ":Clockcontainer:ff_permute.Clock[0]ff_div_19==>:TCPWMcontainer:TCPWM[0].clock"
+	term   ":TCPWMcontainer:TCPWM[0].clock"
+end Net_23_ff11
+net Net_33
+	term   ":TCPWMcontainer:TCPWM[0].interrupt"
+	switch ":TCPWMcontainer:TCPWM[0].interrupt==>:intc_0:interrupt90.interrupt"
+	term   ":intc_0:interrupt90.interrupt"
+end Net_33
 net \BLE:Net_1\
 	term   ":BLEcontainer:BLE[0].interrupt"
 	switch ":BLEcontainer:BLE[0].interrupt==>:intc_0:interrupt24.interrupt"

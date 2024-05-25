@@ -1,5 +1,5 @@
--- Project:   C:\Users\rdn\Documents\PSoC Creator\PSoC6_ws\ble_test.cydsn\ble_test.cyprj
--- Generated: 05/21/2024 13:44:47
+-- Project:   C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\ble_test.cyprj
+-- Generated: 05/25/2024 16:00:12
 -- PSoC Creator  4.4
 
 ENTITY ble_test IS
@@ -44,9 +44,17 @@ ARCHITECTURE __DEFAULT__ OF ble_test IS
     SIGNAL Net_1 : bit;
     SIGNAL Net_10 : bit;
     SIGNAL Net_2 : bit;
+    SIGNAL Net_23_ff11 : bit;
+    ATTRIBUTE global_signal OF Net_23_ff11 : SIGNAL IS true;
     SIGNAL Net_3 : bit;
+    SIGNAL Net_33 : bit;
+    SIGNAL Net_34 : bit;
+    SIGNAL Net_35 : bit;
+    SIGNAL Net_36 : bit;
     SIGNAL Net_9 : bit;
     SIGNAL \BLE:Net_1\ : bit;
+    SIGNAL \TX_COUNTER:Net_1\ : bit;
+    SIGNAL \TX_COUNTER:Net_2\ : bit;
     SIGNAL \UART_DEBUG:Net_1172\ : bit;
     SIGNAL \UART_DEBUG:Net_161\ : bit;
     SIGNAL \UART_DEBUG:Net_847_ff0\ : bit;
@@ -80,6 +88,8 @@ ARCHITECTURE __DEFAULT__ OF ble_test IS
     ATTRIBUTE Location OF \BLE:bless_isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(24)]";
     ATTRIBUTE Location OF \UART_DEBUG:SCB_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(46)]";
     ATTRIBUTE Location OF \UART_DEBUG:SCB\ : LABEL IS "F(SCB,5)";
+    ATTRIBUTE Location OF \TX_COUNTER:TCPWM\ : LABEL IS "F(TCPWM,0)";
+    ATTRIBUTE Location OF INT_TX : LABEL IS "[IntrContainer=(0)][IntrId=(90)]";
     COMPONENT BLE
         PORT (
             ext_pa_lna_chip_en_out : OUT std_ulogic;
@@ -437,6 +447,21 @@ ARCHITECTURE __DEFAULT__ OF ble_test IS
             tr_rx_req : OUT std_ulogic;
             tr_i2c_scl_filtered : OUT std_ulogic);
     END COMPONENT;
+    COMPONENT TCPWM
+        PORT (
+            clock : IN std_ulogic;
+            capture : IN std_ulogic;
+            count : IN std_ulogic;
+            reload : IN std_ulogic;
+            stop : IN std_ulogic;
+            start : IN std_ulogic;
+            tr_underflow : OUT std_ulogic;
+            tr_compare_match : OUT std_ulogic;
+            tr_overflow : OUT std_ulogic;
+            line_compl : OUT std_ulogic;
+            line : OUT std_ulogic;
+            interrupt : OUT std_ulogic);
+    END COMPONENT;
 BEGIN
 
     ClockGenBlock:CLK_GEN;
@@ -461,6 +486,7 @@ BEGIN
             wco => ClockBlock_WCO,
             lfclk => ClockBlock_LFClk,
             ff_div_0 => open,
+            ff_div_11 => Net_23_ff11,
             ff_div_5 => \UART_DEBUG:Net_847_ff0\,
             periclk_App => periclk_App);
 
@@ -737,5 +763,33 @@ BEGIN
             tr_tx_req => Net_10,
             tr_rx_req => Net_9,
             tr_i2c_scl_filtered => \UART_DEBUG:Net_161\);
+
+    \TX_COUNTER:TCPWM\:TCPWM
+        GENERIC MAP(
+            cy_registers => "",
+            exact_width => 0,
+            width => 16)
+        PORT MAP(
+            clock => Net_23_ff11,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_35,
+            tr_compare_match => Net_36,
+            tr_overflow => Net_34,
+            line_compl => \TX_COUNTER:Net_1\,
+            line => \TX_COUNTER:Net_2\,
+            interrupt => Net_33);
+
+    INT_TX:interrupt
+        GENERIC MAP(
+            cy_registers => "",
+            deepsleep_required => 0,
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_33,
+            clock => ClockBlock_PeriClk);
 
 END __DEFAULT__;

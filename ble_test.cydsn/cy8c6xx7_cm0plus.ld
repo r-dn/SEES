@@ -49,8 +49,11 @@ MEMORY
      * Your changes must be aligned with the corresponding memory regions for the CM4 core in 'xx_cm4_dual.ld',
      * where 'xx' is the device group; for example, 'cy8c6xx7_cm4_dual.ld'.
      */
-    ram               (rwx)   : ORIGIN = 0x08000000, LENGTH = 0x24000
+    ram               (rwx)   : ORIGIN = 0x08000000, LENGTH = 0x20000
     flash             (rx)    : ORIGIN = 0x10000000, LENGTH = 0x80000
+	shared_ram 		  (rwx)	  : ORIGIN = 0x08020000, LENGTH = 0x4000
+	
+	
 
     /* This is a 32K flash region used for EEPROM emulation. This region can also be used as the general purpose flash.
      * You can assign sections to this memory region for only one of the cores.
@@ -287,7 +290,26 @@ SECTIONS
         KEEP(*(.heap*))
         __HeapLimit = .;
     } > ram
-
+	
+	.ble_connected(NOLOAD):
+	{
+		*(.ble_connected)
+	} > shared_ram
+	
+	.shared_buffer(NOLOAD):
+	{
+		*(.shared_buffer)
+	} > shared_ram
+	
+	.current_frame_reading(NOLOAD):
+	{
+		*(.current_frame_reading)
+	} > shared_ram
+	
+	.current_frame_written(NOLOAD):
+	{
+		*(.current_frame_written)
+	} > shared_ram
 
     /* .stack_dummy section doesn't contains any symbols. It is only
      * used for linker to calculate size of stack sections, and assign
@@ -306,6 +328,14 @@ SECTIONS
 
     /* Check if data + heap + stack exceeds RAM limit */
     ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack")
+
+
+
+
+
+
+
+
 
 
     /* Emulated EEPROM Flash area */

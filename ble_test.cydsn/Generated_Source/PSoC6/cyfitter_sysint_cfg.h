@@ -24,6 +24,9 @@
     #define BLE_bless_isr__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t BLE_bless_isr_cfg;
 
+    #define INT_TX__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t INT_TX_cfg;
+
 #endif /* ((__CORTEX_M == 0) && (CY_CORE_ID == 0)) */
 
 /* ARM CM4 */

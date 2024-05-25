@@ -24,6 +24,17 @@
 #define BLE_cy_mxs40_ble__HW BLE
 #define BLE_cy_mxs40_ble__IDX 0
 
+/* CLK0 */
+#define CLK0__DIV_IDX 1
+#define CLK0__DIV_NUM 1
+#define CLK0__DIV_TYPE CY_SYSCLK_DIV_8_BIT
+
+/* TX_COUNTER */
+#define TX_COUNTER_TCPWM__CNT_HW TCPWM0_CNT0
+#define TX_COUNTER_TCPWM__CNT_IDX 0u
+#define TX_COUNTER_TCPWM__HW TCPWM0
+#define TX_COUNTER_TCPWM__IDX 0u
+
 /* UART_DEBUG_SCB */
 #define UART_DEBUG_SCB__HW SCB5
 #define UART_DEBUG_SCB__IDX 5

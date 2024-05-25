@@ -53,6 +53,7 @@ MEMORY
      */
     ram               (rwx)   : ORIGIN = 0x08024000, LENGTH = 0x23800
     flash             (rx)    : ORIGIN = 0x10080000, LENGTH = 0x80000
+	shared_ram 		  (rwx)	  : ORIGIN = 0x08020000, LENGTH = 0x4000
 
     /* This is a 32K flash region used for EEPROM emulation. This region can also be used as the general purpose flash.
      * You can assign sections to this memory region for only one of the cores.
@@ -110,7 +111,12 @@ GROUP(libgcc.a libc.a libm.a libnosys.a)
 
 SECTIONS
 {
-    .text :
+    
+	
+	
+	
+	
+	.text :
     {
         . = ALIGN(4);
         __Vectors = . ;
@@ -226,7 +232,6 @@ SECTIONS
         KEEP(*(.init_array))
         PROVIDE_HIDDEN (__init_array_end = .);
 
-
         . = ALIGN(4);
         /* finit data */
         PROVIDE_HIDDEN (__fini_array_start = .);
@@ -285,6 +290,26 @@ SECTIONS
         KEEP(*(.heap*))
         __HeapLimit = .;
     } > ram
+	
+	.ble_connected(NOLOAD):
+	{
+		*(.ble_connected)
+	} > shared_ram
+	
+	.shared_buffer(NOLOAD):
+	{
+		*(.shared_buffer)
+	} > shared_ram
+	
+	.current_frame_reading(NOLOAD):
+	{
+		*(.current_frame_reading)
+	} > shared_ram
+	
+	.current_frame_written(NOLOAD):
+	{
+		*(.current_frame_written)
+	} > shared_ram
 
 
     /* .stack_dummy section doesn't contains any symbols. It is only

@@ -6,6 +6,7 @@
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
     <Group key="Interrupt">
+      <Data key="51c14da8-46b9-4e57-8c0c-133f3cafb464" value="INT_TX" />
       <Data key="73be8b3f-f540-4b51-a846-74828cf79155/5e509665-5bd3-4115-bbc0-fb65a49def9a" value="BLE_bless_isr" />
       <Data key="7044b1b0-1b4a-405b-85b7-9a2a1615224d/9260d369-b684-4310-b925-f618d77b89d7" value="UART_DEBUG_SCB_IRQ" />
     </Group>
@@ -15,6 +16,18 @@
     </Group>
   </Group>
   <Group key="Interrupt">
+    <Group key="51c14da8-46b9-4e57-8c0c-133f3cafb464">
+      <Group key="CortexM0p">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="Default" />
+        <Data key="Vector" value="8" />
+      </Group>
+      <Group key="CortexM4">
+        <Data key="Assigned" value="False" />
+        <Data key="Priority" value="Default" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
     <Group key="73be8b3f-f540-4b51-a846-74828cf79155/5e509665-5bd3-4115-bbc0-fb65a49def9a">
       <Group key="CortexM0p">
         <Data key="Assigned" value="True" />

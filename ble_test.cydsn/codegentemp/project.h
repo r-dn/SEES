@@ -35,6 +35,10 @@
 #include "cy_syslib.h"
 #include "cy_syspm.h"
 #include "cy_systick.h"
+#include "cy_tcpwm.h"
+#include "cy_tcpwm_counter.h"
+#include "cy_tcpwm_pwm.h"
+#include "cy_tcpwm_quaddec.h"
 #include "cy_trigmux.h"
 #include "cy_wdt.h"
 #include "cy_device.h"
@@ -157,6 +161,8 @@
 #include "BLE.h"
 #include "BLE_config.h"
 #include "UART_DEBUG.h"
+#include "TX_COUNTER.h"
+#include "CLK0.h"
 #include "UART_DEBUG_SCBCLK.h"
 
 /*[]*/
