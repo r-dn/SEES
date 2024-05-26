@@ -26,7 +26,7 @@
 // tedious but works
 #define __SHARED(x) 	__attribute__ ((section(x)))
 	
-//#define DEBUG_PRINT
+#define DEBUG_PRINT
 #ifdef DEBUG_PRINT
 #define printf(x)				Cy_SCB_UART_PutString(UART_DEBUG_HW, x)
 #else

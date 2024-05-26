@@ -348,42 +348,6 @@
 <VisibleNodeIds>
 <v>ble_test-000</v>
 <v>ble_test-000\ble_test</v>
-<v>ble_test-000\ble_test\CortexM0p</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\attdet.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\bits.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_config.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_custom_config.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\bwdet.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_aios.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ancs.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ans.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bas.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bcs.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bls.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bms.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_bts.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cgms.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cps.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cscs.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_cts.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_custom.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_dis.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ess.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_event_handler.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gap.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gatt.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_gls.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_int.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hal_pvt.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hids.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hps.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_hrs.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -431,7 +395,6 @@
 <name v=".\main_cm4.c" />
 <name v=".\cy8c6xx7_cm0plus.ld" />
 <name v=".\cy8c6xx7_cm4_dual.ld" />
-<name v=".\TopDesign\TopDesign.cysch" />
 <name v=".\ble_test.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
@@ -440,7 +403,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1066, 535" SelectedTabbedMdiWindow="32c19848-cbe1-41e6-891c-9b1633024458"><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\main_cm0p.c" Guid="32c19848-cbe1-41e6-891c-9b1633024458" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\shared.h" Guid="454e2a50-7c67-475a-85d8-77c8c2ac5002" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\main_cm4.c" Guid="53df7813-c2bc-4828-9ab8-b5220ec868bd" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="ce6e58d3-9bc5-4b39-a9b6-5685cb1845f7" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\cy8c6xx7_cm0plus.ld" Guid="b668bc18-47f6-4ac2-9009-1cf896943137" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\cy8c6xx7_cm4_dual.ld" Guid="ae446b19-8bf0-4422-84eb-8bca2727d888" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\TopDesign\TopDesign.cysch" Guid="12359ea8-63b0-4c12-ad3a-884f39732e76" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\ble_test.cydwr" Guid="278843f2-d2df-4f70-98b8-82e4c5ea0f02" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1066, 535" SelectedTabbedMdiWindow="454e2a50-7c67-475a-85d8-77c8c2ac5002"><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\main_cm0p.c" Guid="32c19848-cbe1-41e6-891c-9b1633024458" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\shared.h" Guid="454e2a50-7c67-475a-85d8-77c8c2ac5002" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\main_cm4.c" Guid="53df7813-c2bc-4828-9ab8-b5220ec868bd" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\cy8c6xx7_cm0plus.ld" Guid="b668bc18-47f6-4ac2-9009-1cf896943137" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\cy8c6xx7_cm4_dual.ld" Guid="ae446b19-8bf0-4422-84eb-8bca2727d888" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\ble_test.cydwr" Guid="278843f2-d2df-4f70-98b8-82e4c5ea0f02" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="ce6e58d3-9bc5-4b39-a9b6-5685cb1845f7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
