@@ -20,10 +20,12 @@ int main(void)
 	
 	current_frame_written = 0;
 	
+	uint16_t counter = 0;
+	
 	do {
 		__WFE();
 	} while (!ble_connected);
-	printf("woken up!\n");
+	printf("cm4 woken up!\n");
 		
     for(;;) {
 		// only start writing the next frame if that frame is not being read by cm0p
@@ -40,9 +42,10 @@ int main(void)
 		
 		// fill with random stuff for testing
 		for (uint16_t i = 0; i < FRAME_SAMPLES; i++) {
-			shared_buffer[2*i + FRAME_SAMPLES*PCM_SBYTES*current_frame_writing] = i & 0xFF;
-			shared_buffer[2*i+1 + FRAME_SAMPLES*PCM_SBYTES*current_frame_writing] = i >> 8;
+			shared_buffer[2*i + FRAME_SAMPLES*PCM_SBYTES*current_frame_writing] = counter & 0xFF;
+			shared_buffer[2*i+1 + FRAME_SAMPLES*PCM_SBYTES*current_frame_writing] = counter >> 8;
 		}
+		counter++;
 		
 		current_frame_written = current_frame_writing;
     }

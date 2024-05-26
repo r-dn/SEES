@@ -14,6 +14,7 @@
 #include <lc3.h>
 
 
+#define CUSTOM_SERV0_CHAR0_DESC0_HANDLE     cy_ble_customConfig.customs[0].customServInfo[0].customServCharDesc[0] 
 
 #define NOTIFICATION_PKT_SIZE	BLOCK_SIZE
 #define SUCCESS					(0u)
@@ -26,6 +27,7 @@ static cy_stc_ble_conn_handle_t appConnHandle;
 static cy_stc_ble_gatts_handle_value_ntf_t notificationPacket;
 static uint8_t tx_buffer[NOTIFICATION_PKT_SIZE];
 lc3_encoder_t enc[NCHANNELS];
+int msg_sent;
 
 int main(void) {
 	cy_en_ble_api_result_t          apiResult;
@@ -60,7 +62,7 @@ int main(void) {
 		CY_ASSERT(0u != 0u);
 	} 
 	
-	current_frame_reading = S_FRAMES-1;
+	current_frame_reading = 0;
 	
 	// setup encoding
 	for (int ich = 0; ich < NCHANNELS; ich++) {
@@ -78,10 +80,13 @@ int main(void) {
 		if (!ble_connected || current_frame_reading == current_frame_written) {
 			continue;
 		}
+		if (!(Cy_BLE_GATT_GetBusyStatus(appConnHandle.attId) == CY_BLE_STACK_STATE_FREE) || !(Cy_BLE_GetConnectionState(appConnHandle) >= CY_BLE_CONN_STATE_CONNECTED)) {
+			printf("stack not free, could not send notification\n");
+			continue;
+		}
 		current_frame_reading = (current_frame_reading + 1) % S_FRAMES;
 		
-		printf("sending frame\n");
-		
+		printf("encoding frame\n");
 		// encode frame
 		uint8_t* out_ptr = tx_buffer;
 		for (int ich = 0; ich < NCHANNELS; ich++) {
@@ -98,9 +103,7 @@ int main(void) {
 		
 		notificationPacket.handleValPair.value.val = tx_buffer;
 		
-		if ((Cy_BLE_GATT_GetBusyStatus(appConnHandle.attId) == CY_BLE_STACK_STATE_FREE) && (Cy_BLE_GetConnectionState(appConnHandle) >= CY_BLE_CONN_STATE_CONNECTED) /*&& (Cy_BLE_IsDevicePaired(&appConnHandle) == true)*/) {
-			printf("notification\n");
-			
+		if ((Cy_BLE_GATT_GetBusyStatus(appConnHandle.attId) == CY_BLE_STACK_STATE_FREE) && (Cy_BLE_GetConnectionState(appConnHandle) >= CY_BLE_CONN_STATE_CONNECTED)) {
     		apiResult = Cy_BLE_GATTS_Notification(&notificationPacket);
 			if(apiResult == CY_BLE_ERROR_INVALID_PARAMETER) {
 				printf("Couldn't send notification. [CY_BLE_ERROR_INVALID_PARAMETER]\n");
@@ -110,7 +113,7 @@ int main(void) {
 				continue;
 			}
 			
-			
+			printf("notification sent\n");
 		}
     }
 }
@@ -132,19 +135,15 @@ void ble_callback(uint32_t event, void * eventParam) {
 
     case CY_BLE_EVT_GATT_CONNECT_IND:
 		{
-			appConnHandle = *(cy_stc_ble_conn_handle_t *) eventParam;
+		appConnHandle = *(cy_stc_ble_conn_handle_t *) eventParam;
 			
 		notificationPacket.connHandle = appConnHandle;
         notificationPacket.handleValPair.attrHandle = cy_ble_customConfig.customs[0].customServInfo[0].customServCharHandle;
-//		notificationPacket.handleValPair.value.val = tx_buffer;
+		notificationPacket.handleValPair.value.val = tx_buffer;
         notificationPacket.handleValPair.value.len = NOTIFICATION_PKT_SIZE;
         printf("Device connected!\n");
 		
-		Cy_BLE_GetPhy(appConnHandle.bdHandle);    
-		
-		// wake up CM4
-//		ble_connected = true;
-//		__SEV();
+		Cy_BLE_GetPhy(appConnHandle.bdHandle);
 		}
 		break;
 		
@@ -177,19 +176,37 @@ void ble_callback(uint32_t event, void * eventParam) {
 		case CY_BLE_EVT_SET_PHY_COMPLETE:
         {
             printf("Updating the Phy.....\r\n");
-            cy_stc_ble_events_param_generic_t * param =\
-            (cy_stc_ble_events_param_generic_t *) eventParam;
+            cy_stc_ble_events_param_generic_t * param = (cy_stc_ble_events_param_generic_t *) eventParam;
             if(param->status == SUCCESS) {
                 printf("SET PHY updated to 2 Mbps\r\n");
                 Cy_BLE_GetPhy(appConnHandle.bdHandle);
 				
-				// wake up CM4
-		ble_connected = true;
-		__SEV();
             } else {
                 printf("SET PHY Could not update to 2 Mbps\r\n");
                 Cy_BLE_GetPhy(appConnHandle.bdHandle);
             }
+            break;
+        }
+		
+		// a write req gets received when the client starts listening for notifs (even when this service doesn't allow writes)
+		case CY_BLE_EVT_GATTS_WRITE_REQ:
+        {
+            cy_stc_ble_gatt_write_param_t *write_req_param = (cy_stc_ble_gatt_write_param_t *)eventParam;
+			
+            printf("received GATT Write Request\n");
+			
+			if (write_req_param->handleValPair.attrHandle == (cy_ble_customConfig.customs[0].customServInfo[0].customServCharDesc[1])
+				&& *write_req_param->handleValPair.value.val == 1) {
+				printf("start notifications\n");
+				
+				// wake up CM4
+				ble_connected = true;
+				__SEV();
+			}
+			
+			
+			
+			
             break;
         }
 

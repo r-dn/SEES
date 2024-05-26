@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ble_test-000\ble_test\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ble_test-000\ble_test\Generated_Source\PSoC6\pdl\middleware\ble\cy_ble.h">
 <ExpandedNodeIds>
 <v>ble_test-000</v>
 <v>ble_test-000\ble_test</v>
@@ -93,8 +93,16 @@
 <v>ble_test-000\ble_test\Shared Files\cyapicallbacks.h</v>
 <v>ble_test-000\ble_test\Shared Files\shared.h</v>
 <v>ble_test-000\ble_test\Shared Files\system_psoc6.h</v>
+<v>ble_test-000\ble_test\Generated_Source</v>
+<v>ble_test-000\ble_test\Generated_Source\PSoC6</v>
+<v>ble_test-000\ble_test\Generated_Source\PSoC6\pdl</v>
+<v>ble_test-000\ble_test\Generated_Source\PSoC6\pdl\middleware</v>
+<v>ble_test-000\ble_test\Generated_Source\PSoC6\pdl\middleware\ble</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>ble_test-000</v>
+<v>ble_test-000\ble_test</v>
+<v>ble_test-000\ble_test\TopDesign</v>
 <v>ble_test-000\ble_test\ble_test.cydwr</v>
 <v>ble_test-000\ble_test\ble_test.cydwr\Pins</v>
 <v>ble_test-000\ble_test\ble_test.cydwr\Analog</v>
@@ -130,9 +138,6 @@
 <v>ble_test-000\ble_test\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
 <v>ble_test-000\ble_test\Shared Files</v>
 <v>ble_test-000\ble_test\Shared Files\cy_ble_config.h</v>
-<v>ble_test-000\ble_test\Shared Files\cyapicallbacks.h</v>
-<v>ble_test-000\ble_test\Shared Files\shared.h</v>
-<v>ble_test-000\ble_test\Shared Files\system_psoc6.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
