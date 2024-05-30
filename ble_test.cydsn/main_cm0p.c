@@ -11,23 +11,18 @@
 */
 
 #include "shared.h"
-#include <lc3.h>
-
 
 #define CUSTOM_SERV0_CHAR0_DESC0_HANDLE     cy_ble_customConfig.customs[0].customServInfo[0].customServCharDesc[0] 
 
-#define NOTIFICATION_PKT_SIZE	BLOCK_SIZE
+#define NOTIFICATION_PKT_SIZE	BLOCK_SIZE+1
 #define SUCCESS					(0u)
-
-typedef LC3_ENCODER_MEM_T(FRAME_US, SRATE_HZ) lc3_encoder_mem_t;
 
 void ble_callback(uint32_t event, void * eventParam);
 
 static cy_stc_ble_conn_handle_t appConnHandle;
 static cy_stc_ble_gatts_handle_value_ntf_t notificationPacket;
 static uint8_t tx_buffer[NOTIFICATION_PKT_SIZE];
-lc3_encoder_t enc[NCHANNELS];
-int msg_sent;
+uint8_t msg_id;
 
 int main(void) {
 	cy_en_ble_api_result_t          apiResult;
@@ -64,14 +59,8 @@ int main(void) {
 	
 	current_frame_reading = 0;
 	
-	// setup encoding
-	for (int ich = 0; ich < NCHANNELS; ich++) {
-		enc[ich] = lc3_setup_encoder(FRAME_US, SRATE_HZ, SRATE_HZ, malloc(sizeof(lc3_encoder_mem_t)));
-		
-		if (!enc[ich]) {
-			printf("Encoder initialization failed");
-		}
-	}
+	// setup 
+	msg_id = 0;
 	
     for(;;) {
 		Cy_BLE_ProcessEvents();
@@ -81,26 +70,15 @@ int main(void) {
 			continue;
 		}
 		if (!(Cy_BLE_GATT_GetBusyStatus(appConnHandle.attId) == CY_BLE_STACK_STATE_FREE) || !(Cy_BLE_GetConnectionState(appConnHandle) >= CY_BLE_CONN_STATE_CONNECTED)) {
-			printf("stack not free, could not send notification\n");
+//			printf("stack not free, could not send notification\n");
 			continue;
 		}
-		current_frame_reading = (current_frame_reading + 1) % S_FRAMES;
+		printf("start notif\n");
+		current_frame_reading = (current_frame_reading + 1) % S_BLOCKS;
 		
-		printf("encoding frame\n");
-		// encode frame
-		uint8_t* out_ptr = tx_buffer;
-		for (int ich = 0; ich < NCHANNELS; ich++) {
-			int frame_bytes = BLOCK_SIZE / NCHANNELS
-				+ (ich < BLOCK_SIZE % NCHANNELS);
-			
-			// channels interleaved!
-			lc3_encode(enc[ich], LC3_PCM_FORMAT_S16,
-			&shared_buffer[current_frame_reading*PCM_SBYTES*FRAME_SAMPLES] + ich * PCM_SBYTES,
-			NCHANNELS, frame_bytes, out_ptr);
 		
-			out_ptr += frame_bytes;
-		}
-		
+		tx_buffer[NOTIFICATION_PKT_SIZE-1] = msg_id;
+		memcpy(tx_buffer, &shared_buffer[current_frame_reading*BLOCK_SIZE], BLOCK_SIZE);
 		notificationPacket.handleValPair.value.val = tx_buffer;
 		
 		if ((Cy_BLE_GATT_GetBusyStatus(appConnHandle.attId) == CY_BLE_STACK_STATE_FREE) && (Cy_BLE_GetConnectionState(appConnHandle) >= CY_BLE_CONN_STATE_CONNECTED)) {
@@ -112,14 +90,13 @@ int main(void) {
 				printf("Attrhandle = 0x  Cy_BLE_GATTS_Notification API Error: 0x\n");
 				continue;
 			}
-			
+			msg_id++;
 			printf("notification sent\n");
 		}
     }
 }
 
 void ble_callback(uint32_t event, void * eventParam) {
-//	cy_stc_ble_gatts_write_cmd_req_param_t *writeReqParameter;
 	
 	switch (event) {
 	case CY_BLE_EVT_STACK_ON:
@@ -130,6 +107,7 @@ void ble_callback(uint32_t event, void * eventParam) {
     case CY_BLE_EVT_GAP_DEVICE_DISCONNECTED:
         printf("Device disconnected; start advertising\n");
 		ble_connected = false;
+		
         Cy_BLE_GAPP_StartAdvertisement(CY_BLE_ADVERTISING_FAST, CY_BLE_PERIPHERAL_CONFIGURATION_0_INDEX);
         break;
 
@@ -141,10 +119,14 @@ void ble_callback(uint32_t event, void * eventParam) {
         notificationPacket.handleValPair.attrHandle = cy_ble_customConfig.customs[0].customServInfo[0].customServCharHandle;
 		notificationPacket.handleValPair.value.val = tx_buffer;
         notificationPacket.handleValPair.value.len = NOTIFICATION_PKT_SIZE;
-        printf("Device connected!\n");
+        printf("gatt connect ind!\n");
 		
 		Cy_BLE_GetPhy(appConnHandle.bdHandle);
 		}
+		break;
+		
+	case CY_BLE_EVT_GAP_DEVICE_CONNECTED:
+		printf("GAP connected\r\n");
 		break;
 		
 	/* This event is triggered when there is a change to either the maximum Payload 
@@ -161,7 +143,7 @@ void ble_callback(uint32_t event, void * eventParam) {
             phyParam.phyOption = 0;
             phyParam.rxPhyMask = CY_BLE_PHY_MASK_LE_2M;
             phyParam.txPhyMask = CY_BLE_PHY_MASK_LE_2M;
-            
+			
             Cy_BLE_EnablePhyUpdateFeature();
             apiResult = Cy_BLE_SetPhy(&phyParam);
             if(apiResult != CY_BLE_SUCCESS) {
@@ -201,12 +183,9 @@ void ble_callback(uint32_t event, void * eventParam) {
 				
 				// wake up CM4
 				ble_connected = true;
+				msg_id = 0;
 				__SEV();
 			}
-			
-			
-			
-			
             break;
         }
 
@@ -214,10 +193,11 @@ void ble_callback(uint32_t event, void * eventParam) {
 		{
 			char str[50];
             snprintf(str, 50, "event: %X\n", (int) event);
-//			printf(str);
+			printf(str);
 		}
         break;
 	}
 }
+
 
 /* [] END OF FILE */

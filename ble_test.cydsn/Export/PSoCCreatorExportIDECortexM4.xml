@@ -6,7 +6,7 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb -I. -IGenerated_Source\PSoC6 -IGenerated_Source\PSoC6\pdl\cmsis/include/ -IGenerated_Source\PSoC6\pdl\devices/psoc6/include/ -IGenerated_Source\PSoC6\pdl\devices/psoc6/include/ip/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/device/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/efuse/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/flash/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/gpio/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/ipc/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/lvd/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/profile/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/prot/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/scb/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysanalog/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysclk/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysint/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/syslib/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/syspm/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/systick/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/trigmux/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/wdt/ -IGenerated_Source\PSoC6\pdl\middleware/ -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb -I. -IGenerated_Source\PSoC6 -IGenerated_Source\PSoC6\pdl\cmsis/include/ -IGenerated_Source\PSoC6\pdl\devices/psoc6/include/ -IGenerated_Source\PSoC6\pdl\devices/psoc6/include/ip/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/device/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/efuse/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/flash/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/gpio/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/ipc/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/lvd/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/profile/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/prot/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/scb/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysanalog/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysclk/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysint/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/syslib/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/syspm/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/systick/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/trigmux/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/wdt/ -IGenerated_Source\PSoC6\pdl\middleware/ -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY_PSOC_CREATOR_USED=1 -D CYBLE_416045_02 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb -I.\liblc3\include -I. -IGenerated_Source\PSoC6 -IGenerated_Source\PSoC6\pdl\cmsis/include/ -IGenerated_Source\PSoC6\pdl\devices/psoc6/include/ -IGenerated_Source\PSoC6\pdl\devices/psoc6/include/ip/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/device/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/efuse/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/flash/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/gpio/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/ipc/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/lvd/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/profile/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/prot/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/scb/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysanalog/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysclk/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/sysint/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/syslib/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/syspm/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/systick/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/tcpwm/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/trigmux/ -IGenerated_Source\PSoC6\pdl\drivers/peripheral/wdt/ -IGenerated_Source\PSoC6\pdl\middleware/ -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CY_PSOC_CREATOR_USED=1 -D CYBLE_416045_02 -Wall -ffunction-sections -ffat-lto-objects -Og" />
       <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m4 -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -mthumb -L Generated_Source\PSoC6 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T cy8c6xx7_cm4_dual.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
@@ -51,10 +51,43 @@
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn">
-        <Files Root="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn" />
+        <Files Root="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn">
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\include\lc3.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\include\lc3_cpp.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\include\lc3_private.h</File>
+        </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn">
-        <Files Root="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn" />
+        <Files Root="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn">
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\attdet.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\attdet.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\bits.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\bits.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\bwdet.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\bwdet.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\common.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\energy.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\energy.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\fastmath.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\lc3.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\ltpf.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\ltpf.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\ltpf_arm.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\ltpf_neon.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\mdct.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\mdct.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\mdct_neon.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\plc.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\plc.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\sns.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\sns.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\spec.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\spec.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\tables.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\tables.h</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\tns.c</File>
+          <File BuildType="BUILD" Toolchain="">..\..\..\liblc3\src\tns.h</File>
+        </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\Generated_Source\PSoC6">
         <Files Root="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn">

@@ -43,14 +43,14 @@
 #define BLOCK_SIZE		(BITRATE/8*FRAME_US/1000000)
 #define PCM_SBYTES		(PCM_SBITS/8)
 	
-// #frames in the shared buffer
-#define S_FRAMES		(4)
+// #blocks in the shared buffer
+#define S_BLOCKS		(10)
 	
 #define SEMA_NUM	16u
 
 bool ble_connected __SHARED(".ble_connected");
 
-uint8_t alignas(int32_t) shared_buffer[FRAME_SAMPLES*PCM_SBYTES*S_FRAMES] __SHARED(".shared_buffer");
+uint8_t alignas(int32_t) shared_buffer[BLOCK_SIZE*S_BLOCKS] __SHARED(".shared_buffer");
 
 int current_frame_written __SHARED(".current_frame_written");
 int current_frame_reading __SHARED(".current_frame_reading");

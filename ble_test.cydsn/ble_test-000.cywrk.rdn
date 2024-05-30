@@ -18,7 +18,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ble_test-000\ble_test\Generated_Source\PSoC6\pdl\middleware\ble\cy_ble.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ble_test-000\ble_test\Generated_Source">
 <ExpandedNodeIds>
 <v>ble_test-000</v>
 <v>ble_test-000\ble_test</v>
@@ -37,39 +37,6 @@
 <v>ble_test-000\ble_test\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Header Files</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\include</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\include\lc3.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\include\lc3_cpp.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\include\lc3_private.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\attdet.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\attdet.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\bits.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\bits.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\bwdet.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\bwdet.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\common.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\energy.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\energy.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\fastmath.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\lc3.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\ltpf.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\ltpf.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\ltpf_arm.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\ltpf_neon.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\mdct.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\mdct.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\mdct_neon.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\plc.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\plc.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\sns.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\sns.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\spec.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\spec.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\tables.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\tables.h</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\tns.c</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3\src\tns.h</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Source Files</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
@@ -82,6 +49,39 @@
 <v>ble_test-000\ble_test\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Header Files</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\include</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\include\lc3.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\include\lc3_cpp.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\include\lc3_private.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\attdet.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\attdet.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\bits.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\bits.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\bwdet.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\bwdet.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\common.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\energy.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\energy.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\fastmath.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\lc3.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\ltpf.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\ltpf.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\ltpf_arm.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\ltpf_neon.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\mdct.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\mdct.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\mdct_neon.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\plc.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\plc.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\sns.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\sns.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\spec.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\spec.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\tables.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\tables.h</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\tns.c</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3\src\tns.h</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Source Files</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
@@ -93,7 +93,6 @@
 <v>ble_test-000\ble_test\Shared Files\cyapicallbacks.h</v>
 <v>ble_test-000\ble_test\Shared Files\shared.h</v>
 <v>ble_test-000\ble_test\Shared Files\system_psoc6.h</v>
-<v>ble_test-000\ble_test\Generated_Source</v>
 <v>ble_test-000\ble_test\Generated_Source\PSoC6</v>
 <v>ble_test-000\ble_test\Generated_Source\PSoC6\pdl</v>
 <v>ble_test-000\ble_test\Generated_Source\PSoC6\pdl\middleware</v>
@@ -117,7 +116,6 @@
 <v>ble_test-000\ble_test\CM0p (Core 0)\ARM IAR Generic</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\ARM MDK Generic</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Header Files</v>
-<v>ble_test-000\ble_test\CM0p (Core 0)\lc3</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Source Files</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
 <v>ble_test-000\ble_test\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
@@ -130,6 +128,7 @@
 <v>ble_test-000\ble_test\CM4 (Core 1)\ARM IAR Generic</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\ARM MDK Generic</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Header Files</v>
+<v>ble_test-000\ble_test\CM4 (Core 1)\lc3</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Source Files</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
 <v>ble_test-000\ble_test\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
@@ -162,12 +161,9 @@
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\attdet.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\bits.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_config.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\BLE_custom_config.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\bwdet.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_aios.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_ancs.lst</v>
@@ -239,30 +235,108 @@
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\energy.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\lc3.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\ltpf.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\mdct.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\plc.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\sns.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\spec.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\tables.lst</v>
-<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\tns.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\TX_COUNTER.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART_DEBUG.lst</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\ble_test.elf</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\ble_test.hex</v>
 <v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Debug\ble_test.map</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\BLE.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\BLE_config.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\BLE_custom_config.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_aios.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_ancs.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_ans.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_bas.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_bcs.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_bls.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_bms.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_bts.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_cgms.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_clk.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_cps.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_cscs.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_cts.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_custom.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_dis.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_ess.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_event_handler.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_gap.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_gatt.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_gls.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_hal_int.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_hal_pvt.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_hids.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_hps.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_hrs.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_hts.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_ias.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_ips.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_lls.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_lns.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_ndcs.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_pass.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_plxs.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_rscs.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_rtus.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_scps.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_tps.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_uds.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_wpts.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ble_wss.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_device.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_efuse.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_flash.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_gpio.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_drv.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_pipe.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_ipc_sema.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_lvd.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_profile.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_prot.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_scb_common.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_scb_ezi2c.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_scb_i2c.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_scb_spi.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_scb_uart.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_sysanalog.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_sysclk.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_sysint.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_syslib.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_syslib_gcc.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_syspm.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_systick.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_tcpwm_counter.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_trigmux.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cy_wdt.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cyfitter_cfg.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\cymetadata.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\main_cm0p.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\startup_psoc6_01_cm0plus.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\system_psoc6_cm0plus.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\TX_COUNTER.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\Listing Files\UART_DEBUG.lst</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\ble_test.elf</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\ble_test.hex</v>
+<v>ble_test-000\ble_test\CortexM0p\ARM_GCC_541\Release\ble_test.map</v>
 <v>ble_test-000\ble_test\CortexM4</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\attdet.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\bits.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\BLE.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\BLE_config.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\BLE_custom_config.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\bwdet.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_aios.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_ancs.lst</v>
@@ -333,14 +407,118 @@
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\energy.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\lc3.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\ltpf.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\mdct.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\plc.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\sns.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\spec.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm4.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm4.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\tables.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\tns.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\TX_COUNTER.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\Listing Files\UART_DEBUG.lst</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\ble_test.elf</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\ble_test.hex</v>
 <v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Debug\ble_test.map</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\attdet.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\bits.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\BLE.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\BLE_config.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\BLE_custom_config.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\bwdet.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_aios.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_ancs.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_ans.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_bas.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_bcs.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_bls.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_bms.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_bts.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_cgms.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_clk.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_cps.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_cscs.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_cts.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_custom.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_dis.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_ess.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_event_handler.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_gap.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_gatt.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_gls.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_hal_int.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_hal_pvt.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_hids.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_hps.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_hrs.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_hts.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_ias.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_ips.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_lls.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_lns.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_ndcs.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_pass.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_plxs.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_rscs.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_rtus.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_scps.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_tps.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_uds.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_wpts.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ble_wss.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_device.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_efuse.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_flash.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_gpio.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ipc_drv.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ipc_pipe.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_ipc_sema.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_lvd.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_profile.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_prot.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_scb_common.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_scb_ezi2c.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_scb_i2c.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_scb_spi.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_scb_uart.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_sysanalog.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_sysclk.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_sysint.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_syslib.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_syslib_gcc.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_syspm.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_systick.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_tcpwm_counter.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_tcpwm_pwm.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_tcpwm_quaddec.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_trigmux.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cy_wdt.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\cymetadata.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\energy.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\lc3.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\ltpf.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\main_cm4.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\mdct.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\plc.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\sns.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\spec.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\startup_psoc6_01_cm4.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\system_psoc6_cm4.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\tables.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\tns.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\TX_COUNTER.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\Listing Files\UART_DEBUG.lst</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\ble_test.elf</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\ble_test.hex</v>
+<v>ble_test-000\ble_test\CortexM4\ARM_GCC_541\Release\ble_test.map</v>
 <v>ble_test-000\ble_test\ble_test.gpdsc</v>
 <v>ble_test-000\ble_test\ble_test.rpt</v>
 <v>ble_test-000\ble_test\ble_test_timing.html</v>
@@ -404,7 +582,7 @@
   http://www.actiprosoftware.com
 
 --><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1066, 535" SelectedTabbedMdiWindow="454e2a50-7c67-475a-85d8-77c8c2ac5002"><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\main_cm0p.c" Guid="32c19848-cbe1-41e6-891c-9b1633024458" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\shared.h" Guid="454e2a50-7c67-475a-85d8-77c8c2ac5002" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\main_cm4.c" Guid="53df7813-c2bc-4828-9ab8-b5220ec868bd" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\cy8c6xx7_cm0plus.ld" Guid="b668bc18-47f6-4ac2-9009-1cf896943137" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\cy8c6xx7_cm4_dual.ld" Guid="ae446b19-8bf0-4422-84eb-8bca2727d888" /><DocumentWindow Key="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\ble_test.cydwr" Guid="278843f2-d2df-4f70-98b8-82e4c5ea0f02" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="ce6e58d3-9bc5-4b39-a9b6-5685cb1845f7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
-<config v="" />
+<config v="Debug" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
 </CyXmlSerializer>
