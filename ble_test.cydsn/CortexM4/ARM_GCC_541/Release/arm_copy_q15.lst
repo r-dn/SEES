@@ -1,0 +1,1424 @@
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 1
+   4              		.fpu fpv4-sp-d16
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.thumb
+  15              		.syntax unified
+  16              		.file	"arm_copy_q15.c"
+  17              		.text
+  18              	.Ltext0:
+  19              		.section	.gnu.lto_.profile.d618f209,"",%progbits
+  20 0000 789C6361 		.ascii	"x\234ca`d`a`\000\222\234\034\000\000\204\000\034"
+  20      60646061 
+  20      6000929C 
+  20      1C000084 
+  20      001C
+  21              		.text
+  22              		.section	.gnu.lto_.icf.d618f209,"",%progbits
+  23 0000 789C6361 		.ascii	"x\234ca`d\000\001\016\006\004`d\350\\yn-\027\003\000"
+  23      60640001 
+  23      0E060460 
+  23      64E85C79 
+  23      6E2D1703 
+  24 0015 0D2402C6 		.ascii	"\015$\002\306"
+  25              		.text
+  26              		.section	.gnu.lto_.jmpfuncs.d618f209,"",%progbits
+  27 0000 789C6361 		.ascii	"x\234ca`d\000\001n\006\004`d`fddd\257\257\257g\000\000"
+  27      60640001 
+  27      6E060460 
+  27      64606664 
+  27      6464AFAF 
+  28 0018 068A019C 		.ascii	"\006\212\001\234"
+  29              		.text
+  30              		.section	.gnu.lto_.inline.d618f209,"",%progbits
+  31 0000 789C6361 		.ascii	"x\234ca`d\000\001Y\006\004\000\212p\235f`ddR\000\262"
+  31      60640001 
+  31      59060400 
+  31      8A709D66 
+  31      60646452 
+  32 0016 98F8267D 		.ascii	"\230\370&}\344``[ \317\304\300\002\222\004\000:(\003"
+  32      E460605B 
+  32      20CFC4C0 
+  32      02920400 
+  32      3A2803
+  33 0029 84       		.ascii	"\204"
+  34              		.text
+  35              		.section	.gnu.lto_.pureconst.d618f209,"",%progbits
+  36 0000 789C6361 		.ascii	"x\234ca`d`f`\000\222R\000\000r\000$"
+  36      60646066 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 2
+
+
+  36      60009252 
+  36      00007200 
+  36      24
+  37              		.text
+  38              		.section	.gnu.lto_arm_copy_q15.d618f209,"",%progbits
+  39 0000 789C5D93 		.ascii	"x\234]\223OH\024q\024\307\177\357\367ffwGg\267C\035"
+  39      4F481471 
+  39      14C77FEF 
+  39      F7666677 
+  39      4767B743 
+  40 0015 02092F22 		.ascii	"\002\011/\"\036\214:$D\320E):H\321\\\005\321\305\203"
+  40      1E8C3A24 
+  40      44D04529 
+  40      3A48D15C 
+  40      05D1C583 
+  41 0029 A8BBDBBA 		.ascii	"\250\273\333\272\036\352\342\350\354\256\025A\022$T"
+  41      1EEAE2E8 
+  41      ECAE1541 
+  41      122454
+  42 0038 8A8708B7 		.ascii	"\212\207\010\267\326r\2652\027\222F!\245\300B\212\376"
+  42      D672B532 
+  42      17924621 
+  42      A5C0428A 
+  42      FE
+  43 0049 B0973433 		.ascii	"\260\22743\262\016*\205)\346\366~\277\361\240\376`\347"
+  43      B20E2A85 
+  43      29E6F67E 
+  43      BFF1A0FE 
+  43      60E7
+  44 005b 37EFFDDE 		.ascii	"7\357\375\336\347\275\367{\337Y\205\001\023\253\035"
+  44      E7BDF77B 
+  44      DF598501 
+  44      13AB1D
+  45 006a 1933693F 		.ascii	"\0313i?K?\320\030\360\3567\214ux9(\356\013\272/\023"
+  45      4B3FD018 
+  45      F0EE378C 
+  45      75783928 
+  45      EE0BBA2F 
+  46 007f 5E85E3B5 		.ascii	"^\205\343\265i\306,]\215{\230U\250\002\010\277\345\005"
+  46      69C62C5D 
+  46      8D7B9855 
+  46      A80208BF 
+  46      E505
+  47 0091 D6CE5151 		.ascii	"\326\316QQ\241\235+\014\034\005\362\264\0022\365\037"
+  47      A19D2B0C 
+  47      1C05F2B4 
+  47      0232F51F 
+  48 00a1 FE8FC364 		.ascii	"\376\217\303d\327b\226\227\015X\264\276$\226\216X)\007"
+  48      D7629697 
+  48      0D58B4BE 
+  48      24968E58 
+  48      2907
+  49 00b3 125432CF 		.ascii	"\022T2\317e\010\203\001(\243\250\331x\246\027\177\363"
+  49      65088301 
+  49      28A3A8D9 
+  49      78A6177F 
+  49      F3
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 3
+
+
+  50 00c4 04022864 		.ascii	"\004\002(d\256\314\334\376\352\027&\207b2\26723Y\037"
+  50      AECCDCFE 
+  50      EA172687 
+  50      6232B732 
+  50      33591F
+  51 00d7 1E0746EF 		.ascii	"\036\007F\357\337\277\315\3760J\357YV\247\345\274\233"
+  51      DFBFCDFE 
+  51      304AEF59 
+  51      56A7E5BC 
+  51      9B
+  52 00e8 DA7FCB72 		.ascii	"\332\177\313r\224\004\"<\000\244\224p\037\212 \005E"
+  52      9404223C 
+  52      00A49470 
+  52      1F8A2005 
+  52      45
+  53 00f9 8C5C0CD2 		.ascii	"\214\\\014\322PJ@O\"\227\325\361\244\204\307r\003W\374"
+  53      504A404F 
+  53      2297D5F1 
+  53      A484C772 
+  53      0357FC
+  54 010c DBF0FBA9 		.ascii	"\333\360\373\251B\253\233zQ`p/K\027y(\331\341\255WK"
+  54      42AB9B7A 
+  54      5160702F 
+  54      4B177928 
+  54      D9E1AD57 
+  55 0121 1EAC94EC 		.ascii	"\036\254\224\354\235\033\331\224\266\315~L\036p\013"
+  55      9D1BD994 
+  55      B6CD7E4C 
+  55      1E700B
+  56 0130 ABF0682F 		.ascii	"\253\360h/\2542\030\202RAL\364\345F\003X-\351\364\344"
+  56      AC321882 
+  56      52414CF4 
+  56      E5460358 
+  56      2DE9F4E4 
+  57 0144 C8B25E72 		.ascii	"\310\262^rW\322\271\244\237\350x\261\3003\273q\261("
+  57      57D2B9A4 
+  57      9FE878B1 
+  57      C033BB71 
+  57      B128
+  58 0156 7A7E78EB 		.ascii	"z~x\353\246\241\305\305\320\212a\030J\334q\301\010h"
+  58      A6A1C5C5 
+  58      D08A6118 
+  58      4ADC71C1 
+  58      0868
+  59 0168 42B4A1F3 		.ascii	"B\264\241\363\216\225\317\333\226\363Y\233\370\353\361"
+  59      8E95CFDB 
+  59      96F3599B 
+  59      F8EBF1
+  60 0177 83BC2997 		.ascii	"\203\274)\227=\243,N\332\320S\003\341\367\200\360\373"
+  60      3DA32C4E 
+  60      DAD05303 
+  60      E1F780F0 
+  60      FB
+  61 0188 E4A92E23 		.ascii	"\344\251.#\013\250I\315p\273d\313\224\230\364\\\341"
+  61      0BA849CD 
+  61      70BB64CB 
+  61      9498F45C 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 4
+
+
+  61      E1
+  62 0199 9C369C87 		.ascii	"\2346\234\207Ng\274\313\220\205\250\254M\227at\206\214"
+  62      4E67BCCB 
+  62      9085A8AC 
+  62      4D976174 
+  62      868C
+  63 01ab 94C745B0 		.ascii	"\224\307E\260{\223\033\207\304\241\215>\033\205\272"
+  63      7B931B87 
+  63      C4A18D3E 
+  63      1B85BA
+  64 01ba 2FF36B4E 		.ascii	"/\363kN\300\325\215\303c\272\300<\355\202\246j\024\304"
+  64      C0D58DC3 
+  64      63BAC03C 
+  64      ED82A66A 
+  64      14C4
+  65 01cc 24B3C05D 		.ascii	"$\263\300]F\267)lgPZ\004\351\024\324\271qu\023\334\240"
+  65      46B7296C 
+  65      67505A04 
+  65      E914D4B9 
+  65      717513DC 
+  66 01e1 0229D9E4 		.ascii	"\002)\331\344[\217\310\212rvk\323\257/\027\366C\037"
+  66      5B8FC88A 
+  66      72766BD3 
+  66      AF2F17F6 
+  66      431F
+  67 01f3 89E51129 		.ascii	"\211\345\021)\236\210A\301S\350\007\201\366\314\371"
+  67      9E8841C1 
+  67      53E80781 
+  67      F6CCF9
+  68 0202 05B91353 		.ascii	"\005\271\023Sva\035b\214\005\011\364R\3130*\331g\304"
+  68      76611D62 
+  68      8C0509F4 
+  68      52CB302A 
+  68      D967C4
+  69 0215 5229D15E 		.ascii	"R)\321^O\362C\177\205[\332\260\021\211\373\371<\363"
+  69      4FF2437F 
+  69      855BDAB0 
+  69      1189FBF9 
+  69      3CF3
+  70 0227 49156954 		.ascii	"I\025iT\367[\206\261\035-\313\251\030r*\012\243?\200"
+  70      F75B86B1 
+  70      1D2DCBA9 
+  70      18722A0A 
+  70      A33F80
+  71 023a 18D93EE6 		.ascii	"\030\331>\346\272\221\271\206\274;\3376\344\035\201"
+  71      BA91B986 
+  71      BC3BDF36 
+  71      E41D81
+  72 0249 CD413C67 		.ascii	"\315A<g\247\257\037t+\2112C\277\262\353\206(\343#\001"
+  72      A7AF1F74 
+  72      2B893243 
+  72      BFB2EB86 
+  72      28E32301 
+  73 025d B3AEF6AB 		.ascii	"\263\256\366\253@mi\234\036:n\216g`\025\270\215\036"
+  73      406D699C 
+  73      1E3A6E8E 
+  73      676015B8 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 5
+
+
+  73      8D1E
+  74 026f 61FB3085 		.ascii	"a\3730\205\253\200\244\010_8A\035\340\340\213f\352A"
+  74      AB80A408 
+  74      5F38411D 
+  74      E0E08B66 
+  74      EA41
+  75 0281 15AA2D91 		.ascii	"\025\252-\221j\353\247Ef\371\375,s /\351ZQYm\2361\313"
+  75      6AEBA745 
+  75      66F9FD2C 
+  75      73202FE9 
+  75      5A51596D 
+  76 0298 ABCC73E5 		.ascii	"\253\314s\345-u\215\241\0323\334\026\0156\324\230m\221"
+  76      2D758DA1 
+  76      1A33DC16 
+  76      0D36D498 
+  76      6D91
+  77 02aa 48381A3B 		.ascii	"H8\032;\325\026\012\306\032\303\241\326\232\272hKm0"
+  77      D5160AC6 
+  77      1AC3A1D6 
+  77      9ABA684B 
+  77      6D30
+  78 02bc 1CB9587B 		.ascii	"\034\271X{\341\350\261\303A\246D\314hP\211T\265\306"
+  78      E1E8B1C3 
+  78      41A644CC 
+  78      68508954 
+  78      B5C6
+  79 02ce 7CF5CDE1 		.ascii	"|\365\315\341`\223\331x\251A\253on\252\014\305\376\003"
+  79      6093D978 
+  79      A941AB6F 
+  79      6EAA0CC5 
+  79      FE03
+  80 02e0 8C063CE0 		.ascii	"\214\006<\340"
+  81              		.text
+  82              		.section	.gnu.lto_.symbol_nodes.d618f209,"",%progbits
+  83 0000 789C6361 		.ascii	"x\234ca`d\020a\000\002\246/\014\365\014\014\023\316"
+  83      60641061 
+  83      0002A62F 
+  83      0CF50C0C 
+  83      13CE
+  84 0012 3180A85D 		.ascii	"1\200\250]\015\212@!\0008\223\004\307"
+  84      0D8A4021 
+  84      00389304 
+  84      C7
+  85              		.text
+  86              		.section	.gnu.lto_.refs.d618f209,"",%progbits
+  87 0000 789C6361 		.ascii	"x\234ca`\004B \000\000\0009\000\007"
+  87      60044220 
+  87      00000039 
+  87      0007
+  88              		.text
+  89              		.section	.gnu.lto_.decls.d618f209,"",%progbits
+  90 0000 789CBD94 		.ascii	"x\234\275\224]h\023Y\024\307\357\271\023\267\355\230"
+  90      5D681359 
+  90      14C7EFB9 
+  90      13B7ED98 
+  91 0010 6DA588E4 		.ascii	"m\245\210\344A0\210\320\356B#\321Z\304G\025\305\007"
+  91      413088D0 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 6
+
+
+  91      EE4223D1 
+  91      5AC44715 
+  91      C507
+  92 0022 1721AB4F 		.ascii	"\027!\253O\263\014q:\332@3\211\231\211\330\027\271\032"
+  92      B30C713A 
+  92      DA403389 
+  92      9989D817 
+  92      B91A
+  93 0034 C1D60F5A 		.ascii	"\301\326\017Z\021\324\025\027\245\326\232\332\256\255"
+  93      11D41517 
+  93      A5D69ADA 
+  93      AEAD
+  94 0042 4DBB5AAD 		.ascii	"M\273Z\255Z?\252\005\253\370\001\202\024\261\"\372\340"
+  94      5A3FAA05 
+  94      ABF80182 
+  94      14B122FA 
+  94      E0
+  95 0053 077E5090 		.ascii	"\007~P\220\0265\236;\037\231V\353\352\223\227\234\344"
+  95      16359E3B 
+  95      1F9956EB 
+  95      EA93979C 
+  95      E4
+  96 0064 DCC339E7 		.ascii	"\334\3039\347\367\277\347f\306C\200\360\325\353!\344"
+  96      F7BFE766 
+  96      C64380F0 
+  96      D5EB21E4 
+  97 0074 30BA06FA 		.ascii	"0\272\006\372Y\\\024\177\327\020w\361\254\001\362\365"
+  97      595C147F 
+  97      D71077F1 
+  97      AC01F2F5 
+  98 0084 E231D1CE 		.ascii	"\3421\321\316-F\233\216\326\217v\031-\203\346C\273\212"
+  98      2D469B8E 
+  98      D68F7619 
+  98      2D83E643 
+  98      BB8A
+  99 0096 7609ADE4 		.ascii	"v\011\255\344;\275>R\310\036\356\252\317\037\202\007"
+  99      3BBD3E52 
+  99      C81EEEAA 
+  99      CF1F8207 
+ 100 00a6 20105B18 		.ascii	" \020[\030\001\260\276\3014b\231\271E\207\022\313qB"
+ 100      01B0BEC1 
+ 100      346299B9 
+ 100      458712CB 
+ 100      7142
+ 101 00b8 B945EC14 		.ascii	"\271E\354\024\352\270n3\363c\327C\326Yf\023\267;\330"
+ 101      EAB86E33 
+ 101      F363D743 
+ 101      D6596613 
+ 101      B73BD8
+ 102 00cb 45D6DED1 		.ascii	"E\326\336\321m\027\001u\001`m\235\212q\375\276P\344"
+ 102      6D170175 
+ 102      01606D9D 
+ 102      8A71FDBE 
+ 102      50E4
+ 103 00dd 68763084 		.ascii	"hv0\204:\207\336168\010\002\005\356?\032M/\013\2641"
+ 103      3A87DE31 
+ 103      36380802 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 7
+
+
+ 103      05EE3F1A 
+ 103      4D2F0BB4 
+ 104 00f2 5C0D8CD1 		.ascii	"\\\015\214\321Y\356d\036\016\264\264\012#\024JDSs\021"
+ 104      59EE641E 
+ 104      0EB4B40A 
+ 104      23144A44 
+ 104      537311
+ 105 0105 86DA5FF6 		.ascii	"\206\332_\366\214\376j\205x\306\335\372wMy\202\317\364"
+ 105      8CFE6A85 
+ 105      78C6DDFA 
+ 105      774D7982 
+ 105      CFF4
+ 106 0117 EF6CEB38 		.ascii	"\357l\3538\304\263\213E\360\340\366\355\315\203O\012"
+ 106      C4B38B45 
+ 106      F0E0F6ED 
+ 106      CD834F0A 
+ 107 0127 713B5D04 		.ascii	"q;]\004\377GJ\257\355\316tN\205R\261\231s\206\367\037"
+ 107      FF474AAF 
+ 107      EDCE744E 
+ 107      8552B199 
+ 107      7386F71F 
+ 108 013b F3F63036 		.ascii	"\363\36606\015:@\2046\020\240\005\002\\d\011\277\326"
+ 108      0D3A4084 
+ 108      3610A005 
+ 108      025C6409 
+ 108      BFD6
+ 109 014d 5AC6B6B2 		.ascii	"Z\306\266\262\206\024+\036($p\022f\302\2770\223@;\224"
+ 109      86142B1E 
+ 109      28247012 
+ 109      66C2BF30 
+ 109      93403B94 
+ 110 0161 72284F84 		.ascii	"r(O\204V\014\236\300 RZ\232\3664\376\"4\003W@\377\356"
+ 110      560C9EC0 
+ 110      20525A9A 
+ 110      F634FE22 
+ 110      34035740 
+ 111 0177 3AF15ECC 		.ascii	":\361^\3141.\356,o\343\214\0142N\271\014D~\023\3229"
+ 111      312EEE2C 
+ 111      6FE38C0C 
+ 111      324EB90C 
+ 111      447E13D2 
+ 112 018c 3964FBCB 		.ascii	"9d\373\313\246\373\324\203\2633{\255\365\360\330\223"
+ 112      A6FBD483 
+ 112      B3337BAD 
+ 112      F5F0D893 
+ 113 019c C65B4729 		.ascii	"\306[G)\036\317\307g\003\0308\330w\373/k\317\330f\334"
+ 113      1ECFC767 
+ 113      031838D8 
+ 113      77FB2F6B 
+ 113      CFD866DC 
+ 114 01b0 6786465A 		.ascii	"g\206FZ\250\320l\215\270?\373\276\257\310\232\015\345"
+ 114      A8D06C8D 
+ 114      B83FFBBE 
+ 114      AFC89A0D 
+ 114      E5
+ 115 01c1 637B33F8 		.ascii	"c{3\370\317Tk6\323P\367\353S\365\373\212@,\255\345\272"
+ 115      CF546B36 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 8
+
+
+ 115      D350F7EB 
+ 115      53F5FB8A 
+ 115      402CADE5 
+ 116 01d6 598A8969 		.ascii	"Y\212\211i\024\325\203\3743\\\3249\024\345\263E\375"
+ 116      14D583FC 
+ 116      335CD439 
+ 116      14E5B345 
+ 116      FD
+ 117 01e7 87C16E0C 		.ascii	"\207\301n\014\332S|\2728\305\030\300YTu\332=\241O\264"
+ 117      DA537CBA 
+ 117      38C518C0 
+ 117      595475DA 
+ 117      3DA14FB4 
+ 118 01fb AEAFFBC0 		.ascii	"\256\257\373\300\315\275\205B\207\251\200\236|\226\275"
+ 118      CDBD8542 
+ 118      87A9809E 
+ 118      7C96BD
+ 119 020a 57306E36 		.ascii	"W0n6sZ\371l.`e\257[y\326\231\315$2\316O\"\003!\303\215"
+ 119      735AF96C 
+ 119      2E6065AF 
+ 119      5B79D699 
+ 119      CD2432CE 
+ 120 0224 9DA7BDC2 		.ascii	"\235\247\275\302\031\013\362\342a\372\031\315A>\354"
+ 120      190BF2E2 
+ 120      61FA19CD 
+ 120      413EEC
+ 121 0233 8D6EE3F2 		.ascii	"\215n\343\362.!\344\242\013\271\360?\220\276\311!#\257"
+ 121      2E21E4A2 
+ 121      0BB9F03F 
+ 121      90BEC921 
+ 121      23AF
+ 122 0245 BAB6E679 		.ascii	"\272\266\346yw\270wf\366t\256\215\300e\360\332\177\331"
+ 122      77B87766 
+ 122      F674AE8D 
+ 122      C065F0DA 
+ 122      7FD9
+ 123 0257 DD75DDBD 		.ascii	"\335u\335\275\005\346Ua\014\272\300\274\253\261\332"
+ 123      05E65561 
+ 123      0CBAC0BC 
+ 123      ABB1DA
+ 124 0266 1BEF0A44 		.ascii	"\033\357\012D\233\330\360C\304]\007\236\177*\232@\274"
+ 124      9BD8F043 
+ 124      C45D079E 
+ 124      7F2A9A40 
+ 124      BC
+ 125 0277 3A81D89F 		.ascii	":\201\330\237#\266\263\272&0\211\030\203+\0261\335?"
+ 125      23B6B3BA 
+ 125      26308918 
+ 125      832B1631 
+ 125      DD3F
+ 126 0289 365AE8DB 		.ascii	"6Z\350\333g>S)\346\367\300\232\031\343\212\257\003\276"
+ 126      673E5329 
+ 126      E6F7C09A 
+ 126      19E38AAF 
+ 126      03BE
+ 127 029b A2E01AA6 		.ascii	"\242\340\032\246\232\035\036\334\275\221\242\263\217"
+ 127      9A1D1EDC 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 9
+
+
+ 127      BD91A2B3 
+ 127      8F
+ 128 02a8 B0231D6C 		.ascii	"\260#\035l8\263\377\317\307\235\214\325a\241\207\347"
+ 128      38B3FFCF 
+ 128      C79D8CD5 
+ 128      61A187E7 
+ 129 02b8 41DA1D5C 		.ascii	"A\332\035\\\232\277\241\010\034\207!|\232\007`6\361"
+ 129      9ABFA108 
+ 129      1C87217C 
+ 129      9A076036 
+ 129      F1
+ 130 02c9 86135159 		.ascii	"\206\023QY\211\305k\344\015\301\005\371\313\377X\355"
+ 130      89C56BE4 
+ 130      0DC105F9 
+ 130      CBFF58ED 
+ 131 02d9 5F120C12 		.ascii	"_\022\014\022Q\226\223\021\315\230?O6\266\200\262H\212"
+ 131      51969311 
+ 131      CD983F4F 
+ 131      36B680B2 
+ 131      488A
+ 132 02eb 2762EB13 		.ascii	"'b\353\023\341\250\177]\244Z\325\375\245\233\026V\374"
+ 132      E1A87F5D 
+ 132      A45AD5FD 
+ 132      A59B1656 
+ 132      FC
+ 133 02fc 262935F1 		.ascii	"&)5\361\204\252\353R\\\217)~%\241\206\215XB*\017\224"
+ 133      84AAEB52 
+ 133      5C8F297E 
+ 133      25A1868D 
+ 133      58422A0F 
+ 134 0311 4F0C44A2 		.ascii	"O\014D\242\361X\302\220\326kI\011I\322\202@y \310\275"
+ 134      F158C290 
+ 134      D66B4909 
+ 134      49D28240 
+ 134      7920C8BD 
+ 135 0325 322DA6A9 		.ascii	"2-\246\251ejxmD\212hJu\262R\225\242a\245*\242\251\222"
+ 135      656A786D 
+ 135      448A684A 
+ 135      75B25295 
+ 135      A261A52A 
+ 136 033c 5CA9AE0B 		.ascii	"\\\251\256\013'\253\015\331\250\211\253z\240\212\344"
+ 136      27AB0DD9 
+ 136      A889AB7A 
+ 136      A08AE4
+ 137 034b 3B5A36FE 		.ascii	";Z6\376,)z\215.\311\272Q\211\\\344\027\3102:\301\012"
+ 137      2C297A8D 
+ 137      2EC9BA51 
+ 137      895CE417 
+ 137      C8323AC1 
+ 138 0360 D9C8B37F 		.ascii	"\331\310\263\177\247\340\260d\343\367\200\264dehE\250"
+ 138      A7E0B064 
+ 138      E3F780B4 
+ 138      64656845 
+ 138      A8
+ 139 0371 6C696855 		.ascii	"lihUY4\034\321\244\025V\375\\>\324h\330\250\312\035"
+ 139      59341CD1 
+ 139      A41556FD 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 10
+
+
+ 139      5C3ED468 
+ 139      D8A8CA1D 
+ 140 0385 A1E28BC4 		.ascii	"\241\342\213\304P,\231PT)\224\214sM\313\222\232bDb\232"
+ 140      502C9950 
+ 140      5429948C 
+ 140      734DCB92 
+ 140      9A624462 
+ 141 039a 2E8DBF8D 		.ascii	".\215\277\215\200B>\003&\023\333\220"
+ 141      80423E03 
+ 141      2613DB90 
+ 142              		.text
+ 143              		.section	.gnu.lto_.symtab.d618f209,"",%progbits
+ 144 0000 61726D5F 		.ascii	"arm_copy_q15\000"
+ 144      636F7079 
+ 144      5F713135 
+ 144      00
+ 145 000d 00       		.ascii	"\000"
+ 146 000e 00       		.ascii	"\000"
+ 147 000f 00       		.ascii	"\000"
+ 148 0010 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 148      00000000 
+ 149 0018 C8000000 		.ascii	"\310\000\000\000"
+ 150              		.text
+ 151              		.section	.gnu.lto_.opts,"",%progbits
+ 152 0000 272D666D 		.ascii	"'-fmath-errno' '-fsigned-zeros' '-ftrapping-math' '"
+ 152      6174682D 
+ 152      6572726E 
+ 152      6F272027 
+ 152      2D667369 
+ 153 0033 2D666E6F 		.ascii	"-fno-trapv' '-fno-openmp' '-fno-openacc' '-mcpu=cor"
+ 153      2D747261 
+ 153      70762720 
+ 153      272D666E 
+ 153      6F2D6F70 
+ 154 0066 7465782D 		.ascii	"tex-m4' '-mfloat-abi=softfp' '-mfpu=fpv4-sp-d16' '-"
+ 154      6D342720 
+ 154      272D6D66 
+ 154      6C6F6174 
+ 154      2D616269 
+ 155 0099 6D746875 		.ascii	"mthumb' '-g' '-O3' '-ffunction-sections' '-ffat-lto"
+ 155      6D622720 
+ 155      272D6727 
+ 155      20272D4F 
+ 155      33272027 
+ 156 00cc 2D6F626A 		.ascii	"-objects' '-finline-functions' '-flto'\000"
+ 156      65637473 
+ 156      2720272D 
+ 156      66696E6C 
+ 156      696E652D 
+ 157              		.text
+ 158              		.cfi_sections	.debug_frame
+ 159              		.section	.text.arm_copy_q15,"ax",%progbits
+ 160              		.align	2
+ 161              		.global	arm_copy_q15
+ 162              		.thumb
+ 163              		.thumb_func
+ 164              		.type	arm_copy_q15, %function
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 11
+
+
+ 165              	arm_copy_q15:
+ 166              	.LFB116:
+ 167              		.file 1 "CMSIS-DSP-main\\Source\\SupportFunctions\\arm_copy_q15.c"
+   1:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** /* ----------------------------------------------------------------------
+   2:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * Project:      CMSIS DSP Library
+   3:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * Title:        arm_copy_q15.c
+   4:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * Description:  Copies the elements of a Q15 vector
+   5:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  *
+   6:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * $Date:        23 April 2021
+   7:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * $Revision:    V1.9.0
+   8:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  *
+   9:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * Target Processor: Cortex-M and Cortex-A cores
+  10:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * -------------------------------------------------------------------- */
+  11:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** /*
+  12:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * Copyright (C) 2010-2021 ARM Limited or its affiliates. All rights reserved.
+  13:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  *
+  14:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * SPDX-License-Identifier: Apache-2.0
+  15:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  *
+  16:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  17:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * not use this file except in compliance with the License.
+  18:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * You may obtain a copy of the License at
+  19:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  *
+  20:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * www.apache.org/licenses/LICENSE-2.0
+  21:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  *
+  22:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * Unless required by applicable law or agreed to in writing, software
+  23:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  24:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  25:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * See the License for the specific language governing permissions and
+  26:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  * limitations under the License.
+  27:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  */
+  28:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  29:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** #include "dsp/support_functions.h"
+  30:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  31:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** /**
+  32:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   @ingroup groupSupport
+  33:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  */
+  34:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  35:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** /**
+  36:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   @addtogroup copy
+  37:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   @{
+  38:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  */
+  39:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  40:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** /**
+  41:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   @brief         Copies the elements of a Q15 vector.
+  42:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   @param[in]     pSrc       points to input vector
+  43:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   @param[out]    pDst       points to output vector
+  44:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   @param[in]     blockSize  number of samples in each vector
+  45:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****  */
+  46:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** #if defined(ARM_MATH_MVEI) && !defined(ARM_MATH_AUTOVECTORIZE)
+  47:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** void arm_copy_q15(
+  48:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   const q15_t * pSrc,
+  49:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****         q15_t * pDst,
+  50:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****         uint32_t blockSize)
+  51:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** {
+  52:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   uint32_t blkCnt;
+  53:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  54:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   blkCnt = blockSize >> 3;
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 12
+
+
+  55:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   while (blkCnt > 0U)
+  56:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   {
+  57:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****       vstrhq_s16(pDst,vldrhq_s16(pSrc));
+  58:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****       /*
+  59:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****        * Decrement the blockSize loop counter
+  60:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****        * Advance vector source and destination pointers
+  61:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****        */
+  62:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****       pSrc += 8;
+  63:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****       pDst += 8;
+  64:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****       blkCnt --;
+  65:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   }
+  66:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  67:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   blkCnt = blockSize & 7;
+  68:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   while (blkCnt > 0U)
+  69:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   {
+  70:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* C = A */
+  71:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  72:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* Copy and store result in destination buffer */
+  73:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     *pDst++ = *pSrc++;
+  74:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  75:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* Decrement loop counter */
+  76:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     blkCnt--;
+  77:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   }
+  78:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** }
+  79:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** #else
+  80:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** void arm_copy_q15(
+  81:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   const q15_t * pSrc,
+  82:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****         q15_t * pDst,
+  83:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****         uint32_t blockSize)
+  84:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** {
+ 168              		.loc 1 84 0
+ 169              		.cfi_startproc
+ 170              		@ args = 0, pretend = 0, frame = 0
+ 171              		@ frame_needed = 0, uses_anonymous_args = 0
+ 172              	.LVL0:
+  85:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   uint32_t blkCnt;                               /* Loop counter */
+  86:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  87:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** #if defined (ARM_MATH_LOOPUNROLL)
+  88:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  89:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   /* Loop unrolling: Compute 4 outputs at a time */
+  90:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   blkCnt = blockSize >> 2U;
+  91:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  92:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   while (blkCnt > 0U)
+  93:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   {
+  94:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* C = A */
+  95:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+  96:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* read 2 times 2 samples at a time */
+  97:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     write_q15x2_ia (&pDst, read_q15x2_ia (&pSrc));
+  98:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     write_q15x2_ia (&pDst, read_q15x2_ia (&pSrc));
+  99:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+ 100:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* Decrement loop counter */
+ 101:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     blkCnt--;
+ 102:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   }
+ 103:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+ 104:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   /* Loop unrolling: Compute remaining outputs */
+ 105:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   blkCnt = blockSize % 0x4U;
+ 106:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 13
+
+
+ 107:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** #else
+ 108:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+ 109:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   /* Initialize blkCnt with number of samples */
+ 110:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   blkCnt = blockSize;
+ 111:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+ 112:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** #endif /* #if defined (ARM_MATH_LOOPUNROLL) */
+ 113:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+ 114:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   while (blkCnt > 0U)
+ 173              		.loc 1 114 0
+ 174 0000 82B3     		cbz	r2, .L18
+ 175 0002 031D     		adds	r3, r0, #4
+  84:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   uint32_t blkCnt;                               /* Loop counter */
+ 176              		.loc 1 84 0
+ 177 0004 F0B5     		push	{r4, r5, r6, r7, lr}
+ 178              		.cfi_def_cfa_offset 20
+ 179              		.cfi_offset 4, -20
+ 180              		.cfi_offset 5, -16
+ 181              		.cfi_offset 6, -12
+ 182              		.cfi_offset 7, -8
+ 183              		.cfi_offset 14, -4
+ 184 0006 0C1D     		adds	r4, r1, #4
+ 185 0008 A042     		cmp	r0, r4
+ 186 000a 38BF     		it	cc
+ 187 000c 9942     		cmpcc	r1, r3
+ 188 000e 2CBF     		ite	cs
+ 189 0010 0123     		movcs	r3, #1
+ 190 0012 0023     		movcc	r3, #0
+ 191 0014 0C2A     		cmp	r2, #12
+ 192 0016 94BF     		ite	ls
+ 193 0018 0023     		movls	r3, #0
+ 194 001a 03F00103 		andhi	r3, r3, #1
+ 195 001e CBB1     		cbz	r3, .L3
+ 196 0020 40EA0103 		orr	r3, r0, r1
+ 197 0024 9B07     		lsls	r3, r3, #30
+ 198 0026 15D1     		bne	.L3
+ 199 0028 941E     		subs	r4, r2, #2
+ 200 002a 6408     		lsrs	r4, r4, #1
+ 201 002c 0134     		adds	r4, r4, #1
+ 202 002e 4FEA440E 		lsl	lr, r4, #1
+ 203 0032 061F     		subs	r6, r0, #4
+ 204              		.loc 1 114 0
+ 205 0034 0D46     		mov	r5, r1
+ 206 0036 0023     		movs	r3, #0
+ 207              	.LVL1:
+ 208              	.L4:
+ 209 0038 0133     		adds	r3, r3, #1
+ 115:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   {
+ 116:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* C = A */
+ 117:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c **** 
+ 118:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     /* Copy and store result in destination buffer */
+ 119:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****     *pDst++ = *pSrc++;
+ 210              		.loc 1 119 0
+ 211 003a 56F8047F 		ldr	r7, [r6, #4]!
+ 212 003e 45F8047B 		str	r7, [r5], #4
+ 213 0042 9C42     		cmp	r4, r3
+ 214 0044 F8D8     		bhi	.L4
+ 215 0046 7245     		cmp	r2, lr
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 14
+
+
+ 216 0048 0BD0     		beq	.L1
+ 217              	.LVL2:
+ 218 004a 30F91E30 		ldrsh	r3, [r0, lr, lsl #1]
+ 219 004e 21F81E30 		strh	r3, [r1, lr, lsl #1]	@ movhi
+ 220              	.LVL3:
+ 221 0052 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 222              	.LVL4:
+ 223              	.L3:
+ 224 0054 0239     		subs	r1, r1, #2
+ 225              	.LVL5:
+ 226              	.L7:
+ 227 0056 30F9023B 		ldrsh	r3, [r0], #2
+ 228              	.LVL6:
+ 229 005a 21F8023F 		strh	r3, [r1, #2]!	@ movhi
+ 114:CMSIS-DSP-main\Source\SupportFunctions/arm_copy_q15.c ****   {
+ 230              		.loc 1 114 0
+ 231 005e 013A     		subs	r2, r2, #1
+ 232              	.LVL7:
+ 233 0060 F9D1     		bne	.L7
+ 234              	.LVL8:
+ 235              	.L1:
+ 236 0062 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 237              	.LVL9:
+ 238              	.L18:
+ 239              		.cfi_def_cfa_offset 0
+ 240              		.cfi_restore 4
+ 241              		.cfi_restore 5
+ 242              		.cfi_restore 6
+ 243              		.cfi_restore 7
+ 244              		.cfi_restore 14
+ 245 0064 7047     		bx	lr
+ 246              		.cfi_endproc
+ 247              	.LFE116:
+ 248              		.size	arm_copy_q15, .-arm_copy_q15
+ 249 0066 00BF     		.text
+ 250              	.Letext0:
+ 251              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 252              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 253              		.file 4 ".\\CMSIS-DSP-main\\Include/arm_math_types.h"
+ 254              		.section	.debug_info,"",%progbits
+ 255              	.Ldebug_info0:
+ 256 0000 26010000 		.4byte	0x126
+ 257 0004 0400     		.2byte	0x4
+ 258 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 259 000a 04       		.byte	0x4
+ 260 000b 01       		.uleb128 0x1
+ 261 000c A7000000 		.4byte	.LASF22
+ 262 0010 0C       		.byte	0xc
+ 263 0011 03020000 		.4byte	.LASF23
+ 264 0015 36000000 		.4byte	.LASF24
+ 265 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 266 001d 00000000 		.4byte	0
+ 267 0021 00000000 		.4byte	.Ldebug_line0
+ 268 0025 02       		.uleb128 0x2
+ 269 0026 01       		.byte	0x1
+ 270 0027 06       		.byte	0x6
+ 271 0028 BE010000 		.4byte	.LASF0
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 15
+
+
+ 272 002c 02       		.uleb128 0x2
+ 273 002d 01       		.byte	0x1
+ 274 002e 08       		.byte	0x8
+ 275 002f 73010000 		.4byte	.LASF1
+ 276 0033 03       		.uleb128 0x3
+ 277 0034 0E000000 		.4byte	.LASF5
+ 278 0038 02       		.byte	0x2
+ 279 0039 29       		.byte	0x29
+ 280 003a 3E000000 		.4byte	0x3e
+ 281 003e 02       		.uleb128 0x2
+ 282 003f 02       		.byte	0x2
+ 283 0040 05       		.byte	0x5
+ 284 0041 D6010000 		.4byte	.LASF2
+ 285 0045 02       		.uleb128 0x2
+ 286 0046 02       		.byte	0x2
+ 287 0047 07       		.byte	0x7
+ 288 0048 AB010000 		.4byte	.LASF3
+ 289 004c 02       		.uleb128 0x2
+ 290 004d 04       		.byte	0x4
+ 291 004e 05       		.byte	0x5
+ 292 004f 8F010000 		.4byte	.LASF4
+ 293 0053 03       		.uleb128 0x3
+ 294 0054 1D000000 		.4byte	.LASF6
+ 295 0058 02       		.byte	0x2
+ 296 0059 41       		.byte	0x41
+ 297 005a 5E000000 		.4byte	0x5e
+ 298 005e 02       		.uleb128 0x2
+ 299 005f 04       		.byte	0x4
+ 300 0060 07       		.byte	0x7
+ 301 0061 78000000 		.4byte	.LASF7
+ 302 0065 02       		.uleb128 0x2
+ 303 0066 08       		.byte	0x8
+ 304 0067 05       		.byte	0x5
+ 305 0068 00000000 		.4byte	.LASF8
+ 306 006c 02       		.uleb128 0x2
+ 307 006d 08       		.byte	0x8
+ 308 006e 07       		.byte	0x7
+ 309 006f 8A000000 		.4byte	.LASF9
+ 310 0073 04       		.uleb128 0x4
+ 311 0074 04       		.byte	0x4
+ 312 0075 05       		.byte	0x5
+ 313 0076 696E7400 		.ascii	"int\000"
+ 314 007a 02       		.uleb128 0x2
+ 315 007b 04       		.byte	0x4
+ 316 007c 07       		.byte	0x7
+ 317 007d ED010000 		.4byte	.LASF10
+ 318 0081 03       		.uleb128 0x3
+ 319 0082 28000000 		.4byte	.LASF11
+ 320 0086 03       		.byte	0x3
+ 321 0087 20       		.byte	0x20
+ 322 0088 33000000 		.4byte	0x33
+ 323 008c 03       		.uleb128 0x3
+ 324 008d 86010000 		.4byte	.LASF12
+ 325 0091 03       		.byte	0x3
+ 326 0092 30       		.byte	0x30
+ 327 0093 53000000 		.4byte	0x53
+ 328 0097 02       		.uleb128 0x2
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 16
+
+
+ 329 0098 08       		.byte	0x8
+ 330 0099 04       		.byte	0x4
+ 331 009a CA010000 		.4byte	.LASF13
+ 332 009e 02       		.uleb128 0x2
+ 333 009f 04       		.byte	0x4
+ 334 00a0 07       		.byte	0x7
+ 335 00a1 FA010000 		.4byte	.LASF14
+ 336 00a5 02       		.uleb128 0x2
+ 337 00a6 01       		.byte	0x1
+ 338 00a7 08       		.byte	0x8
+ 339 00a8 81010000 		.4byte	.LASF15
+ 340 00ac 02       		.uleb128 0x2
+ 341 00ad 08       		.byte	0x8
+ 342 00ae 04       		.byte	0x4
+ 343 00af 9D010000 		.4byte	.LASF16
+ 344 00b3 02       		.uleb128 0x2
+ 345 00b4 04       		.byte	0x4
+ 346 00b5 04       		.byte	0x4
+ 347 00b6 A1000000 		.4byte	.LASF17
+ 348 00ba 05       		.uleb128 0x5
+ 349 00bb 30000000 		.4byte	.LASF18
+ 350 00bf 04       		.byte	0x4
+ 351 00c0 2A01     		.2byte	0x12a
+ 352 00c2 81000000 		.4byte	0x81
+ 353 00c6 06       		.uleb128 0x6
+ 354 00c7 E0010000 		.4byte	.LASF25
+ 355 00cb 01       		.byte	0x1
+ 356 00cc 50       		.byte	0x50
+ 357 00cd 00000000 		.4byte	.LFB116
+ 358 00d1 66000000 		.4byte	.LFE116-.LFB116
+ 359 00d5 01       		.uleb128 0x1
+ 360 00d6 9C       		.byte	0x9c
+ 361 00d7 18010000 		.4byte	0x118
+ 362 00db 07       		.uleb128 0x7
+ 363 00dc 98010000 		.4byte	.LASF19
+ 364 00e0 01       		.byte	0x1
+ 365 00e1 51       		.byte	0x51
+ 366 00e2 18010000 		.4byte	0x118
+ 367 00e6 00000000 		.4byte	.LLST0
+ 368 00ea 07       		.uleb128 0x7
+ 369 00eb 18000000 		.4byte	.LASF20
+ 370 00ef 01       		.byte	0x1
+ 371 00f0 52       		.byte	0x52
+ 372 00f1 23010000 		.4byte	0x123
+ 373 00f5 3D000000 		.4byte	.LLST1
+ 374 00f9 07       		.uleb128 0x7
+ 375 00fa 6E000000 		.4byte	.LASF21
+ 376 00fe 01       		.byte	0x1
+ 377 00ff 53       		.byte	0x53
+ 378 0100 8C000000 		.4byte	0x8c
+ 379 0104 87000000 		.4byte	.LLST2
+ 380 0108 08       		.uleb128 0x8
+ 381 0109 A4010000 		.4byte	.LASF26
+ 382 010d 01       		.byte	0x1
+ 383 010e 55       		.byte	0x55
+ 384 010f 8C000000 		.4byte	0x8c
+ 385 0113 B3000000 		.4byte	.LLST3
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 17
+
+
+ 386 0117 00       		.byte	0
+ 387 0118 09       		.uleb128 0x9
+ 388 0119 04       		.byte	0x4
+ 389 011a 1E010000 		.4byte	0x11e
+ 390 011e 0A       		.uleb128 0xa
+ 391 011f BA000000 		.4byte	0xba
+ 392 0123 09       		.uleb128 0x9
+ 393 0124 04       		.byte	0x4
+ 394 0125 BA000000 		.4byte	0xba
+ 395 0129 00       		.byte	0
+ 396              		.section	.debug_abbrev,"",%progbits
+ 397              	.Ldebug_abbrev0:
+ 398 0000 01       		.uleb128 0x1
+ 399 0001 11       		.uleb128 0x11
+ 400 0002 01       		.byte	0x1
+ 401 0003 25       		.uleb128 0x25
+ 402 0004 0E       		.uleb128 0xe
+ 403 0005 13       		.uleb128 0x13
+ 404 0006 0B       		.uleb128 0xb
+ 405 0007 03       		.uleb128 0x3
+ 406 0008 0E       		.uleb128 0xe
+ 407 0009 1B       		.uleb128 0x1b
+ 408 000a 0E       		.uleb128 0xe
+ 409 000b 55       		.uleb128 0x55
+ 410 000c 17       		.uleb128 0x17
+ 411 000d 11       		.uleb128 0x11
+ 412 000e 01       		.uleb128 0x1
+ 413 000f 10       		.uleb128 0x10
+ 414 0010 17       		.uleb128 0x17
+ 415 0011 00       		.byte	0
+ 416 0012 00       		.byte	0
+ 417 0013 02       		.uleb128 0x2
+ 418 0014 24       		.uleb128 0x24
+ 419 0015 00       		.byte	0
+ 420 0016 0B       		.uleb128 0xb
+ 421 0017 0B       		.uleb128 0xb
+ 422 0018 3E       		.uleb128 0x3e
+ 423 0019 0B       		.uleb128 0xb
+ 424 001a 03       		.uleb128 0x3
+ 425 001b 0E       		.uleb128 0xe
+ 426 001c 00       		.byte	0
+ 427 001d 00       		.byte	0
+ 428 001e 03       		.uleb128 0x3
+ 429 001f 16       		.uleb128 0x16
+ 430 0020 00       		.byte	0
+ 431 0021 03       		.uleb128 0x3
+ 432 0022 0E       		.uleb128 0xe
+ 433 0023 3A       		.uleb128 0x3a
+ 434 0024 0B       		.uleb128 0xb
+ 435 0025 3B       		.uleb128 0x3b
+ 436 0026 0B       		.uleb128 0xb
+ 437 0027 49       		.uleb128 0x49
+ 438 0028 13       		.uleb128 0x13
+ 439 0029 00       		.byte	0
+ 440 002a 00       		.byte	0
+ 441 002b 04       		.uleb128 0x4
+ 442 002c 24       		.uleb128 0x24
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 18
+
+
+ 443 002d 00       		.byte	0
+ 444 002e 0B       		.uleb128 0xb
+ 445 002f 0B       		.uleb128 0xb
+ 446 0030 3E       		.uleb128 0x3e
+ 447 0031 0B       		.uleb128 0xb
+ 448 0032 03       		.uleb128 0x3
+ 449 0033 08       		.uleb128 0x8
+ 450 0034 00       		.byte	0
+ 451 0035 00       		.byte	0
+ 452 0036 05       		.uleb128 0x5
+ 453 0037 16       		.uleb128 0x16
+ 454 0038 00       		.byte	0
+ 455 0039 03       		.uleb128 0x3
+ 456 003a 0E       		.uleb128 0xe
+ 457 003b 3A       		.uleb128 0x3a
+ 458 003c 0B       		.uleb128 0xb
+ 459 003d 3B       		.uleb128 0x3b
+ 460 003e 05       		.uleb128 0x5
+ 461 003f 49       		.uleb128 0x49
+ 462 0040 13       		.uleb128 0x13
+ 463 0041 00       		.byte	0
+ 464 0042 00       		.byte	0
+ 465 0043 06       		.uleb128 0x6
+ 466 0044 2E       		.uleb128 0x2e
+ 467 0045 01       		.byte	0x1
+ 468 0046 3F       		.uleb128 0x3f
+ 469 0047 19       		.uleb128 0x19
+ 470 0048 03       		.uleb128 0x3
+ 471 0049 0E       		.uleb128 0xe
+ 472 004a 3A       		.uleb128 0x3a
+ 473 004b 0B       		.uleb128 0xb
+ 474 004c 3B       		.uleb128 0x3b
+ 475 004d 0B       		.uleb128 0xb
+ 476 004e 27       		.uleb128 0x27
+ 477 004f 19       		.uleb128 0x19
+ 478 0050 11       		.uleb128 0x11
+ 479 0051 01       		.uleb128 0x1
+ 480 0052 12       		.uleb128 0x12
+ 481 0053 06       		.uleb128 0x6
+ 482 0054 40       		.uleb128 0x40
+ 483 0055 18       		.uleb128 0x18
+ 484 0056 9742     		.uleb128 0x2117
+ 485 0058 19       		.uleb128 0x19
+ 486 0059 01       		.uleb128 0x1
+ 487 005a 13       		.uleb128 0x13
+ 488 005b 00       		.byte	0
+ 489 005c 00       		.byte	0
+ 490 005d 07       		.uleb128 0x7
+ 491 005e 05       		.uleb128 0x5
+ 492 005f 00       		.byte	0
+ 493 0060 03       		.uleb128 0x3
+ 494 0061 0E       		.uleb128 0xe
+ 495 0062 3A       		.uleb128 0x3a
+ 496 0063 0B       		.uleb128 0xb
+ 497 0064 3B       		.uleb128 0x3b
+ 498 0065 0B       		.uleb128 0xb
+ 499 0066 49       		.uleb128 0x49
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 19
+
+
+ 500 0067 13       		.uleb128 0x13
+ 501 0068 02       		.uleb128 0x2
+ 502 0069 17       		.uleb128 0x17
+ 503 006a 00       		.byte	0
+ 504 006b 00       		.byte	0
+ 505 006c 08       		.uleb128 0x8
+ 506 006d 34       		.uleb128 0x34
+ 507 006e 00       		.byte	0
+ 508 006f 03       		.uleb128 0x3
+ 509 0070 0E       		.uleb128 0xe
+ 510 0071 3A       		.uleb128 0x3a
+ 511 0072 0B       		.uleb128 0xb
+ 512 0073 3B       		.uleb128 0x3b
+ 513 0074 0B       		.uleb128 0xb
+ 514 0075 49       		.uleb128 0x49
+ 515 0076 13       		.uleb128 0x13
+ 516 0077 02       		.uleb128 0x2
+ 517 0078 17       		.uleb128 0x17
+ 518 0079 00       		.byte	0
+ 519 007a 00       		.byte	0
+ 520 007b 09       		.uleb128 0x9
+ 521 007c 0F       		.uleb128 0xf
+ 522 007d 00       		.byte	0
+ 523 007e 0B       		.uleb128 0xb
+ 524 007f 0B       		.uleb128 0xb
+ 525 0080 49       		.uleb128 0x49
+ 526 0081 13       		.uleb128 0x13
+ 527 0082 00       		.byte	0
+ 528 0083 00       		.byte	0
+ 529 0084 0A       		.uleb128 0xa
+ 530 0085 26       		.uleb128 0x26
+ 531 0086 00       		.byte	0
+ 532 0087 49       		.uleb128 0x49
+ 533 0088 13       		.uleb128 0x13
+ 534 0089 00       		.byte	0
+ 535 008a 00       		.byte	0
+ 536 008b 00       		.byte	0
+ 537              		.section	.debug_loc,"",%progbits
+ 538              	.Ldebug_loc0:
+ 539              	.LLST0:
+ 540 0000 00000000 		.4byte	.LVL0
+ 541 0004 38000000 		.4byte	.LVL1
+ 542 0008 0100     		.2byte	0x1
+ 543 000a 50       		.byte	0x50
+ 544 000b 4A000000 		.4byte	.LVL2
+ 545 000f 54000000 		.4byte	.LVL4
+ 546 0013 0A00     		.2byte	0xa
+ 547 0015 7E       		.byte	0x7e
+ 548 0016 00       		.sleb128 0
+ 549 0017 31       		.byte	0x31
+ 550 0018 24       		.byte	0x24
+ 551 0019 70       		.byte	0x70
+ 552 001a 00       		.sleb128 0
+ 553 001b 22       		.byte	0x22
+ 554 001c 23       		.byte	0x23
+ 555 001d 02       		.uleb128 0x2
+ 556 001e 9F       		.byte	0x9f
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 20
+
+
+ 557 001f 54000000 		.4byte	.LVL4
+ 558 0023 62000000 		.4byte	.LVL8
+ 559 0027 0100     		.2byte	0x1
+ 560 0029 50       		.byte	0x50
+ 561 002a 64000000 		.4byte	.LVL9
+ 562 002e 66000000 		.4byte	.LFE116
+ 563 0032 0100     		.2byte	0x1
+ 564 0034 50       		.byte	0x50
+ 565 0035 00000000 		.4byte	0
+ 566 0039 00000000 		.4byte	0
+ 567              	.LLST1:
+ 568 003d 00000000 		.4byte	.LVL0
+ 569 0041 38000000 		.4byte	.LVL1
+ 570 0045 0100     		.2byte	0x1
+ 571 0047 51       		.byte	0x51
+ 572 0048 4A000000 		.4byte	.LVL2
+ 573 004c 54000000 		.4byte	.LVL4
+ 574 0050 0A00     		.2byte	0xa
+ 575 0052 7E       		.byte	0x7e
+ 576 0053 00       		.sleb128 0
+ 577 0054 31       		.byte	0x31
+ 578 0055 24       		.byte	0x24
+ 579 0056 71       		.byte	0x71
+ 580 0057 00       		.sleb128 0
+ 581 0058 22       		.byte	0x22
+ 582 0059 23       		.byte	0x23
+ 583 005a 02       		.uleb128 0x2
+ 584 005b 9F       		.byte	0x9f
+ 585 005c 54000000 		.4byte	.LVL4
+ 586 0060 56000000 		.4byte	.LVL5
+ 587 0064 0100     		.2byte	0x1
+ 588 0066 51       		.byte	0x51
+ 589 0067 56000000 		.4byte	.LVL5
+ 590 006b 62000000 		.4byte	.LVL8
+ 591 006f 0300     		.2byte	0x3
+ 592 0071 74       		.byte	0x74
+ 593 0072 7E       		.sleb128 -2
+ 594 0073 9F       		.byte	0x9f
+ 595 0074 64000000 		.4byte	.LVL9
+ 596 0078 66000000 		.4byte	.LFE116
+ 597 007c 0100     		.2byte	0x1
+ 598 007e 51       		.byte	0x51
+ 599 007f 00000000 		.4byte	0
+ 600 0083 00000000 		.4byte	0
+ 601              	.LLST2:
+ 602 0087 00000000 		.4byte	.LVL0
+ 603 008b 56000000 		.4byte	.LVL5
+ 604 008f 0100     		.2byte	0x1
+ 605 0091 52       		.byte	0x52
+ 606 0092 56000000 		.4byte	.LVL5
+ 607 0096 64000000 		.4byte	.LVL9
+ 608 009a 0400     		.2byte	0x4
+ 609 009c F3       		.byte	0xf3
+ 610 009d 01       		.uleb128 0x1
+ 611 009e 52       		.byte	0x52
+ 612 009f 9F       		.byte	0x9f
+ 613 00a0 64000000 		.4byte	.LVL9
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 21
+
+
+ 614 00a4 66000000 		.4byte	.LFE116
+ 615 00a8 0100     		.2byte	0x1
+ 616 00aa 52       		.byte	0x52
+ 617 00ab 00000000 		.4byte	0
+ 618 00af 00000000 		.4byte	0
+ 619              	.LLST3:
+ 620 00b3 00000000 		.4byte	.LVL0
+ 621 00b7 38000000 		.4byte	.LVL1
+ 622 00bb 0100     		.2byte	0x1
+ 623 00bd 52       		.byte	0x52
+ 624 00be 4A000000 		.4byte	.LVL2
+ 625 00c2 52000000 		.4byte	.LVL3
+ 626 00c6 0600     		.2byte	0x6
+ 627 00c8 72       		.byte	0x72
+ 628 00c9 00       		.sleb128 0
+ 629 00ca 7E       		.byte	0x7e
+ 630 00cb 00       		.sleb128 0
+ 631 00cc 1C       		.byte	0x1c
+ 632 00cd 9F       		.byte	0x9f
+ 633 00ce 52000000 		.4byte	.LVL3
+ 634 00d2 54000000 		.4byte	.LVL4
+ 635 00d6 0700     		.2byte	0x7
+ 636 00d8 7E       		.byte	0x7e
+ 637 00d9 00       		.sleb128 0
+ 638 00da 20       		.byte	0x20
+ 639 00db 72       		.byte	0x72
+ 640 00dc 00       		.sleb128 0
+ 641 00dd 22       		.byte	0x22
+ 642 00de 9F       		.byte	0x9f
+ 643 00df 54000000 		.4byte	.LVL4
+ 644 00e3 56000000 		.4byte	.LVL5
+ 645 00e7 0100     		.2byte	0x1
+ 646 00e9 52       		.byte	0x52
+ 647 00ea 56000000 		.4byte	.LVL5
+ 648 00ee 60000000 		.4byte	.LVL7
+ 649 00f2 0300     		.2byte	0x3
+ 650 00f4 72       		.byte	0x72
+ 651 00f5 7F       		.sleb128 -1
+ 652 00f6 9F       		.byte	0x9f
+ 653 00f7 60000000 		.4byte	.LVL7
+ 654 00fb 62000000 		.4byte	.LVL8
+ 655 00ff 0100     		.2byte	0x1
+ 656 0101 52       		.byte	0x52
+ 657 0102 64000000 		.4byte	.LVL9
+ 658 0106 66000000 		.4byte	.LFE116
+ 659 010a 0100     		.2byte	0x1
+ 660 010c 52       		.byte	0x52
+ 661 010d 00000000 		.4byte	0
+ 662 0111 00000000 		.4byte	0
+ 663              		.section	.debug_aranges,"",%progbits
+ 664 0000 1C000000 		.4byte	0x1c
+ 665 0004 0200     		.2byte	0x2
+ 666 0006 00000000 		.4byte	.Ldebug_info0
+ 667 000a 04       		.byte	0x4
+ 668 000b 00       		.byte	0
+ 669 000c 0000     		.2byte	0
+ 670 000e 0000     		.2byte	0
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 22
+
+
+ 671 0010 00000000 		.4byte	.LFB116
+ 672 0014 66000000 		.4byte	.LFE116-.LFB116
+ 673 0018 00000000 		.4byte	0
+ 674 001c 00000000 		.4byte	0
+ 675              		.section	.debug_ranges,"",%progbits
+ 676              	.Ldebug_ranges0:
+ 677 0000 00000000 		.4byte	.LFB116
+ 678 0004 66000000 		.4byte	.LFE116
+ 679 0008 00000000 		.4byte	0
+ 680 000c 00000000 		.4byte	0
+ 681              		.section	.debug_line,"",%progbits
+ 682              	.Ldebug_line0:
+ 683 0000 99010000 		.section	.debug_str,"MS",%progbits,1
+ 683      02007601 
+ 683      00000201 
+ 683      FB0E0D00 
+ 683      01010101 
+ 684              	.LASF8:
+ 685 0000 6C6F6E67 		.ascii	"long long int\000"
+ 685      206C6F6E 
+ 685      6720696E 
+ 685      7400
+ 686              	.LASF5:
+ 687 000e 5F5F696E 		.ascii	"__int16_t\000"
+ 687      7431365F 
+ 687      7400
+ 688              	.LASF20:
+ 689 0018 70447374 		.ascii	"pDst\000"
+ 689      00
+ 690              	.LASF6:
+ 691 001d 5F5F7569 		.ascii	"__uint32_t\000"
+ 691      6E743332 
+ 691      5F7400
+ 692              	.LASF11:
+ 693 0028 696E7431 		.ascii	"int16_t\000"
+ 693      365F7400 
+ 694              	.LASF18:
+ 695 0030 7131355F 		.ascii	"q15_t\000"
+ 695      7400
+ 696              	.LASF24:
+ 697 0036 433A5C55 		.ascii	"C:\\Users\\rdn\\Documents\\PSoC Creator\\SEES\\ble_"
+ 697      73657273 
+ 697      5C72646E 
+ 697      5C446F63 
+ 697      756D656E 
+ 698 0063 74657374 		.ascii	"test.cydsn\000"
+ 698      2E637964 
+ 698      736E00
+ 699              	.LASF21:
+ 700 006e 626C6F63 		.ascii	"blockSize\000"
+ 700      6B53697A 
+ 700      6500
+ 701              	.LASF7:
+ 702 0078 6C6F6E67 		.ascii	"long unsigned int\000"
+ 702      20756E73 
+ 702      69676E65 
+ 702      6420696E 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 23
+
+
+ 702      7400
+ 703              	.LASF9:
+ 704 008a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 704      206C6F6E 
+ 704      6720756E 
+ 704      7369676E 
+ 704      65642069 
+ 705              	.LASF17:
+ 706 00a1 666C6F61 		.ascii	"float\000"
+ 706      7400
+ 707              	.LASF22:
+ 708 00a7 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 708      43313120 
+ 708      352E342E 
+ 708      31203230 
+ 708      31363036 
+ 709 00da 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 709      20726576 
+ 709      6973696F 
+ 709      6E203233 
+ 709      37373135 
+ 710 010d 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -O3 -ffunction-s"
+ 710      70202D6D 
+ 710      6670753D 
+ 710      66707634 
+ 710      2D73702D 
+ 711 0140 65637469 		.ascii	"ections -ffat-lto-objects -finline-functions -flto\000"
+ 711      6F6E7320 
+ 711      2D666661 
+ 711      742D6C74 
+ 711      6F2D6F62 
+ 712              	.LASF1:
+ 713 0173 756E7369 		.ascii	"unsigned char\000"
+ 713      676E6564 
+ 713      20636861 
+ 713      7200
+ 714              	.LASF15:
+ 715 0181 63686172 		.ascii	"char\000"
+ 715      00
+ 716              	.LASF12:
+ 717 0186 75696E74 		.ascii	"uint32_t\000"
+ 717      33325F74 
+ 717      00
+ 718              	.LASF4:
+ 719 018f 6C6F6E67 		.ascii	"long int\000"
+ 719      20696E74 
+ 719      00
+ 720              	.LASF19:
+ 721 0198 70537263 		.ascii	"pSrc\000"
+ 721      00
+ 722              	.LASF16:
+ 723 019d 646F7562 		.ascii	"double\000"
+ 723      6C6500
+ 724              	.LASF26:
+ 725 01a4 626C6B43 		.ascii	"blkCnt\000"
+ 725      6E7400
+ 726              	.LASF3:
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc0Dame2.s 			page 24
+
+
+ 727 01ab 73686F72 		.ascii	"short unsigned int\000"
+ 727      7420756E 
+ 727      7369676E 
+ 727      65642069 
+ 727      6E7400
+ 728              	.LASF0:
+ 729 01be 7369676E 		.ascii	"signed char\000"
+ 729      65642063 
+ 729      68617200 
+ 730              	.LASF13:
+ 731 01ca 6C6F6E67 		.ascii	"long double\000"
+ 731      20646F75 
+ 731      626C6500 
+ 732              	.LASF2:
+ 733 01d6 73686F72 		.ascii	"short int\000"
+ 733      7420696E 
+ 733      7400
+ 734              	.LASF25:
+ 735 01e0 61726D5F 		.ascii	"arm_copy_q15\000"
+ 735      636F7079 
+ 735      5F713135 
+ 735      00
+ 736              	.LASF10:
+ 737 01ed 756E7369 		.ascii	"unsigned int\000"
+ 737      676E6564 
+ 737      20696E74 
+ 737      00
+ 738              	.LASF14:
+ 739 01fa 73697A65 		.ascii	"sizetype\000"
+ 739      74797065 
+ 739      00
+ 740              	.LASF23:
+ 741 0203 434D5349 		.ascii	"CMSIS-DSP-main\\Source\\SupportFunctions\\arm_copy_"
+ 741      532D4453 
+ 741      502D6D61 
+ 741      696E5C53 
+ 741      6F757263 
+ 742 0233 7131352E 		.ascii	"q15.c\000"
+ 742      6300
+ 743              		.comm	__gnu_lto_v1,1,1
+ 744              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

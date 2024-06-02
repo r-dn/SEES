@@ -24,15 +24,12 @@
     #define BLE_bless_isr__INTC_ASSIGNED 1u
     extern const cy_stc_sysint_t BLE_bless_isr_cfg;
 
-    #define INT_TX__INTC_ASSIGNED 1u
-    extern const cy_stc_sysint_t INT_TX_cfg;
-
 #endif /* ((__CORTEX_M == 0) && (CY_CORE_ID == 0)) */
 
 /* ARM CM4 */
 #if (((__CORTEX_M == 4) && (CY_CORE_ID == 0)))
-    #define UART_DEBUG_SCB_IRQ__INTC_ASSIGNED 1u
-    extern const cy_stc_sysint_t UART_DEBUG_SCB_IRQ_cfg;
+    #define DMA_IRQ__INTC_ASSIGNED 1u
+    extern const cy_stc_sysint_t DMA_IRQ_cfg;
 
 #endif /* ((__CORTEX_M == 4) && (CY_CORE_ID == 0)) */
 

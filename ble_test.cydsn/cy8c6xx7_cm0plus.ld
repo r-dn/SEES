@@ -310,7 +310,17 @@ SECTIONS
 	{
 		*(.current_frame_written)
 	} > shared_ram
-
+	
+	.incoming_frame(NOLOAD):
+	{
+		*(.incoming_frame)
+	} > shared_ram
+	
+	.frame_received(NOLOAD):
+	{
+		*(.frame_received)
+	} > shared_ram
+	
     /* .stack_dummy section doesn't contains any symbols. It is only
      * used for linker to calculate size of stack sections, and assign
      * values to stack symbols later */

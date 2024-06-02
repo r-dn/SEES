@@ -21,9 +21,10 @@
   <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\BLE_custom_config.c" value="SOURCE_C;CortexM0p,CortexM4;;;;BLE" />
   <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\UART_DEBUG.c" value="SOURCE_C;CortexM0p,CortexM4;;;;UART_DEBUG" />
   <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\UART_DEBUG.h" value="HEADER;;;;;UART_DEBUG" />
-  <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\TX_COUNTER.c" value="SOURCE_C;CortexM0p,CortexM4;;;;TX_COUNTER" />
-  <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\TX_COUNTER.h" value="HEADER;;;;;TX_COUNTER" />
-  <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\CLK0.h" value="HEADER;;;;;CLK0" />
+  <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\PDM_PCM.h" value="HEADER;;;;;PDM_PCM" />
+  <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\PDM_PCM.c" value="SOURCE_C;CortexM0p,CortexM4;;;;PDM_PCM" />
+  <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\DMA.c" value="SOURCE_C;CortexM0p,CortexM4;;;;DMA" />
+  <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\DMA.h" value="HEADER;;;;;DMA" />
   <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\UART_DEBUG_SCBCLK.h" value="HEADER;;;;;UART_DEBUG_SCBCLK" />
   <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\project.h" value="OTHER;;;;;" />
   <file name="C:\Users\rdn\Documents\PSoC Creator\SEES\ble_test.cydsn\codegentemp\cycodeshareimport.ld" value="OTHER;;;;;" />

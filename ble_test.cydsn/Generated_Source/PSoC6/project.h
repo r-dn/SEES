@@ -15,6 +15,7 @@
 ********************************************************************************/
 
 #include "cyble_416045_02.h"
+#include "cy_dma.h"
 #include "cy_efuse.h"
 #include "cy_flash.h"
 #include "cy_gpio.h"
@@ -22,6 +23,7 @@
 #include "cy_ipc_sema.h"
 #include "cy_ipc_pipe.h"
 #include "cy_lvd.h"
+#include "cy_pdm_pcm.h"
 #include "cy_profile.h"
 #include "cy_prot.h"
 #include "cy_scb_common.h"
@@ -35,10 +37,6 @@
 #include "cy_syslib.h"
 #include "cy_syspm.h"
 #include "cy_systick.h"
-#include "cy_tcpwm.h"
-#include "cy_tcpwm_counter.h"
-#include "cy_tcpwm_pwm.h"
-#include "cy_tcpwm_quaddec.h"
 #include "cy_trigmux.h"
 #include "cy_wdt.h"
 #include "cy_device.h"
@@ -161,8 +159,8 @@
 #include "BLE.h"
 #include "BLE_config.h"
 #include "UART_DEBUG.h"
-#include "TX_COUNTER.h"
-#include "CLK0.h"
+#include "PDM_PCM.h"
+#include "DMA.h"
 #include "UART_DEBUG_SCBCLK.h"
 
 /*[]*/

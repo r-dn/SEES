@@ -1,5 +1,5 @@
 # ble_test
-# 2024-05-25 23:27:13Z
+# 2024-06-01 21:13:58Z
 
 dont_use_location SMIF -1 -1 0
 dont_use_location p4usbcell -1 -1 0
@@ -10,11 +10,17 @@ set_location "ClockBlock" Clock -1 -1 0
 set_location "CPUSS" CPUSS -1 -1 0
 set_io "CY_CPUSS_SWJ_SWCLK_TCLK(0)" iocell 6 7
 set_io "CY_CPUSS_SWJ_SWDIO_TMS(0)" iocell 6 6
+set_location "SRSS" SRSS -1 -1 0
+set_io "CY_SRSS_WCO_IN(0)" iocell 0 0
+set_io "CY_SRSS_WCO_OUT(0)" iocell 0 1
 set_io "\UART_DEBUG:tx(0)\" iocell 5 1
 set_io "\UART_DEBUG:rx(0)\" iocell 5 0
+set_io "PDM_CLK(0)" iocell 10 4
+set_io "PDM_DATA(0)" iocell 10 5
 set_location "\BLE:cy_mxs40_ble\" BLE -1 -1 0
 set_location "\BLE:bless_isr\" interrupt -1 -1 24
 set_location "\UART_DEBUG:SCB_IRQ\" interrupt -1 -1 46
 set_location "\UART_DEBUG:SCB\" SCB -1 -1 5
-set_location "\TX_COUNTER:TCPWM\" TCPWM -1 -1 0
-set_location "INT_TX" interrupt -1 -1 90
+set_location "DMA_IRQ" interrupt -1 -1 50
+set_location "\PDM_PCM:cy_mxs40_pdm\" PDM -1 -1 0
+set_location "\DMA:DW\" drqcell -1 -1 0

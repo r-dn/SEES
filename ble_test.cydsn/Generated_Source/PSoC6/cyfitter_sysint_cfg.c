@@ -27,22 +27,15 @@
         .intrPriority = BLE_bless_isr__INTC_CORTEXM0P_PRIORITY
     };
 
-    /* INT_TX */
-    const cy_stc_sysint_t INT_TX_cfg = {
-        .intrSrc = (IRQn_Type)INT_TX__INTC_CORTEXM0P_MUX,
-        .cm0pSrc = (cy_en_intr_t)INT_TX__INTC_NUMBER,
-        .intrPriority = INT_TX__INTC_CORTEXM0P_PRIORITY
-    };
-
 #endif /* ((__CORTEX_M == 0) && (CY_CORE_ID == 0)) */
 
 /* ARM CM4 */
 #if (((__CORTEX_M == 4) && (CY_CORE_ID == 0)))
 
-    /* UART_DEBUG_SCB_IRQ */
-    const cy_stc_sysint_t UART_DEBUG_SCB_IRQ_cfg = {
-        .intrSrc = (IRQn_Type)UART_DEBUG_SCB_IRQ__INTC_NUMBER,
-        .intrPriority = UART_DEBUG_SCB_IRQ__INTC_CORTEXM4_PRIORITY
+    /* DMA_IRQ */
+    const cy_stc_sysint_t DMA_IRQ_cfg = {
+        .intrSrc = (IRQn_Type)DMA_IRQ__INTC_NUMBER,
+        .intrPriority = DMA_IRQ__INTC_CORTEXM4_PRIORITY
     };
 
 #endif /* ((__CORTEX_M == 4) && (CY_CORE_ID == 0)) */

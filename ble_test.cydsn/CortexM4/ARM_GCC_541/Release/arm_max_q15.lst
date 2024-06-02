@@ -1,0 +1,1678 @@
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 1
+   4              		.fpu fpv4-sp-d16
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.thumb
+  15              		.syntax unified
+  16              		.file	"arm_max_q15.c"
+  17              		.text
+  18              	.Ltext0:
+  19              		.section	.gnu.lto_.profile.d6425ad4,"",%progbits
+  20 0000 789C6361 		.ascii	"x\234ca`d`a`\000\222\374|\000\000\226\000("
+  20      60646061 
+  20      600092FC 
+  20      7C000096 
+  20      0028
+  21              		.text
+  22              		.section	.gnu.lto_.icf.d6425ad4,"",%progbits
+  23 0000 789C6361 		.ascii	"x\234ca`d\000\001\016\006\004`d\270\260\366@#\013\003"
+  23      60640001 
+  23      0E060460 
+  23      64B8B0F6 
+  23      40230B03 
+  24 0014 000E1A02 		.ascii	"\000\016\032\002\321"
+  24      D1
+  25              		.text
+  26              		.section	.gnu.lto_.jmpfuncs.d6425ad4,"",%progbits
+  27 0000 789C6361 		.ascii	"x\234ca`d\000\001^\006\004`d`a\004\002\376z `\000\000"
+  27      60640001 
+  27      5E060460 
+  27      64606104 
+  27      02FE7A20 
+  28 0017 09B00227 		.ascii	"\011\260\002'"
+  29              		.text
+  30              		.section	.gnu.lto_.inline.d6425ad4,"",%progbits
+  31 0000 789C6361 		.ascii	"x\234ca`d\000\001[\006\004\000\212\010\\e`dfP\000\311"
+  31      60640001 
+  31      5B060400 
+  31      8A085C65 
+  31      60646650 
+  32 0016 09303230 		.ascii	"\01102030\202\230lB\017\316s2p|\320cb`\272\300\317\302"
+  32      33308298 
+  32      6C420FCE 
+  32      7332707C 
+  32      D0636260 
+  33 002e C0F8829D 		.ascii	"\300\370\202\235\203\011L\202\370\002\014\002 \315\000"
+  33      83094C82 
+  33      F8020C02 
+  33      20CD00
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 2
+
+
+  34 003d F8300854 		.ascii	"\3700\010T"
+  35              		.text
+  36              		.section	.gnu.lto_.pureconst.d6425ad4,"",%progbits
+  37 0000 789C6361 		.ascii	"x\234ca`d`f`\000\222R\000\000r\000$"
+  37      60646066 
+  37      60009252 
+  37      00007200 
+  37      24
+  38              		.text
+  39              		.section	.gnu.lto_arm_max_q15.d6425ad4,"",%progbits
+  40 0000 789C6D54 		.ascii	"x\234mTkL\034U\024\276\347\336y,\313\276\232Z\037\011"
+  40      6B4C1C55 
+  40      14BEE7DE 
+  40      792CCBBE 
+  40      9A5A1F09 
+  41 0014 26240D21 		.ascii	"&$\015!\375Q\243\361\021\215\232\220\324\230\324D\323"
+  41      FD51A3F1 
+  41      118D9A90 
+  41      D498D444 
+  41      D3
+  42 0025 B0B18909 		.ascii	"\260\261\211\011\011\302\226\244\233\302\202\260$\304"
+  42      09C296A4 
+  42      9BC282B0 
+  42      24C4
+  43 0033 3F9DEEB0 		.ascii	"?\235\356\260P\011?\252\251\224j\021\023\202\245By\224"
+  43      50093FAA 
+  43      A9946A11 
+  43      1382A542 
+  43      7994
+  44 0045 D27605DA 		.ascii	"\322v\005\332\001\005Zmi\252Ukh\255\"\322X\211\262T"
+  44      01055A6D 
+  44      69AA556B 
+  44      68AD22D2 
+  44      5889B254 
+  45 0059 6D302978 		.ascii	"m0)x\356\271K\272\002\223\314\354\3343\337\367\235\357"
+  45      EEB94BBA 
+  45      0293CCEC 
+  45      DC33DFF7 
+  45      9DEF
+  46 006b 9E73EE6A 		.ascii	"\236s\356j\014\230\274^7\030\253\302\337\335x\203\213"
+  46      0C98BC5E 
+  46      3718ABC2 
+  46      DFDD7883 
+  46      8B
+  47 007c 013F30C9 		.ascii	"\001?0\311\330>\027\007C\275\010\256\355\317e\226[\227"
+  47      D83E1707 
+  47      43BD08AE 
+  47      EDCF6596 
+  47      5B97
+  48 008e 4F8F06BA 		.ascii	"O\217\006\272\012\353\352\373\210\313\340\242q\202!"
+  48      0AEBEAFB 
+  48      88CBE0A2 
+  48      718221
+  49 009d C0AC3511 		.ascii	"\300\2545\021`\002\310\270\345\002\266\227\013M7L\330"
+  49      6002C8B8 
+  49      E502B697 
+  49      0B4D374C 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 3
+
+
+  49      D8
+  50 00ae CB0D068E 		.ascii	"\313\015\006\216\006\313x\371)\347\337\374\036\207\321"
+  50      06CB78F9 
+  50      29E7DFFC 
+  50      1E87D1
+  51 00bd FAD904DF 		.ascii	"\372\331\004\337r\324\302\353\247\366;\217[\035\016"
+  51      72D4C2EB 
+  51      A7F63B8F 
+  51      5B1D0E
+  52 00cc C40563CB 		.ascii	"\304\005c\313\234 \014\216\302\026D]\251\355=\"\376"
+  52      9C200C8E 
+  52      C216445D 
+  52      A9ED3D22 
+  52      FE
+  53 00dd E27101A0 		.ascii	"\342q\001\240\3412y\351\203_|r\311!\033\227K\275\227"
+  53      E13279E9 
+  53      835F7C72 
+  53      C9211B97 
+  53      4BBD97
+  54 00f0 1219E279 		.ascii	"\022\031\342y`\370~\353\327+\277ys\333-+f9-\023\017"
+  54      60F87EEB 
+  54      D72BBF79 
+  54      73DB2D2B 
+  54      66392D13 
+  55 0105 1CB61C2D 		.ascii	"\034\266\034-.\004|\012\002%\341\030dA\007d1\0141\350"
+  55      2E047C0A 
+  55      0225E118 
+  55      64410764 
+  55      310C31E8 
+  56 0119 845C24F4 		.ascii	"\204\\$\364-]\270m\212<\"\177\370^\242\303H\221[\353"
+  56      2D5DB86D 
+  56      8A3C227F 
+  56      F85EA2C3 
+  56      48915BEB 
+  57 012d 3729B206 		.ascii	"7)\262\006]\253\311\032\203\343Dn?\337z\325/^!\362\301"
+  57      5DABC91A 
+  57      83E3446E 
+  57      3FDF7AD5 
+  57      2F5E21F2 
+  58 0142 C5C93FDD 		.ascii	"\305\311?\335)r\337Jf\035\272W\223u\006=D>s\253q\320"
+  58      2972DF4A 
+  58      661DBA57 
+  58      9375063D 
+  58      443E73AB 
+  59 0158 23F289FC 		.ascii	"#\362\211\374M\367\370\346\024\267\277\376A\3055\240"
+  59      4DF7F8E6 
+  59      14B7BFFE 
+  59      41C535A0 
+  60 0168 7735174B 		.ascii	"w5\027K\330\007\271\222\3200\3230\227!\336 \362\275"
+  60      D807B992 
+  60      D030D330 
+  60      9721DE20 
+  60      F2BD
+  61 017a 6B56933B 		.ascii	"kV\223;\247\215\330\211\372G\221]\233-}\237\370?]^\210"
+  61      A78DD889 
+  61      FA47915D 
+  61      9B2D7D9F 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 4
+
+
+  61      F83F5D5E 
+  62 018f 1E69993A 		.ascii	"\036i\231:\345\027\305\304\354\034=1\237bZ\337\356\262"
+  62      E517C5C4 
+  62      EC1C3D31 
+  62      9F625ADF 
+  62      EEB2
+  63 01a1 DEC993B4 		.ascii	"\336\311\223\264\223\353\322\306\226\357:~\325\002\331"
+  63      93EBD2C6 
+  63      96EF3A7E 
+  63      D502D9
+  64 01b0 B7AFE72F 		.ascii	"\267\257\347/\266d\252\026\004py\365\372\345\013B\204"
+  64      B664AA16 
+  64      047079F5 
+  64      FAE50B42 
+  64      84
+  65 01c1 49B471F1 		.ascii	"I\264q\361\354\017$jY\316\351\211\207\232-'\206vL8\243"
+  65      EC0F246A 
+  65      59CEE989 
+  65      879A2D27 
+  65      86764C38 
+  66 01d6 744FA3EE 		.ascii	"tO\243\356\251\373\272\363'?\031\312\020e\304\234i;"
+  66      A9FBBAF3 
+  66      273F19CA 
+  66      1065C49C 
+  66      693B
+  67 01e8 90D414D3 		.ascii	"\220\324\024\323:\367\246\025\317\223\264\317\326\245"
+  67      3AF7A615 
+  67      CF93B4CF 
+  67      D6A5
+  68 01f6 4DF72DBD 		.ascii	"M\367-\275\3575j%2\033\006!\007\022x\017\340\335\017"
+  68      EF356A25 
+  68      321B0621 
+  68      0712780F 
+  68      E0DD0F
+  69 0209 396A7A60 		.ascii	"9jz`\010\014\034n\221\376\245'\337\261\226\227m\313"
+  69      080C1C6E 
+  69      91FEA527 
+  69      DFB19697 
+  69      6DCB
+  70 021b 1930479A 		.ascii	"\0310G\232}\233\200\206\000\305\021\"\350\211\235E("
+  70      7D9B8086 
+  70      00C51122 
+  70      E8899D45 
+  70      28
+  71 022c B608C106 		.ascii	"\266\010\301\006=q\224\021\343\"\244\2330\231 \273\357"
+  71      3D719411 
+  71      E322A49B 
+  71      309920BB 
+  71      EF
+  72 023d 21A497E2 		.ascii	"!\244\227\342>\212\373\011\037\240\370\006\220M\336"
+  72      3E8AFB09 
+  72      1FA0F806 
+  72      904DDE
+  73 024c 08D42E36 		.ascii	"\010\324.6\217~\360\\$9\307\0371\0151\347\373z\037\371"
+  73      8F7EF05C 
+  73      2439C71F 
+  73      310D31E7 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 5
+
+
+  73      FB7A1FF9 
+  74 0260 43026EA6 		.ascii	"C\002n\246)>z\331\224\305\324\320\3210nr\026\354#u\177"
+  74      293E7AD9 
+  74      94C5D4D0 
+  74      D1306E72 
+  74      16EC2375 
+  75 0275 7CF482C4 		.ascii	"|\364\202\304\330\302ec\031\344\336\247\201\023\013"
+  75      D8C26563 
+  75      19E4DEA7 
+  75      81130B
+  76 0284 53621451 		.ascii	"Sb\024Q\261\177\033R\030w\272\214\240j\336\235\370r"
+  76      B17F1B52 
+  76      1877BA8C 
+  76      A06ADE9D 
+  76      F872
+  77 0296 BFA7155A 		.ascii	"\277\247\025Z\366\311\"=\211\323C:ge\015\341\034\264"
+  77      F6C9223D 
+  77      89D3433A 
+  77      67650DE1 
+  77      1CB4
+  78 02a8 02CAC52C 		.ascii	"\002\312\305,?\011\242{\224\220i\233\352f\217?\245$"
+  78      3F09A27B 
+  78      9490699B 
+  78      EA668F3F 
+  78      A524
+  79 02ba 3DB6C844 		.ascii	"=\266\310D\231\033\347\217u\322\331\313Pg\027\2344'"
+  79      991BE78F 
+  79      75D2D9CB 
+  79      5067179C 
+  79      3427
+  80 02cc 0392E8C1 		.ascii	"\003\222\350\301j'\271`\370\017 \310\371\217\335;\225"
+  80      6A27B960 
+  80      F80F20C8 
+  80      F98FDD3B 
+  80      95
+  81 02dd 84D7C671 		.ascii	"\204\327\306qY\343\334\253\234\317\200\002\371V{}Qy"
+  81      59E3DCAB 
+  81      9CCF8002 
+  81      F9567B7D 
+  81      5179
+  82 02ef 8594D791 		.ascii	"\205\224\327\221\025\257\317\221\304\240L\351c?C\355"
+  82      15AFCF91 
+  82      C4A04CE9 
+  82      633F43ED 
+  83 02ff A43D78E8 		.ascii	"\244=x\350a\245!d\210\221\017\215\215o\246\032\337\371"
+  83      61A52164 
+  83      88910F8D 
+  83      8D6FA61A 
+  83      DFF9
+  84 0311 CA7B7F73 		.ascii	"\312{\177s>\271\271\346\272\357zv(\202\0377g\343A^1"
+  84      3EB9B9E6 
+  84      BAEF7A76 
+  84      28821F37 
+  84      67E3415E 
+  85 0326 D62F417E 		.ascii	"\326/A~\022\320i#\250\020`*\2543\265 !\256\252\364O"
+  85      12D06923 
+  85      A810602A 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 6
+
+
+  85      AC33B520 
+  85      21AEAAF4 
+  86 033b CF334A28 		.ascii	"\3173J(\200*\270\201\337\207z\257\351\252\205\252J\243"
+  86      802AB881 
+  86      DF877AAF 
+  86      E9AA85AA 
+  86      4AA3
+  87 034d ABAB1460 		.ascii	"\253\253\024`l\0018Z\025\200v\264\203\205\013\240\333"
+  87      6C01385A 
+  87      158076B4 
+  87      83850BA0 
+  87      DB
+  88 035e C2902BBF 		.ascii	"\302\220+\277\326u\363c\300\324\006\303\277\315\364"
+  88      D675F363 
+  88      C0D406C3 
+  88      BFCDF4
+  89 036d D4462A35 		.ascii	"\324F*5)h\351>DjA\025\005Y\216)\273\355\320#\312\224"
+  89      2968E93E 
+  89      446A4115 
+  89      05598E29 
+  89      BBEDD023 
+  90 0383 74D43397 		.ascii	"t\3243\227X\364\252\2761\370\\\235\234\005\300l.~}\270"
+  90      58F4AABE 
+  90      31F85C9D 
+  90      9C05C06C 
+  90      2E7E7DB8 
+  91 0397 06BBA00F 		.ascii	"\006\273\240\017\335\350\202\005\300\322\2711\222\205"
+  91      DDE88205 
+  91      C0D2B931 
+  91      9285
+  92 03a5 5BD371A9 		.ascii	"[\323q\251a?\371\305\251\335hX\237\273Y\272\200\366"
+  92      613FF9C5 
+  92      A9DD6858 
+  92      9FBB59BA 
+  92      80F6
+  93 03b7 7122F9D0 		.ascii	"q\"\371\320p\005\026B\227&M9\304\330\301\246w\307\204"
+  93      70051642 
+  93      97264D39 
+  93      C4D8C1A6 
+  93      77C784
+  94 03ca 4C973E79 		.ascii	"L\227>y\372\332\3113\361\020\333b\003|A\315\034\303"
+  94      FADAC933 
+  94      F110DB62 
+  94      037C41CD 
+  94      1CC3
+  95 03dc 664AF392 		.ascii	"fJ\363\222\237\034\353_#`\254+\200\2466\3028\011L\220"
+  95      9F1CEB5F 
+  95      2360AC2B 
+  95      80A636C2 
+  95      38094C90 
+  96 03f0 80C16E63 		.ascii	"\200\301nc\207\017\277&\351\324\367y\016h\013\317\331"
+  96      870FBF26 
+  96      E9D4F779 
+  96      0E680BCF 
+  96      D9
+  97 0401 B3DB5E0D 		.ascii	"\263\333^\015n\017n})\270ckYQ8R\020,\257\256\014\225"
+  97      6E0F6E7D 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 7
+
+
+  97      29B8636B 
+  97      59513852 
+  97      102CAFAE 
+  98 0417 1404A345 		.ascii	"\024\004\243E\321pU4\034\252z\271:\022\212\206\313#"
+  98      D1705534 
+  98      1CAA7AB9 
+  98      3A128A86 
+  98      CB23
+  99 0429 55054595 		.ascii	"U\005E\225e\205eE5\205o=\361\364c!\246U\004+C\031\305"
+  99      65856545 
+  99      35856F3D 
+  99      F1F46321 
+  99      A655042B 
+ 100 0440 A5E5A13D 		.ascii	"\245\345\241=\301\360\333%fE~IUui\324\250\330\036\331"
+ 100      C1F0DB25 
+ 100      66457E49 
+ 100      557569D4 
+ 100      A8D81ED9 
+ 101 0454 5552E32A 		.ascii	"UR\343*\257\216\322\213Q\\\272g[$*pm ygQ\351\177b\026"
+ 101      AF8ED28B 
+ 101      515CBA67 
+ 101      5B242A70 
+ 101      6D207967 
+ 102 046d 2C3C     		.ascii	",<"
+ 103              		.text
+ 104              		.section	.gnu.lto_.symbol_nodes.d6425ad4,"",%progbits
+ 105 0000 789C6361 		.ascii	"x\234ca`d\020a\000\002\246\257\014\365\014\014\023\316"
+ 105      60641061 
+ 105      0002A6AF 
+ 105      0CF50C0C 
+ 105      13CE
+ 106 0012 3180A85D 		.ascii	"1\200\250]\015\212@!\0008\245\004\310"
+ 106      0D8A4021 
+ 106      0038A504 
+ 106      C8
+ 107              		.text
+ 108              		.section	.gnu.lto_.refs.d6425ad4,"",%progbits
+ 109 0000 789C6361 		.ascii	"x\234ca`\004B \000\000\0009\000\007"
+ 109      60044220 
+ 109      00000039 
+ 109      0007
+ 110              		.text
+ 111              		.section	.gnu.lto_.decls.d6425ad4,"",%progbits
+ 112 0000 789CBD54 		.ascii	"x\234\275T]h\024W\024\276gf\333$\2234+!\350>HY\244\220"
+ 112      5D681457 
+ 112      14BE6766 
+ 112      DB249334 
+ 112      2B21E83E 
+ 113 0018 B4902DAB 		.ascii	"\264\220-\253Q\244\217\265X|h),\365i\3120N&f ;\273\335"
+ 113      51A48FB5 
+ 113      587C6829 
+ 113      2CF569CA 
+ 113      304E2666 
+ 114 0030 9915F352 		.ascii	"\231\025\363R\256\256\224h\225\244\210\301J\177B\352"
+ 114      AEAE9468 
+ 114      95A488C1 
+ 114      4A7F42EA 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 8
+
+
+ 115 0040 B61B9398 		.ascii	"\266\033\223\230\277\3254Uk\0325Fm\212\265\210\224 "
+ 115      BFD53455 
+ 115      6B1A3546 
+ 115      6D8AB588 
+ 115      9420
+ 116 0052 4DF1E7C1 		.ascii	"M\361\347\301\037\332\206\200\030\250\333s\347\316\354"
+ 116      1FDA8680 
+ 116      18A8DB73 
+ 116      E7CEEC
+ 117 0061 646DFAF3 		.ascii	"dm\372\363\324\303\236\331s\276\275\347|\337=\207\235"
+ 117      D4C39ED9 
+ 117      73BEBDE7 
+ 117      7CDF3D87 
+ 117      9D
+ 118 0072 0001C26C 		.ascii	"\000\001\302l1@H7\2066\306\0054\001\277\267\022\337"
+ 118      31404837 
+ 118      8636C605 
+ 118      3401BFB7 
+ 118      12DF
+ 119 0084 D8A9CBE4 		.ascii	"\330\251\313\344\257\3060\311=[\203^\213~\021}\024\375"
+ 119      AFC630C9 
+ 119      3D5B835E 
+ 119      8B7E117D 
+ 119      14FD
+ 120 0096 1C7A1E7D 		.ascii	"\034z\036}\022}\012\275\356_z\375!@\341\263|G\371,\374"
+ 120      127D0ABD 
+ 120      EE5F7AFD 
+ 120      2140E1B3 
+ 120      7C47F92C 
+ 121 00ab 04227185 		.ascii	"\004\"q\205\021\000\376\004\307\011w'\305@ <\360\240"
+ 121      1100FE04 
+ 121      C7097727 
+ 121      C540203C 
+ 121      F0A0
+ 122 00bd A211F788 		.ascii	"\242\021\367\210\340\205~3\347\343\326C\3013\247\211"
+ 122      E0857E33 
+ 122      E7E3D643 
+ 122      C133A789 
+ 123 00cd DF1DDC22 		.ascii	"\337\035\334\"\236{\272\335\"\020|\002\340\251W\261"
+ 123      9E7BBADD 
+ 123      22107C02 
+ 123      E0A957B1 
+ 124 00dd A4DF538A 		.ascii	"\244\337S\212<\315\036\015\021\274K_\231\177\377^\231"
+ 124      3CCD1E0D 
+ 124      11BC4B5F 
+ 124      997FFF5E 
+ 124      99
+ 125 00ee 28008B7F 		.ascii	"(\000\213\177~\234\333\034\351\247h\235\224\012\317"
+ 125      7E9CDB1C 
+ 125      E9A7689D 
+ 125      940ACF
+ 126 00fd FB93F961 		.ascii	"\373\223\371a\317\320\307\342\202\0005\022\0040\375"
+ 126      CFD0C7E2 
+ 126      82003512 
+ 126      0430FD
+ 127 010c 7DE6C8AD 		.ascii	"}\346\310\255jLk%\010czs\272\267\217\375Z'97\012\"4"
+ 127      6A4C6B25 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 9
+
+
+ 127      08637A73 
+ 127      BAB78FFD 
+ 127      5A273937 
+ 128 0123 F860FCF1 		.ascii	"\370`\374\361s\034b\365\327:\346\217\226\211\253X,L"
+ 128      731C62F5 
+ 128      D73AE68F 
+ 128      9689AB58 
+ 128      2C4C
+ 129 0135 1D181DA9 		.ascii	"\035\030\035\251\204z\351\013\3063w([5N\351\012\030"
+ 129      847AE90B 
+ 129      C6337728 
+ 129      5B354EE9 
+ 129      0A18
+ 130 0147 02098E83 		.ascii	"\002\011\216\203\010\275\020a\"\353\330Z\333)\335M;"
+ 130      08BD1061 
+ 130      22EBD85A 
+ 130      DB29DD4D 
+ 130      3B
+ 131 0158 33B466BA 		.ascii	"3\264f\272\232@\037\254\206c\260\232\300 \324\263\266"
+ 131      9A401FAC 
+ 131      8663B09A 
+ 131      C020D4B3 
+ 131      B6
+ 132 0169 EC200C20 		.ascii	"\354 \014 \330\217 R\364\036\375\260\347Y1\013\016\307"
+ 132      D88F2052 
+ 132      F41EFDB0 
+ 132      E759310B 
+ 132      0EC7
+ 133 017b 47F9638F 		.ascii	"G\371c\217\244\"\307\231\017\032\373\031\307(r\014\373"
+ 133      A422C799 
+ 133      0F1AFB19 
+ 133      C728720C 
+ 133      FB
+ 134 018c 1C48F9B7 		.ascii	"\034H\371\267$#\313\223\320\353\237\326V\355\363+\234"
+ 134      2423CB93 
+ 134      D0EB9FD6 
+ 134      56EDF32B 
+ 134      9C
+ 135 019d 965E1181 		.ascii	"\226^\021\201<T\271\003\313\314\014\265W\004\004\216"
+ 135      3C54B903 
+ 135      CBCC0CB5 
+ 135      5704048E 
+ 136 01ad C1B600C3 		.ascii	"\301\266\000\303n\365|\377\271\2003\011\2611\001\002"
+ 136      6EF57CFF 
+ 136      B9803309 
+ 136      B1310102 
+ 137 01bd 4726AEBE 		.ascii	"G&\256\276\303sJ\337\303|tv\241W\020\263|\027\027\012"
+ 137      C3734ADF 
+ 137      C37C7476 
+ 137      A15710B3 
+ 137      7C17170A 
+ 138 01d1 8F26827C 		.ascii	"\217&\202|\344\002\233\340o\337}R\311G\276\002/\370"
+ 138      E4029BE0 
+ 138      6FDF7D52 
+ 138      C947BE02 
+ 138      2FF8
+ 139 01e3 EB704757 		.ascii	"\353pGW\020\244\372vvA\232\241R\016\325\177\215B\306"
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 10
+
+
+ 139      10A4FA76 
+ 139      76419AA1 
+ 139      520ED57F 
+ 139      8D42C6
+ 140 01f6 99FAD3A8 		.ascii	"\231\372\323\250>\344\252\037C\360$\202\356\270\357"
+ 140      3EE4AA1F 
+ 140      43F02482 
+ 140      EEB8EF
+ 141 0205 BC9AA114 		.ascii	"\274\232\241\024\340\024\352\376\312\037EH\342\262O"
+ 141      E014EAFE 
+ 141      CA1F4548 
+ 141      E2B24F
+ 142 0214 1C9E3958 		.ascii	"\034\2369X-\016:\012\204\343w\013?V,\031\342\013}l\210"
+ 142      2D0E3A0A 
+ 142      84E3770B 
+ 142      3F562C19 
+ 142      E20B7D6C 
+ 143 0229 67B1F28C 		.ascii	"g\261\362\214_y\312\033\34222\276YF\006\222\314\365"
+ 143      5F79CA1B 
+ 143      E23232BE 
+ 143      59460692 
+ 143      CCF5
+ 144 023b 8C8C5589 		.ascii	"\214\214U\211c\234\344\376\315\334]\241H\262x0\276\207"
+ 144      639CE4FE 
+ 144      CDDC5DA1 
+ 144      48B27830 
+ 144      BE87
+ 145 024d C99B4492 		.ascii	"\311\233D\222\011\237\344\354?\220|\273<\311\302\303"
+ 145      099FE4EC 
+ 145      3F907CBB 
+ 145      3CC9C2C3 
+ 146 025d FCEEB292 		.ascii	"\374\356\262\222UM\226\254\352\\qU\373O\316w\213\316"
+ 146      554D96AC 
+ 146      EA5C7155 
+ 146      FB4FCE77 
+ 146      8BCE
+ 147 026f AA108313 		.ascii	"\252\020\203\023\340\354\352\300\276\333Y\016\262\015"
+ 147      E0ECEAC0 
+ 147      BEDB590E 
+ 147      B20D
+ 148 027d 9FE7E062 		.ascii	"\237\347\340b\373\225\371\012\311\225\321\371\237d\354"
+ 148      FB95F90A 
+ 148      C995D1F9 
+ 148      9F64EC
+ 149 028c 3F7CEF49 		.ascii	"?|\357I\260D\306T\211\214\213\276\214'\017\016\005\035"
+ 149      B044C654 
+ 149      898C8BBE 
+ 149      8C270F0E 
+ 149      051D
+ 150 029e 46C4E002 		.ascii	"F\304\340\002g\274q\255\353\274\020\352r\376\221\031"
+ 150      67BC71AD 
+ 150      EBBC10EA 
+ 150      72FE9119 
+ 151 02ae 1A0EC0D6 		.ascii	"\032\016\300\326\225K\212/A\010\237\323x\324\3510pz"
+ 151      954B8A2F 
+ 151      41089FD3 
+ 151      78D4E930 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 11
+
+
+ 151      707A
+ 152 02c0 200B6BBA 		.ascii	" \013k\272i\367\020\235\033\276\321\374\313\010\245"
+ 152      69F7109D 
+ 152      1BBED1FC 
+ 152      CB08A5
+ 153 02cf 7BB130C0 		.ascii	"{\2610\300\316A\316\237f\216\275\337\010|\011\263\370"
+ 153      CE41CE9F 
+ 153      668EBDDF 
+ 153      087C09B3 
+ 153      F8
+ 154 02e0 2EB80C6B 		.ascii	".\270\014kH\245\232\212+qu\247\362nt}\371\353o\276\035"
+ 154      48A59A8A 
+ 154      2B7175A7 
+ 154      F26E747D 
+ 154      F9EB6FBE 
+ 155 02f5 DE148D12 		.ascii	"\336\024\215\022IQ\322\206i\257[\253\330\273@{EN\246"
+ 155      4951D286 
+ 155      69AF5BAB 
+ 155      D8BB407B 
+ 155      454EA6
+ 156 0308 12DB536A 		.ascii	"\022\333Sj<\334l\264\352V\270~\347\306\015/\312Z[2\245"
+ 156      3CDC6CB4 
+ 156      EA56B87E 
+ 156      E7C60D2F 
+ 156      CA5A5B32 
+ 157 031d 5B969CB4 		.ascii	"[\226\234\264\022ZXK\351\252\235H\311\215\221\306R\300"
+ 157      125A584B 
+ 157      E9AA9D48 
+ 157      C98D91C6 
+ 157      52C0
+ 158 032f 88271329 		.ascii	"\210'\023)[\336n\246e$\222\327G\032#Q\0265\230\011S"
+ 158      5BDE6EA6 
+ 158      652492D7 
+ 158      471A2351 
+ 158      16359809 
+ 159 0344 6FD0D56D 		.ascii	"o\320\325m\206l\230Zk\272I\227\343\252\326b\230\272"
+ 159      866C985A 
+ 159      6BBA4997 
+ 159      E3AAD662 
+ 159      98BA
+ 160 0356 AC34E9CD 		.ascii	"\2544\351\315j\272\325V\354\266\244nEZH\271\247e\307"
+ 160      6ABAD556 
+ 160      ECB6A46E 
+ 160      455A48B9 
+ 160      A765C7
+ 161 0369 FF25C56A 		.ascii	"\377%\305j\263d\305\262\233\220\027\371+\024\005\203"
+ 161      B364C5B2 
+ 161      9B9017F9 
+ 161      2B140583 
+ 162 0379 E806C52E 		.ascii	"\350\006\305.s\277\237\301a)\366K\021y\323\033\261-"
+ 162      73BF9FC1 
+ 162      6129F64B 
+ 162      1179D31B 
+ 162      B12D
+ 163 038b B186D762 		.ascii	"\261\206\327bo5\304U\303\224\267\360\372\227\371L\355"
+ 163      6F35C455 
+ 163      C394B7F0 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 12
+
+
+ 163      FA97F94C 
+ 163      ED
+ 164 039c 96E21536 		.ascii	"\226\342\0256>u0\226H\2474]\216\331\252mX\266\241Y\233"
+ 164      3E753096 
+ 164      48A7345D 
+ 164      8ED9AA6D 
+ 164      58B6A159 
+ 165 03b1 D3A6661B 		.ascii	"\323\246f\033\011\323\222\227\354#\242\221?\001.\251"
+ 165      09D39297 
+ 165      EC23A291 
+ 165      3F012EA9 
+ 166 03c1 ED8E     		.ascii	"\355\216"
+ 167              		.text
+ 168              		.section	.gnu.lto_.symtab.d6425ad4,"",%progbits
+ 169 0000 61726D5F 		.ascii	"arm_max_q15\000"
+ 169      6D61785F 
+ 169      71313500 
+ 170 000c 00       		.ascii	"\000"
+ 171 000d 00       		.ascii	"\000"
+ 172 000e 00       		.ascii	"\000"
+ 173 000f 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 173      00000000 
+ 174 0017 CA000000 		.ascii	"\312\000\000\000"
+ 175              		.text
+ 176              		.section	.gnu.lto_.opts,"",%progbits
+ 177 0000 272D666D 		.ascii	"'-fmath-errno' '-fsigned-zeros' '-ftrapping-math' '"
+ 177      6174682D 
+ 177      6572726E 
+ 177      6F272027 
+ 177      2D667369 
+ 178 0033 2D666E6F 		.ascii	"-fno-trapv' '-fno-openmp' '-fno-openacc' '-mcpu=cor"
+ 178      2D747261 
+ 178      70762720 
+ 178      272D666E 
+ 178      6F2D6F70 
+ 179 0066 7465782D 		.ascii	"tex-m4' '-mfloat-abi=softfp' '-mfpu=fpv4-sp-d16' '-"
+ 179      6D342720 
+ 179      272D6D66 
+ 179      6C6F6174 
+ 179      2D616269 
+ 180 0099 6D746875 		.ascii	"mthumb' '-g' '-O3' '-ffunction-sections' '-ffat-lto"
+ 180      6D622720 
+ 180      272D6727 
+ 180      20272D4F 
+ 180      33272027 
+ 181 00cc 2D6F626A 		.ascii	"-objects' '-finline-functions' '-flto'\000"
+ 181      65637473 
+ 181      2720272D 
+ 181      66696E6C 
+ 181      696E652D 
+ 182              		.text
+ 183              		.cfi_sections	.debug_frame
+ 184              		.section	.text.arm_max_q15,"ax",%progbits
+ 185              		.align	2
+ 186              		.global	arm_max_q15
+ 187              		.thumb
+ 188              		.thumb_func
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 13
+
+
+ 189              		.type	arm_max_q15, %function
+ 190              	arm_max_q15:
+ 191              	.LFB117:
+ 192              		.file 1 "CMSIS-DSP-main\\Source\\StatisticsFunctions\\arm_max_q15.c"
+   1:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** /* ----------------------------------------------------------------------
+   2:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * Project:      CMSIS DSP Library
+   3:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * Title:        arm_max_q15.c
+   4:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * Description:  Maximum value of a Q15 vector
+   5:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  *
+   6:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * $Date:        23 April 2021
+   7:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * $Revision:    V1.9.0
+   8:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  *
+   9:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * Target Processor: Cortex-M and Cortex-A cores
+  10:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * -------------------------------------------------------------------- */
+  11:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** /*
+  12:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * Copyright (C) 2010-2021 ARM Limited or its affiliates. All rights reserved.
+  13:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  *
+  14:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * SPDX-License-Identifier: Apache-2.0
+  15:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  *
+  16:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * Licensed under the Apache License, Version 2.0 (the License); you may
+  17:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * not use this file except in compliance with the License.
+  18:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * You may obtain a copy of the License at
+  19:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  *
+  20:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * www.apache.org/licenses/LICENSE-2.0
+  21:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  *
+  22:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * Unless required by applicable law or agreed to in writing, software
+  23:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * distributed under the License is distributed on an AS IS BASIS, WITHOUT
+  24:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  25:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * See the License for the specific language governing permissions and
+  26:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  * limitations under the License.
+  27:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  */
+  28:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  29:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #include "dsp/statistics_functions.h"
+  30:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  31:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** /**
+  32:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @ingroup groupStats
+  33:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  */
+  34:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  35:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** /**
+  36:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @addtogroup Max
+  37:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @{
+  38:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  */
+  39:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  40:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** /**
+  41:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @brief         Maximum value of a Q15 vector.
+  42:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @param[in]     pSrc       points to the input vector
+  43:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @param[in]     blockSize  number of samples in input vector
+  44:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @param[out]    pResult    maximum value returned here
+  45:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   @param[out]    pIndex     index of maximum value returned here
+  46:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****  */
+  47:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #if defined(ARM_MATH_MVEI) && !defined(ARM_MATH_AUTOVECTORIZE)
+  48:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  49:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #include "arm_helium_utils.h"
+  50:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  51:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** void arm_max_q15(
+  52:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   const q15_t * pSrc,
+  53:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         uint32_t blockSize,
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 14
+
+
+  54:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         q15_t * pResult,
+  55:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         uint32_t * pIndex)
+  56:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** {
+  57:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     int32_t         blkCnt;     /* loop counters */
+  58:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     q15x8_t         extremValVec = vdupq_n_s16(Q15_MIN);
+  59:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     q15_t           maxValue = Q15_MIN;
+  60:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     uint16x8_t      indexVec;
+  61:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     uint16x8_t      extremIdxVec;
+  62:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     mve_pred16_t    p0;
+  63:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     uint16_t        extremIdxArr[8];
+  64:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  65:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     indexVec = vidupq_u16(0U, 1);
+  66:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  67:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     blkCnt = blockSize;
+  68:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     do {
+  69:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         mve_pred16_t    p = vctp16q(blkCnt);
+  70:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         q15x8_t         extremIdxVal = vld1q_z_s16(pSrc, p);
+  71:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         /*
+  72:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****          * Get current max per lane and current index per lane
+  73:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****          * when a max is selected
+  74:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****          */
+  75:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         p0 = vcmpgeq_m(extremIdxVal, extremValVec, p);
+  76:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  77:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         extremValVec = vorrq_m(extremValVec, extremIdxVal, extremIdxVal, p0);
+  78:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         /* store per-lane extrema indexes */
+  79:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         vst1q_p_u16(extremIdxArr, indexVec, p0);
+  80:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  81:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         indexVec += 8;
+  82:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         pSrc += 8;
+  83:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         blkCnt -= 8;
+  84:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     }
+  85:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     while (blkCnt > 0);
+  86:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  87:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  88:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* Get max value across the vector   */
+  89:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     maxValue = vmaxvq(maxValue, extremValVec);
+  90:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  91:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* set index for lower values to max possible index   */
+  92:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     p0 = vcmpgeq(extremValVec, maxValue);
+  93:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     extremIdxVec = vld1q_u16(extremIdxArr);
+  94:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+  95:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     indexVec = vpselq(extremIdxVec, vdupq_n_u16(blockSize - 1), p0);
+  96:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     *pIndex = vminvq(blockSize - 1, indexVec);
+  97:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     *pResult = maxValue;
+  98:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** }
+  99:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 100:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #else
+ 101:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** void arm_max_q15(
+ 102:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   const q15_t * pSrc,
+ 103:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         uint32_t blockSize,
+ 104:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         q15_t * pResult,
+ 105:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         uint32_t * pIndex)
+ 106:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** {
+ 193              		.loc 1 106 0
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 15
+
+
+ 197              		@ link register save eliminated.
+ 198              	.LVL0:
+ 107:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         q15_t maxVal, out;                             /* Temporary variables to store the output v
+ 108:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         uint32_t blkCnt, outIndex;                     /* Loop counter */
+ 109:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 110:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #if defined (ARM_MATH_LOOPUNROLL)
+ 111:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         uint32_t index;                                /* index of maximum value */
+ 112:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #endif
+ 113:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 114:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Initialise index value to zero. */
+ 115:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   outIndex = 0U;
+ 116:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Load first input value that act as reference value for comparision */
+ 117:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   out = *pSrc++;
+ 118:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 119:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #if defined (ARM_MATH_LOOPUNROLL)
+ 120:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Initialise index of maximum value. */
+ 121:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   index = 0U;
+ 122:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 123:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Loop unrolling: Compute 4 outputs at a time */
+ 124:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   blkCnt = (blockSize - 1U) >> 2U;
+ 125:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 126:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   while (blkCnt > 0U)
+ 127:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   {
+ 128:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* Initialize maxVal to next consecutive values one by one */
+ 129:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     maxVal = *pSrc++;
+ 130:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 131:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* compare for the maximum value */
+ 132:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     if (out < maxVal)
+ 133:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     {
+ 134:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       /* Update the maximum value and it's index */
+ 135:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       out = maxVal;
+ 136:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       outIndex = index + 1U;
+ 137:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     }
+ 138:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 139:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     maxVal = *pSrc++;
+ 140:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     if (out < maxVal)
+ 141:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     {
+ 142:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       out = maxVal;
+ 143:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       outIndex = index + 2U;
+ 144:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     }
+ 145:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 146:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     maxVal = *pSrc++;
+ 147:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     if (out < maxVal)
+ 148:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     {
+ 149:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       out = maxVal;
+ 150:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       outIndex = index + 3U;
+ 151:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     }
+ 152:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 153:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     maxVal = *pSrc++;
+ 154:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     if (out < maxVal)
+ 155:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     {
+ 156:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       out = maxVal;
+ 157:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       outIndex = index + 4U;
+ 158:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     }
+ 159:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 160:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     index += 4U;
+ 161:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 16
+
+
+ 162:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* Decrement loop counter */
+ 163:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     blkCnt--;
+ 164:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   }
+ 165:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 166:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Loop unrolling: Compute remaining outputs */
+ 167:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   blkCnt = (blockSize - 1U) % 4U;
+ 168:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 169:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #else
+ 170:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 171:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Initialize blkCnt with number of samples */
+ 172:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   blkCnt = (blockSize - 1U);
+ 173:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 174:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** #endif /* #if defined (ARM_MATH_LOOPUNROLL) */
+ 175:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 176:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   while (blkCnt > 0U)
+ 199              		.loc 1 176 0
+ 200 0000 0129     		cmp	r1, #1
+ 106:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****         q15_t maxVal, out;                             /* Temporary variables to store the output v
+ 201              		.loc 1 106 0
+ 202 0002 F0B4     		push	{r4, r5, r6, r7}
+ 203              		.cfi_def_cfa_offset 16
+ 204              		.cfi_offset 4, -16
+ 205              		.cfi_offset 5, -12
+ 206              		.cfi_offset 6, -8
+ 207              		.cfi_offset 7, -4
+ 117:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 208              		.loc 1 117 0
+ 209 0004 B0F90050 		ldrsh	r5, [r0]
+ 210              	.LVL1:
+ 211              		.loc 1 176 0
+ 212 0008 13D0     		beq	.L4
+ 213 000a 871C     		adds	r7, r0, #2
+ 214              	.LVL2:
+ 215 000c 0124     		movs	r4, #1
+ 216 000e 0026     		movs	r6, #0
+ 217              	.LVL3:
+ 218              	.L3:
+ 177:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   {
+ 178:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* Initialize maxVal to the next consecutive values one by one */
+ 179:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     maxVal = *pSrc++;
+ 219              		.loc 1 179 0
+ 220 0010 37F9020B 		ldrsh	r0, [r7], #2
+ 221 0014 A842     		cmp	r0, r5
+ 222 0016 C8BF     		it	gt
+ 223 0018 2646     		movgt	r6, r4
+ 224              	.LVL4:
+ 225 001a A842     		cmp	r0, r5
+ 226 001c 04F10104 		add	r4, r4, #1
+ 227              	.LVL5:
+ 228 0020 B8BF     		it	lt
+ 229 0022 2846     		movlt	r0, r5
+ 230              	.LVL6:
+ 176:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   {
+ 231              		.loc 1 176 0
+ 232 0024 8C42     		cmp	r4, r1
+ 233 0026 0546     		mov	r5, r0
+ 234 0028 F2D1     		bne	.L3
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 17
+
+
+ 235              	.LVL7:
+ 236              	.L2:
+ 180:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 181:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* compare for the maximum value */
+ 182:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     if (out < maxVal)
+ 183:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     {
+ 184:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       /* Update the maximum value and it's index */
+ 185:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       out = maxVal;
+ 186:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****       outIndex = blockSize - blkCnt;
+ 187:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     }
+ 188:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 189:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     /* Decrement loop counter */
+ 190:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****     blkCnt--;
+ 191:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   }
+ 192:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 193:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Store the maximum value and it's index into destination pointers */
+ 194:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   *pResult = out;
+ 237              		.loc 1 194 0
+ 238 002a 1080     		strh	r0, [r2]	@ movhi
+ 195:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   *pIndex = outIndex;
+ 239              		.loc 1 195 0
+ 240 002c 1E60     		str	r6, [r3]
+ 196:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** }
+ 241              		.loc 1 196 0
+ 242 002e F0BC     		pop	{r4, r5, r6, r7}
+ 243              		.cfi_remember_state
+ 244              		.cfi_restore 7
+ 245              		.cfi_restore 6
+ 246              		.cfi_restore 5
+ 247              		.cfi_restore 4
+ 248              		.cfi_def_cfa_offset 0
+ 249 0030 7047     		bx	lr
+ 250              	.LVL8:
+ 251              	.L4:
+ 252              		.cfi_restore_state
+ 117:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c **** 
+ 253              		.loc 1 117 0
+ 254 0032 2846     		mov	r0, r5
+ 255              	.LVL9:
+ 115:CMSIS-DSP-main\Source\StatisticsFunctions/arm_max_q15.c ****   /* Load first input value that act as reference value for comparision */
+ 256              		.loc 1 115 0
+ 257 0034 0026     		movs	r6, #0
+ 258 0036 F8E7     		b	.L2
+ 259              		.cfi_endproc
+ 260              	.LFE117:
+ 261              		.size	arm_max_q15, .-arm_max_q15
+ 262              		.text
+ 263              	.Letext0:
+ 264              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 265              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 266              		.file 4 ".\\CMSIS-DSP-main\\Include/arm_math_types.h"
+ 267              		.section	.debug_info,"",%progbits
+ 268              	.Ldebug_info0:
+ 269 0000 5E010000 		.4byte	0x15e
+ 270 0004 0400     		.2byte	0x4
+ 271 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 272 000a 04       		.byte	0x4
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 18
+
+
+ 273 000b 01       		.uleb128 0x1
+ 274 000c 0A000000 		.4byte	.LASF25
+ 275 0010 0C       		.byte	0xc
+ 276 0011 D6000000 		.4byte	.LASF26
+ 277 0015 54010000 		.4byte	.LASF27
+ 278 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 279 001d 00000000 		.4byte	0
+ 280 0021 00000000 		.4byte	.Ldebug_line0
+ 281 0025 02       		.uleb128 0x2
+ 282 0026 01       		.byte	0x1
+ 283 0027 06       		.byte	0x6
+ 284 0028 37020000 		.4byte	.LASF0
+ 285 002c 02       		.uleb128 0x2
+ 286 002d 01       		.byte	0x1
+ 287 002e 08       		.byte	0x8
+ 288 002f 1A010000 		.4byte	.LASF1
+ 289 0033 03       		.uleb128 0x3
+ 290 0034 00000000 		.4byte	.LASF5
+ 291 0038 02       		.byte	0x2
+ 292 0039 29       		.byte	0x29
+ 293 003a 3E000000 		.4byte	0x3e
+ 294 003e 02       		.uleb128 0x2
+ 295 003f 02       		.byte	0x2
+ 296 0040 05       		.byte	0x5
+ 297 0041 0F020000 		.4byte	.LASF2
+ 298 0045 02       		.uleb128 0x2
+ 299 0046 02       		.byte	0x2
+ 300 0047 07       		.byte	0x7
+ 301 0048 41010000 		.4byte	.LASF3
+ 302 004c 02       		.uleb128 0x2
+ 303 004d 04       		.byte	0x4
+ 304 004e 05       		.byte	0x5
+ 305 004f 22020000 		.4byte	.LASF4
+ 306 0053 03       		.uleb128 0x3
+ 307 0054 9B010000 		.4byte	.LASF6
+ 308 0058 02       		.byte	0x2
+ 309 0059 41       		.byte	0x41
+ 310 005a 5E000000 		.4byte	0x5e
+ 311 005e 02       		.uleb128 0x2
+ 312 005f 04       		.byte	0x4
+ 313 0060 07       		.byte	0x7
+ 314 0061 2F010000 		.4byte	.LASF7
+ 315 0065 02       		.uleb128 0x2
+ 316 0066 08       		.byte	0x8
+ 317 0067 05       		.byte	0x5
+ 318 0068 F2010000 		.4byte	.LASF8
+ 319 006c 02       		.uleb128 0x2
+ 320 006d 08       		.byte	0x8
+ 321 006e 07       		.byte	0x7
+ 322 006f C1010000 		.4byte	.LASF9
+ 323 0073 04       		.uleb128 0x4
+ 324 0074 04       		.byte	0x4
+ 325 0075 05       		.byte	0x5
+ 326 0076 696E7400 		.ascii	"int\000"
+ 327 007a 02       		.uleb128 0x2
+ 328 007b 04       		.byte	0x4
+ 329 007c 07       		.byte	0x7
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 19
+
+
+ 330 007d A6010000 		.4byte	.LASF10
+ 331 0081 03       		.uleb128 0x3
+ 332 0082 E1010000 		.4byte	.LASF11
+ 333 0086 03       		.byte	0x3
+ 334 0087 20       		.byte	0x20
+ 335 0088 33000000 		.4byte	0x33
+ 336 008c 03       		.uleb128 0x3
+ 337 008d 19020000 		.4byte	.LASF12
+ 338 0091 03       		.byte	0x3
+ 339 0092 30       		.byte	0x30
+ 340 0093 53000000 		.4byte	0x53
+ 341 0097 02       		.uleb128 0x2
+ 342 0098 08       		.byte	0x8
+ 343 0099 04       		.byte	0x4
+ 344 009a 2B020000 		.4byte	.LASF13
+ 345 009e 02       		.uleb128 0x2
+ 346 009f 04       		.byte	0x4
+ 347 00a0 07       		.byte	0x7
+ 348 00a1 E9010000 		.4byte	.LASF14
+ 349 00a5 02       		.uleb128 0x2
+ 350 00a6 01       		.byte	0x1
+ 351 00a7 08       		.byte	0x8
+ 352 00a8 0A020000 		.4byte	.LASF15
+ 353 00ac 02       		.uleb128 0x2
+ 354 00ad 08       		.byte	0x8
+ 355 00ae 04       		.byte	0x4
+ 356 00af 94010000 		.4byte	.LASF16
+ 357 00b3 02       		.uleb128 0x2
+ 358 00b4 04       		.byte	0x4
+ 359 00b5 04       		.byte	0x4
+ 360 00b6 14010000 		.4byte	.LASF17
+ 361 00ba 05       		.uleb128 0x5
+ 362 00bb 0E010000 		.4byte	.LASF18
+ 363 00bf 04       		.byte	0x4
+ 364 00c0 2A01     		.2byte	0x12a
+ 365 00c2 81000000 		.4byte	0x81
+ 366 00c6 06       		.uleb128 0x6
+ 367 00c7 48020000 		.4byte	.LASF28
+ 368 00cb 01       		.byte	0x1
+ 369 00cc 65       		.byte	0x65
+ 370 00cd 00000000 		.4byte	.LFB117
+ 371 00d1 38000000 		.4byte	.LFE117-.LFB117
+ 372 00d5 01       		.uleb128 0x1
+ 373 00d6 9C       		.byte	0x9c
+ 374 00d7 4A010000 		.4byte	0x14a
+ 375 00db 07       		.uleb128 0x7
+ 376 00dc 43020000 		.4byte	.LASF19
+ 377 00e0 01       		.byte	0x1
+ 378 00e1 66       		.byte	0x66
+ 379 00e2 4A010000 		.4byte	0x14a
+ 380 00e6 00000000 		.4byte	.LLST0
+ 381 00ea 08       		.uleb128 0x8
+ 382 00eb 00020000 		.4byte	.LASF20
+ 383 00ef 01       		.byte	0x1
+ 384 00f0 67       		.byte	0x67
+ 385 00f1 8C000000 		.4byte	0x8c
+ 386 00f5 01       		.uleb128 0x1
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 20
+
+
+ 387 00f6 51       		.byte	0x51
+ 388 00f7 08       		.uleb128 0x8
+ 389 00f8 8C010000 		.4byte	.LASF21
+ 390 00fc 01       		.byte	0x1
+ 391 00fd 68       		.byte	0x68
+ 392 00fe 55010000 		.4byte	0x155
+ 393 0102 01       		.uleb128 0x1
+ 394 0103 52       		.byte	0x52
+ 395 0104 08       		.uleb128 0x8
+ 396 0105 BA010000 		.4byte	.LASF22
+ 397 0109 01       		.byte	0x1
+ 398 010a 69       		.byte	0x69
+ 399 010b 5B010000 		.4byte	0x15b
+ 400 010f 01       		.uleb128 0x1
+ 401 0110 53       		.byte	0x53
+ 402 0111 09       		.uleb128 0x9
+ 403 0112 B3010000 		.4byte	.LASF29
+ 404 0116 01       		.byte	0x1
+ 405 0117 6B       		.byte	0x6b
+ 406 0118 BA000000 		.4byte	0xba
+ 407 011c 0A       		.uleb128 0xa
+ 408 011d 6F757400 		.ascii	"out\000"
+ 409 0121 01       		.byte	0x1
+ 410 0122 6B       		.byte	0x6b
+ 411 0123 BA000000 		.4byte	0xba
+ 412 0127 53000000 		.4byte	.LLST1
+ 413 012b 0B       		.uleb128 0xb
+ 414 012c 28010000 		.4byte	.LASF23
+ 415 0130 01       		.byte	0x1
+ 416 0131 6C       		.byte	0x6c
+ 417 0132 8C000000 		.4byte	0x8c
+ 418 0136 7C000000 		.4byte	.LLST2
+ 419 013a 0B       		.uleb128 0xb
+ 420 013b D8010000 		.4byte	.LASF24
+ 421 013f 01       		.byte	0x1
+ 422 0140 6C       		.byte	0x6c
+ 423 0141 8C000000 		.4byte	0x8c
+ 424 0145 BF000000 		.4byte	.LLST3
+ 425 0149 00       		.byte	0
+ 426 014a 0C       		.uleb128 0xc
+ 427 014b 04       		.byte	0x4
+ 428 014c 50010000 		.4byte	0x150
+ 429 0150 0D       		.uleb128 0xd
+ 430 0151 BA000000 		.4byte	0xba
+ 431 0155 0C       		.uleb128 0xc
+ 432 0156 04       		.byte	0x4
+ 433 0157 BA000000 		.4byte	0xba
+ 434 015b 0C       		.uleb128 0xc
+ 435 015c 04       		.byte	0x4
+ 436 015d 8C000000 		.4byte	0x8c
+ 437 0161 00       		.byte	0
+ 438              		.section	.debug_abbrev,"",%progbits
+ 439              	.Ldebug_abbrev0:
+ 440 0000 01       		.uleb128 0x1
+ 441 0001 11       		.uleb128 0x11
+ 442 0002 01       		.byte	0x1
+ 443 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 21
+
+
+ 444 0004 0E       		.uleb128 0xe
+ 445 0005 13       		.uleb128 0x13
+ 446 0006 0B       		.uleb128 0xb
+ 447 0007 03       		.uleb128 0x3
+ 448 0008 0E       		.uleb128 0xe
+ 449 0009 1B       		.uleb128 0x1b
+ 450 000a 0E       		.uleb128 0xe
+ 451 000b 55       		.uleb128 0x55
+ 452 000c 17       		.uleb128 0x17
+ 453 000d 11       		.uleb128 0x11
+ 454 000e 01       		.uleb128 0x1
+ 455 000f 10       		.uleb128 0x10
+ 456 0010 17       		.uleb128 0x17
+ 457 0011 00       		.byte	0
+ 458 0012 00       		.byte	0
+ 459 0013 02       		.uleb128 0x2
+ 460 0014 24       		.uleb128 0x24
+ 461 0015 00       		.byte	0
+ 462 0016 0B       		.uleb128 0xb
+ 463 0017 0B       		.uleb128 0xb
+ 464 0018 3E       		.uleb128 0x3e
+ 465 0019 0B       		.uleb128 0xb
+ 466 001a 03       		.uleb128 0x3
+ 467 001b 0E       		.uleb128 0xe
+ 468 001c 00       		.byte	0
+ 469 001d 00       		.byte	0
+ 470 001e 03       		.uleb128 0x3
+ 471 001f 16       		.uleb128 0x16
+ 472 0020 00       		.byte	0
+ 473 0021 03       		.uleb128 0x3
+ 474 0022 0E       		.uleb128 0xe
+ 475 0023 3A       		.uleb128 0x3a
+ 476 0024 0B       		.uleb128 0xb
+ 477 0025 3B       		.uleb128 0x3b
+ 478 0026 0B       		.uleb128 0xb
+ 479 0027 49       		.uleb128 0x49
+ 480 0028 13       		.uleb128 0x13
+ 481 0029 00       		.byte	0
+ 482 002a 00       		.byte	0
+ 483 002b 04       		.uleb128 0x4
+ 484 002c 24       		.uleb128 0x24
+ 485 002d 00       		.byte	0
+ 486 002e 0B       		.uleb128 0xb
+ 487 002f 0B       		.uleb128 0xb
+ 488 0030 3E       		.uleb128 0x3e
+ 489 0031 0B       		.uleb128 0xb
+ 490 0032 03       		.uleb128 0x3
+ 491 0033 08       		.uleb128 0x8
+ 492 0034 00       		.byte	0
+ 493 0035 00       		.byte	0
+ 494 0036 05       		.uleb128 0x5
+ 495 0037 16       		.uleb128 0x16
+ 496 0038 00       		.byte	0
+ 497 0039 03       		.uleb128 0x3
+ 498 003a 0E       		.uleb128 0xe
+ 499 003b 3A       		.uleb128 0x3a
+ 500 003c 0B       		.uleb128 0xb
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 22
+
+
+ 501 003d 3B       		.uleb128 0x3b
+ 502 003e 05       		.uleb128 0x5
+ 503 003f 49       		.uleb128 0x49
+ 504 0040 13       		.uleb128 0x13
+ 505 0041 00       		.byte	0
+ 506 0042 00       		.byte	0
+ 507 0043 06       		.uleb128 0x6
+ 508 0044 2E       		.uleb128 0x2e
+ 509 0045 01       		.byte	0x1
+ 510 0046 3F       		.uleb128 0x3f
+ 511 0047 19       		.uleb128 0x19
+ 512 0048 03       		.uleb128 0x3
+ 513 0049 0E       		.uleb128 0xe
+ 514 004a 3A       		.uleb128 0x3a
+ 515 004b 0B       		.uleb128 0xb
+ 516 004c 3B       		.uleb128 0x3b
+ 517 004d 0B       		.uleb128 0xb
+ 518 004e 27       		.uleb128 0x27
+ 519 004f 19       		.uleb128 0x19
+ 520 0050 11       		.uleb128 0x11
+ 521 0051 01       		.uleb128 0x1
+ 522 0052 12       		.uleb128 0x12
+ 523 0053 06       		.uleb128 0x6
+ 524 0054 40       		.uleb128 0x40
+ 525 0055 18       		.uleb128 0x18
+ 526 0056 9742     		.uleb128 0x2117
+ 527 0058 19       		.uleb128 0x19
+ 528 0059 01       		.uleb128 0x1
+ 529 005a 13       		.uleb128 0x13
+ 530 005b 00       		.byte	0
+ 531 005c 00       		.byte	0
+ 532 005d 07       		.uleb128 0x7
+ 533 005e 05       		.uleb128 0x5
+ 534 005f 00       		.byte	0
+ 535 0060 03       		.uleb128 0x3
+ 536 0061 0E       		.uleb128 0xe
+ 537 0062 3A       		.uleb128 0x3a
+ 538 0063 0B       		.uleb128 0xb
+ 539 0064 3B       		.uleb128 0x3b
+ 540 0065 0B       		.uleb128 0xb
+ 541 0066 49       		.uleb128 0x49
+ 542 0067 13       		.uleb128 0x13
+ 543 0068 02       		.uleb128 0x2
+ 544 0069 17       		.uleb128 0x17
+ 545 006a 00       		.byte	0
+ 546 006b 00       		.byte	0
+ 547 006c 08       		.uleb128 0x8
+ 548 006d 05       		.uleb128 0x5
+ 549 006e 00       		.byte	0
+ 550 006f 03       		.uleb128 0x3
+ 551 0070 0E       		.uleb128 0xe
+ 552 0071 3A       		.uleb128 0x3a
+ 553 0072 0B       		.uleb128 0xb
+ 554 0073 3B       		.uleb128 0x3b
+ 555 0074 0B       		.uleb128 0xb
+ 556 0075 49       		.uleb128 0x49
+ 557 0076 13       		.uleb128 0x13
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 23
+
+
+ 558 0077 02       		.uleb128 0x2
+ 559 0078 18       		.uleb128 0x18
+ 560 0079 00       		.byte	0
+ 561 007a 00       		.byte	0
+ 562 007b 09       		.uleb128 0x9
+ 563 007c 34       		.uleb128 0x34
+ 564 007d 00       		.byte	0
+ 565 007e 03       		.uleb128 0x3
+ 566 007f 0E       		.uleb128 0xe
+ 567 0080 3A       		.uleb128 0x3a
+ 568 0081 0B       		.uleb128 0xb
+ 569 0082 3B       		.uleb128 0x3b
+ 570 0083 0B       		.uleb128 0xb
+ 571 0084 49       		.uleb128 0x49
+ 572 0085 13       		.uleb128 0x13
+ 573 0086 00       		.byte	0
+ 574 0087 00       		.byte	0
+ 575 0088 0A       		.uleb128 0xa
+ 576 0089 34       		.uleb128 0x34
+ 577 008a 00       		.byte	0
+ 578 008b 03       		.uleb128 0x3
+ 579 008c 08       		.uleb128 0x8
+ 580 008d 3A       		.uleb128 0x3a
+ 581 008e 0B       		.uleb128 0xb
+ 582 008f 3B       		.uleb128 0x3b
+ 583 0090 0B       		.uleb128 0xb
+ 584 0091 49       		.uleb128 0x49
+ 585 0092 13       		.uleb128 0x13
+ 586 0093 02       		.uleb128 0x2
+ 587 0094 17       		.uleb128 0x17
+ 588 0095 00       		.byte	0
+ 589 0096 00       		.byte	0
+ 590 0097 0B       		.uleb128 0xb
+ 591 0098 34       		.uleb128 0x34
+ 592 0099 00       		.byte	0
+ 593 009a 03       		.uleb128 0x3
+ 594 009b 0E       		.uleb128 0xe
+ 595 009c 3A       		.uleb128 0x3a
+ 596 009d 0B       		.uleb128 0xb
+ 597 009e 3B       		.uleb128 0x3b
+ 598 009f 0B       		.uleb128 0xb
+ 599 00a0 49       		.uleb128 0x49
+ 600 00a1 13       		.uleb128 0x13
+ 601 00a2 02       		.uleb128 0x2
+ 602 00a3 17       		.uleb128 0x17
+ 603 00a4 00       		.byte	0
+ 604 00a5 00       		.byte	0
+ 605 00a6 0C       		.uleb128 0xc
+ 606 00a7 0F       		.uleb128 0xf
+ 607 00a8 00       		.byte	0
+ 608 00a9 0B       		.uleb128 0xb
+ 609 00aa 0B       		.uleb128 0xb
+ 610 00ab 49       		.uleb128 0x49
+ 611 00ac 13       		.uleb128 0x13
+ 612 00ad 00       		.byte	0
+ 613 00ae 00       		.byte	0
+ 614 00af 0D       		.uleb128 0xd
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 24
+
+
+ 615 00b0 26       		.uleb128 0x26
+ 616 00b1 00       		.byte	0
+ 617 00b2 49       		.uleb128 0x49
+ 618 00b3 13       		.uleb128 0x13
+ 619 00b4 00       		.byte	0
+ 620 00b5 00       		.byte	0
+ 621 00b6 00       		.byte	0
+ 622              		.section	.debug_loc,"",%progbits
+ 623              	.Ldebug_loc0:
+ 624              	.LLST0:
+ 625 0000 00000000 		.4byte	.LVL0
+ 626 0004 00000000 		.4byte	.LVL0
+ 627 0008 0100     		.2byte	0x1
+ 628 000a 50       		.byte	0x50
+ 629 000b 00000000 		.4byte	.LVL0
+ 630 000f 0C000000 		.4byte	.LVL2
+ 631 0013 0300     		.2byte	0x3
+ 632 0015 70       		.byte	0x70
+ 633 0016 02       		.sleb128 2
+ 634 0017 9F       		.byte	0x9f
+ 635 0018 0C000000 		.4byte	.LVL2
+ 636 001c 10000000 		.4byte	.LVL3
+ 637 0020 0100     		.2byte	0x1
+ 638 0022 57       		.byte	0x57
+ 639 0023 24000000 		.4byte	.LVL6
+ 640 0027 2A000000 		.4byte	.LVL7
+ 641 002b 0100     		.2byte	0x1
+ 642 002d 57       		.byte	0x57
+ 643 002e 32000000 		.4byte	.LVL8
+ 644 0032 34000000 		.4byte	.LVL9
+ 645 0036 0300     		.2byte	0x3
+ 646 0038 70       		.byte	0x70
+ 647 0039 02       		.sleb128 2
+ 648 003a 9F       		.byte	0x9f
+ 649 003b 34000000 		.4byte	.LVL9
+ 650 003f 38000000 		.4byte	.LFE117
+ 651 0043 0600     		.2byte	0x6
+ 652 0045 F3       		.byte	0xf3
+ 653 0046 01       		.uleb128 0x1
+ 654 0047 50       		.byte	0x50
+ 655 0048 23       		.byte	0x23
+ 656 0049 02       		.uleb128 0x2
+ 657 004a 9F       		.byte	0x9f
+ 658 004b 00000000 		.4byte	0
+ 659 004f 00000000 		.4byte	0
+ 660              	.LLST1:
+ 661 0053 08000000 		.4byte	.LVL1
+ 662 0057 10000000 		.4byte	.LVL3
+ 663 005b 0100     		.2byte	0x1
+ 664 005d 55       		.byte	0x55
+ 665 005e 24000000 		.4byte	.LVL6
+ 666 0062 2A000000 		.4byte	.LVL7
+ 667 0066 0100     		.2byte	0x1
+ 668 0068 50       		.byte	0x50
+ 669 0069 32000000 		.4byte	.LVL8
+ 670 006d 38000000 		.4byte	.LFE117
+ 671 0071 0100     		.2byte	0x1
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 25
+
+
+ 672 0073 55       		.byte	0x55
+ 673 0074 00000000 		.4byte	0
+ 674 0078 00000000 		.4byte	0
+ 675              	.LLST2:
+ 676 007c 08000000 		.4byte	.LVL1
+ 677 0080 10000000 		.4byte	.LVL3
+ 678 0084 0300     		.2byte	0x3
+ 679 0086 71       		.byte	0x71
+ 680 0087 7F       		.sleb128 -1
+ 681 0088 9F       		.byte	0x9f
+ 682 0089 1A000000 		.4byte	.LVL4
+ 683 008d 20000000 		.4byte	.LVL5
+ 684 0091 0700     		.2byte	0x7
+ 685 0093 74       		.byte	0x74
+ 686 0094 00       		.sleb128 0
+ 687 0095 20       		.byte	0x20
+ 688 0096 71       		.byte	0x71
+ 689 0097 00       		.sleb128 0
+ 690 0098 22       		.byte	0x22
+ 691 0099 9F       		.byte	0x9f
+ 692 009a 20000000 		.4byte	.LVL5
+ 693 009e 2A000000 		.4byte	.LVL7
+ 694 00a2 0600     		.2byte	0x6
+ 695 00a4 71       		.byte	0x71
+ 696 00a5 00       		.sleb128 0
+ 697 00a6 74       		.byte	0x74
+ 698 00a7 00       		.sleb128 0
+ 699 00a8 1C       		.byte	0x1c
+ 700 00a9 9F       		.byte	0x9f
+ 701 00aa 32000000 		.4byte	.LVL8
+ 702 00ae 38000000 		.4byte	.LFE117
+ 703 00b2 0300     		.2byte	0x3
+ 704 00b4 71       		.byte	0x71
+ 705 00b5 7F       		.sleb128 -1
+ 706 00b6 9F       		.byte	0x9f
+ 707 00b7 00000000 		.4byte	0
+ 708 00bb 00000000 		.4byte	0
+ 709              	.LLST3:
+ 710 00bf 00000000 		.4byte	.LVL0
+ 711 00c3 10000000 		.4byte	.LVL3
+ 712 00c7 0200     		.2byte	0x2
+ 713 00c9 30       		.byte	0x30
+ 714 00ca 9F       		.byte	0x9f
+ 715 00cb 1A000000 		.4byte	.LVL4
+ 716 00cf 2A000000 		.4byte	.LVL7
+ 717 00d3 0100     		.2byte	0x1
+ 718 00d5 56       		.byte	0x56
+ 719 00d6 32000000 		.4byte	.LVL8
+ 720 00da 38000000 		.4byte	.LFE117
+ 721 00de 0200     		.2byte	0x2
+ 722 00e0 30       		.byte	0x30
+ 723 00e1 9F       		.byte	0x9f
+ 724 00e2 00000000 		.4byte	0
+ 725 00e6 00000000 		.4byte	0
+ 726              		.section	.debug_aranges,"",%progbits
+ 727 0000 1C000000 		.4byte	0x1c
+ 728 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 26
+
+
+ 729 0006 00000000 		.4byte	.Ldebug_info0
+ 730 000a 04       		.byte	0x4
+ 731 000b 00       		.byte	0
+ 732 000c 0000     		.2byte	0
+ 733 000e 0000     		.2byte	0
+ 734 0010 00000000 		.4byte	.LFB117
+ 735 0014 38000000 		.4byte	.LFE117-.LFB117
+ 736 0018 00000000 		.4byte	0
+ 737 001c 00000000 		.4byte	0
+ 738              		.section	.debug_ranges,"",%progbits
+ 739              	.Ldebug_ranges0:
+ 740 0000 00000000 		.4byte	.LFB117
+ 741 0004 38000000 		.4byte	.LFE117
+ 742 0008 00000000 		.4byte	0
+ 743 000c 00000000 		.4byte	0
+ 744              		.section	.debug_line,"",%progbits
+ 745              	.Ldebug_line0:
+ 746 0000 A8010000 		.section	.debug_str,"MS",%progbits,1
+ 746      02007801 
+ 746      00000201 
+ 746      FB0E0D00 
+ 746      01010101 
+ 747              	.LASF5:
+ 748 0000 5F5F696E 		.ascii	"__int16_t\000"
+ 748      7431365F 
+ 748      7400
+ 749              	.LASF25:
+ 750 000a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 750      43313120 
+ 750      352E342E 
+ 750      31203230 
+ 750      31363036 
+ 751 003d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 751      20726576 
+ 751      6973696F 
+ 751      6E203233 
+ 751      37373135 
+ 752 0070 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -O3 -ffunction-s"
+ 752      70202D6D 
+ 752      6670753D 
+ 752      66707634 
+ 752      2D73702D 
+ 753 00a3 65637469 		.ascii	"ections -ffat-lto-objects -finline-functions -flto\000"
+ 753      6F6E7320 
+ 753      2D666661 
+ 753      742D6C74 
+ 753      6F2D6F62 
+ 754              	.LASF26:
+ 755 00d6 434D5349 		.ascii	"CMSIS-DSP-main\\Source\\StatisticsFunctions\\arm_ma"
+ 755      532D4453 
+ 755      502D6D61 
+ 755      696E5C53 
+ 755      6F757263 
+ 756 0106 785F7131 		.ascii	"x_q15.c\000"
+ 756      352E6300 
+ 757              	.LASF18:
+ 758 010e 7131355F 		.ascii	"q15_t\000"
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 27
+
+
+ 758      7400
+ 759              	.LASF17:
+ 760 0114 666C6F61 		.ascii	"float\000"
+ 760      7400
+ 761              	.LASF1:
+ 762 011a 756E7369 		.ascii	"unsigned char\000"
+ 762      676E6564 
+ 762      20636861 
+ 762      7200
+ 763              	.LASF23:
+ 764 0128 626C6B43 		.ascii	"blkCnt\000"
+ 764      6E7400
+ 765              	.LASF7:
+ 766 012f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 766      20756E73 
+ 766      69676E65 
+ 766      6420696E 
+ 766      7400
+ 767              	.LASF3:
+ 768 0141 73686F72 		.ascii	"short unsigned int\000"
+ 768      7420756E 
+ 768      7369676E 
+ 768      65642069 
+ 768      6E7400
+ 769              	.LASF27:
+ 770 0154 433A5C55 		.ascii	"C:\\Users\\rdn\\Documents\\PSoC Creator\\SEES\\ble_"
+ 770      73657273 
+ 770      5C72646E 
+ 770      5C446F63 
+ 770      756D656E 
+ 771 0181 74657374 		.ascii	"test.cydsn\000"
+ 771      2E637964 
+ 771      736E00
+ 772              	.LASF21:
+ 773 018c 70526573 		.ascii	"pResult\000"
+ 773      756C7400 
+ 774              	.LASF16:
+ 775 0194 646F7562 		.ascii	"double\000"
+ 775      6C6500
+ 776              	.LASF6:
+ 777 019b 5F5F7569 		.ascii	"__uint32_t\000"
+ 777      6E743332 
+ 777      5F7400
+ 778              	.LASF10:
+ 779 01a6 756E7369 		.ascii	"unsigned int\000"
+ 779      676E6564 
+ 779      20696E74 
+ 779      00
+ 780              	.LASF29:
+ 781 01b3 6D617856 		.ascii	"maxVal\000"
+ 781      616C00
+ 782              	.LASF22:
+ 783 01ba 70496E64 		.ascii	"pIndex\000"
+ 783      657800
+ 784              	.LASF9:
+ 785 01c1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 785      206C6F6E 
+ARM GAS  C:\Users\rdn\AppData\Local\Temp\cc8iwfDH.s 			page 28
+
+
+ 785      6720756E 
+ 785      7369676E 
+ 785      65642069 
+ 786              	.LASF24:
+ 787 01d8 6F757449 		.ascii	"outIndex\000"
+ 787      6E646578 
+ 787      00
+ 788              	.LASF11:
+ 789 01e1 696E7431 		.ascii	"int16_t\000"
+ 789      365F7400 
+ 790              	.LASF14:
+ 791 01e9 73697A65 		.ascii	"sizetype\000"
+ 791      74797065 
+ 791      00
+ 792              	.LASF8:
+ 793 01f2 6C6F6E67 		.ascii	"long long int\000"
+ 793      206C6F6E 
+ 793      6720696E 
+ 793      7400
+ 794              	.LASF20:
+ 795 0200 626C6F63 		.ascii	"blockSize\000"
+ 795      6B53697A 
+ 795      6500
+ 796              	.LASF15:
+ 797 020a 63686172 		.ascii	"char\000"
+ 797      00
+ 798              	.LASF2:
+ 799 020f 73686F72 		.ascii	"short int\000"
+ 799      7420696E 
+ 799      7400
+ 800              	.LASF12:
+ 801 0219 75696E74 		.ascii	"uint32_t\000"
+ 801      33325F74 
+ 801      00
+ 802              	.LASF4:
+ 803 0222 6C6F6E67 		.ascii	"long int\000"
+ 803      20696E74 
+ 803      00
+ 804              	.LASF13:
+ 805 022b 6C6F6E67 		.ascii	"long double\000"
+ 805      20646F75 
+ 805      626C6500 
+ 806              	.LASF0:
+ 807 0237 7369676E 		.ascii	"signed char\000"
+ 807      65642063 
+ 807      68617200 
+ 808              	.LASF19:
+ 809 0243 70537263 		.ascii	"pSrc\000"
+ 809      00
+ 810              	.LASF28:
+ 811 0248 61726D5F 		.ascii	"arm_max_q15\000"
+ 811      6D61785F 
+ 811      71313500 
+ 812              		.comm	__gnu_lto_v1,1,1
+ 813              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

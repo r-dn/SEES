@@ -12,17 +12,25 @@
 
 #include "shared.h"
 
+// custom service description handle
 #define CUSTOM_SERV0_CHAR0_DESC0_HANDLE     cy_ble_customConfig.customs[0].customServInfo[0].customServCharDesc[0] 
 
-#define NOTIFICATION_PKT_SIZE	BLOCK_SIZE+1
+// actual notification size
+// 160 bytes for audio data (BLOCK_SIZE_R), 1 byte for msg_id, 4 bytes for frequency (float)
+#define NOTIFICATION_PKT_SIZE	BLOCK_SIZE_R+5
 #define SUCCESS					(0u)
 
+// the callback function used by the BLE stack
 void ble_callback(uint32_t event, void * eventParam);
 
+// the connection handle & notification packet used by the ble stack
 static cy_stc_ble_conn_handle_t appConnHandle;
 static cy_stc_ble_gatts_handle_value_ntf_t notificationPacket;
-static uint8_t tx_buffer[NOTIFICATION_PKT_SIZE];
+
+// msg_id is a 1-byte int (from 0 to 255) that provides a rudimentary form of transmission control
+// the receiver can check whether all packets are received in order, how many were lost (if <255)
 uint8_t msg_id;
+
 
 int main(void) {
 	cy_en_ble_api_result_t          apiResult;
@@ -50,39 +58,52 @@ int main(void) {
 		/* Enable CM4 only if BLE Controller started successfully.
 		* CY_CORTEX_M4_APPL_ADDR must be updated if CM4 memory layout
 		* is changed. */
-		ble_connected = false;
 		Cy_SysEnableCM4(CY_CORTEX_M4_APPL_ADDR);
 	} else {
 		/* Halt CPU */
 		CY_ASSERT(0u != 0u);
-	} 
+	}
 	
+	// set the shared vars
+	ble_connected = false;
 	current_frame_reading = 0;
 	
-	// setup 
+	// setup other information 
 	msg_id = 0;
 	
     for(;;) {
+		// main loop
+		
+		// check the ble stack
 		Cy_BLE_ProcessEvents();
 		
-		// only start reading the next frame if that frame is not being written by cm4 (curr being written to frame is c_fr_wr + 1)
+		// only continue if there is a connection & if there is new data available in the shared buffer
 		if (!ble_connected || current_frame_reading == current_frame_written) {
 			continue;
 		}
+		// check if the stack is free
 		if (!(Cy_BLE_GATT_GetBusyStatus(appConnHandle.attId) == CY_BLE_STACK_STATE_FREE) || !(Cy_BLE_GetConnectionState(appConnHandle) >= CY_BLE_CONN_STATE_CONNECTED)) {
 //			printf("stack not free, could not send notification\n");
 			continue;
 		}
-		printf("start notif\n");
+		
+		// start the construction of a packet
+		
+		// update read pointer
 		current_frame_reading = (current_frame_reading + 1) % S_BLOCKS;
 		
+		// use the extra free space in shared_buffer for msg_id & freq, to skip another memcpy
+		shared_buffer[current_frame_reading*BLOCK_SIZE + BLOCK_SIZE_R] = msg_id;
+		memcpy(&shared_buffer[current_frame_reading*BLOCK_SIZE + BLOCK_SIZE_R + 1], &freq[current_frame_reading], sizeof(float));
 		
-		tx_buffer[NOTIFICATION_PKT_SIZE-1] = msg_id;
-		memcpy(tx_buffer, &shared_buffer[current_frame_reading*BLOCK_SIZE], BLOCK_SIZE);
-		notificationPacket.handleValPair.value.val = tx_buffer;
+		// set the packet data to the correct memory pointer
+		notificationPacket.handleValPair.value.val = &shared_buffer[current_frame_reading*BLOCK_SIZE];
 		
+		// re-check if stack is free (normally yes)
 		if ((Cy_BLE_GATT_GetBusyStatus(appConnHandle.attId) == CY_BLE_STACK_STATE_FREE) && (Cy_BLE_GetConnectionState(appConnHandle) >= CY_BLE_CONN_STATE_CONNECTED)) {
-    		apiResult = Cy_BLE_GATTS_Notification(&notificationPacket);
+    		
+			// send the notification
+			apiResult = Cy_BLE_GATTS_Notification(&notificationPacket);
 			if(apiResult == CY_BLE_ERROR_INVALID_PARAMETER) {
 				printf("Couldn't send notification. [CY_BLE_ERROR_INVALID_PARAMETER]\n");
 				continue;
@@ -96,6 +117,8 @@ int main(void) {
     }
 }
 
+// callback function
+// taken mainly from example project
 void ble_callback(uint32_t event, void * eventParam) {
 	
 	switch (event) {
@@ -107,7 +130,6 @@ void ble_callback(uint32_t event, void * eventParam) {
     case CY_BLE_EVT_GAP_DEVICE_DISCONNECTED:
         printf("Device disconnected; start advertising\n");
 		ble_connected = false;
-		
         Cy_BLE_GAPP_StartAdvertisement(CY_BLE_ADVERTISING_FAST, CY_BLE_PERIPHERAL_CONFIGURATION_0_INDEX);
         break;
 
@@ -117,7 +139,7 @@ void ble_callback(uint32_t event, void * eventParam) {
 			
 		notificationPacket.connHandle = appConnHandle;
         notificationPacket.handleValPair.attrHandle = cy_ble_customConfig.customs[0].customServInfo[0].customServCharHandle;
-		notificationPacket.handleValPair.value.val = tx_buffer;
+		
         notificationPacket.handleValPair.value.len = NOTIFICATION_PKT_SIZE;
         printf("gatt connect ind!\n");
 		
@@ -131,6 +153,7 @@ void ble_callback(uint32_t event, void * eventParam) {
 		
 	/* This event is triggered when there is a change to either the maximum Payload 
         length or the maximum transmission time of Data Channel PDUs in either direction */
+		// set the correct packet length & 2Mb/s mode
         case CY_BLE_EVT_DATA_LENGTH_CHANGE:
         {
             printf("CY_BLE_EVT_DATA_LENGTH_CHANGE \r\n");
@@ -184,6 +207,7 @@ void ble_callback(uint32_t event, void * eventParam) {
 				// wake up CM4
 				ble_connected = true;
 				msg_id = 0;
+				// __SEV & __WFE don' t seem to work in release mode
 				__SEV();
 			}
             break;
@@ -193,7 +217,7 @@ void ble_callback(uint32_t event, void * eventParam) {
 		{
 			char str[50];
             snprintf(str, 50, "event: %X\n", (int) event);
-			printf(str);
+//			printf(str);
 		}
         break;
 	}

@@ -1,6 +1,6 @@
 // ======================================================================
 // ble_test.v generated from TopDesign.cysch
-// 05/26/2024 at 01:27
+// 06/01/2024 at 23:13
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -401,48 +401,48 @@ module SCB_UART_PDL_v2_0_2 (
 
 endmodule
 
-// TCPWM_Counter_PDL_v1_0(CaptureInput=7, CaptureInputMasked=3, ClockPrescaler=0, Compare0=16384, Compare1=16384, CompareOrCapture=2, CountDirection=0, CountInput=7, CountInputMasked=3, EnableCompareSwap=false, InterruptSource=0, Period=10000, ReloadInput=7, ReloadInputMasked=3, Resolution=16, RunMode=0, StartInput=7, StartInputMasked=3, StopInput=7, StopInputMasked=3, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=TCPWM_Counter_PDL_v1_0, CY_CONFIG_TITLE=TX_COUNTER, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=TX_COUNTER, CY_INSTANCE_SHORT_NAME=TX_COUNTER, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=tcpwm, CY_PDL_DRIVER_REQ_VERSION=1.0.0, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=TX_COUNTER, )
-module TCPWM_Counter_PDL_v1_0_3 (
-    capture,
+// PDM_PCM_PDL_v2_0(ChanSelect=1, ChanSwap=false, CkoDelay=0, CkoDiv=3, ClkDiv=3, ExtClock=false, GainLeft=15, GainRight=8, HighPassDisable=false, HighPassFilterGain=1, InterruptMask=0UL, MclkDiv=0, RxFifoDmaEnable=true, RxFifoTriggerLevel=240, RxNotEmpty=false, RxOverflow=false, RxTrig=false, RxUnderflow=false, SignExtension=true, SincDecRate=32, SoftMuteCycles=1, SoftMuteEnable=false, SoftMuteFineGain=1, WordLength=0, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=PDM_PCM_PDL_v2_0, CY_CONFIG_TITLE=PDM_PCM, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=PDM_PCM, CY_INSTANCE_SHORT_NAME=PDM_PCM, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=pdm_pcm, CY_PDL_DRIVER_REQ_VERSION=2.0.0, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=PDM_PCM, )
+module PDM_PCM_PDL_v2_0_3 (
     clock,
-    compare,
-    count,
+    dma,
     interrupt,
-    ovrflw,
-    reload,
-    start,
-    stop,
-    undrflw);
-    input       capture;
+    pdm_cko,
+    pdm_in);
     input       clock;
-    output      compare;
-    input       count;
+    output      dma;
     output      interrupt;
-    output      ovrflw;
-    input       reload;
-    input       start;
-    input       stop;
-    output      undrflw;
+    output      pdm_cko;
+    input       pdm_in;
 
 
-          wire  Net_1;
-          wire  Net_2;
 
-    cy_mxs40_tcpwm_v1_0 TCPWM (
-        .capture(capture),
+    cy_mxs40_pdm_v1_0 cy_mxs40_pdm (
         .clock(clock),
-        .count(count),
         .interrupt(interrupt),
-        .line(Net_2),
-        .line_compl(Net_1),
-        .reload(reload),
-        .start(start),
-        .stop(stop),
-        .tr_compare_match(compare),
-        .tr_overflow(ovrflw),
-        .tr_underflow(undrflw));
-    defparam TCPWM.exact_width = 0;
-    defparam TCPWM.width = 16;
+        .pdm_clk(pdm_cko),
+        .pdm_data(pdm_in),
+        .tr_pdm_rx_req(dma));
+
+
+
+endmodule
+
+// DMA_PDL_v2_0(BUFFERABLE=false, CHAIN_TO_1=0, CHAIN_TO_2=0, CHAIN_TO_3=0, CHAIN_TO_4=0, CHANNEL_PRIORITY=3, DATA_ELEMENT_SIZE_1=2, DATA_ELEMENT_SIZE_2=2, DATA_ELEMENT_SIZE_3=2, DATA_ELEMENT_SIZE_4=2, DESCR_NAME_1=Descriptor_1, DESCR_NAME_2=Descriptor_2, DESCR_NAME_3=Descriptor_3, DESCR_NAME_4=Descriptor_4, DESCRIPTORS_XML_STR=<?xml version="1.0" encoding="utf-16"?> <ArrayOfCyDmaDescriptionProperties xmlns:Version="ystem.Collections.Generic">   <CyDmaDescriptionProperties>     <DescriptorName>REC</DescriptorName>     <Interrupt>CY_DMA_INTR_DESCR_CMPLT</Interrupt>     <ChainToDescriptor>REC</ChainToDescriptor>     <TriggerDeactivationAndRetriggering>CY_DMA_RETDIG_4CYC</TriggerDeactivationAndRetriggering>     <DataElementSize>CY_DMA_HALFWORD</DataElementSize>     <SourceAndDestinationTransferWidth>WordToHalfword</SourceAndDestinationTransferWidth>     <NumberOfDataElementsToTransfer>240</NumberOfDataElementsToTransfer>     <SourceIncrementEveryCycleByX>0</SourceIncrementEveryCycleByX>     <NumberOfXLoopsToExecute>2</NumberOfXLoopsToExecute>     <SourceIncrementEveryCycleByY>0</SourceIncrementEveryCycleByY>     <DestinationIncrementEveryCycleByY>240</DestinationIncrementEveryCycleByY>   </CyDmaDescriptionProperties>   <CyDmaDescriptionProperties>     <DescriptorName>Descriptor_2</DescriptorName>   </CyDmaDescriptionProperties>   <CyDmaDescriptionProperties>     <DescriptorName>Descriptor_3</DescriptorName>   </CyDmaDescriptionProperties>   <CyDmaDescriptionProperties>     <DescriptorName>Descriptor_4</DescriptorName>   </CyDmaDescriptionProperties> </ArrayOfCyDmaDescriptionProperties>, DST_WIDTH_1=0, DST_WIDTH_2=0, DST_WIDTH_3=0, DST_WIDTH_4=0, INTR_OUT_1=0, INTR_OUT_2=0, INTR_OUT_3=0, INTR_OUT_4=0, MIGRATION=false, NUM_OF_DESCRIPTORS=4, PREEMPTABLE=false, SRC_WIDTH_1=0, SRC_WIDTH_2=0, SRC_WIDTH_3=0, SRC_WIDTH_4=0, TRIG_DEACT_1=0, TRIG_DEACT_2=0, TRIG_DEACT_3=0, TRIG_DEACT_4=0, TRIG_IN_TYPE_1=0, TRIG_IN_TYPE_2=0, TRIG_IN_TYPE_3=0, TRIG_IN_TYPE_4=0, TRIG_INPUT=true, TRIG_OUT_TYPE_1=0, TRIG_OUT_TYPE_2=0, TRIG_OUT_TYPE_3=0, TRIG_OUT_TYPE_4=0, TRIG_OUTPUT=false, X_DST_INCREMENT_1=1, X_DST_INCREMENT_2=1, X_DST_INCREMENT_3=1, X_DST_INCREMENT_4=1, X_NUM_OF_ELEMENTS_1=1, X_NUM_OF_ELEMENTS_2=1, X_NUM_OF_ELEMENTS_3=1, X_NUM_OF_ELEMENTS_4=1, X_SRC_INCREMENT_1=1, X_SRC_INCREMENT_2=1, X_SRC_INCREMENT_3=1, X_SRC_INCREMENT_4=1, Y_DST_INCREMENT_1=1, Y_DST_INCREMENT_2=1, Y_DST_INCREMENT_3=1, Y_DST_INCREMENT_4=1, Y_NUM_OF_ELEMENTS_1=1, Y_NUM_OF_ELEMENTS_2=1, Y_NUM_OF_ELEMENTS_3=1, Y_NUM_OF_ELEMENTS_4=1, Y_SRC_INCREMENT_1=1, Y_SRC_INCREMENT_2=1, Y_SRC_INCREMENT_3=1, Y_SRC_INCREMENT_4=1, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=DMA_PDL_v2_0, CY_CONFIG_TITLE=DMA, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=DMA, CY_INSTANCE_SHORT_NAME=DMA, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=dma, CY_PDL_DRIVER_REQ_VERSION=2.0.0, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=DMA, )
+module DMA_PDL_v2_0_4 (
+    interrupt,
+    tr_in,
+    tr_out);
+    output      interrupt;
+    input       tr_in;
+    output      tr_out;
+
+
+
+    cy_mxs40_dw_v1_0 DW (
+        .interrupt(interrupt),
+        .tr_in(tr_in),
+        .tr_out(tr_out));
+    defparam DW.priority = 3;
 
 
 
@@ -451,17 +451,9 @@ endmodule
 // top
 module top ;
 
-          wire  Net_25;
-          wire  Net_35;
-          wire  Net_28;
-          wire  Net_30;
-          wire  Net_29;
-          wire  Net_34;
-          wire  Net_33;
-          wire  Net_31;
-          wire  Net_36;
-          wire  Net_23;
-          wire  Net_32;
+          wire  Net_65;
+          wire  Net_69;
+          wire  Net_67;
           wire  Net_5;
           wire  Net_13;
           wire  Net_10;
@@ -475,6 +467,10 @@ module top ;
           wire  Net_1;
           wire  Net_3;
           wire  Net_2;
+          wire  Net_61;
+          wire  Net_64;
+          wire  Net_60;
+          wire  Net_59;
 
     BLE_PDL_v2_20_1 BLE (
         .lna_rx_en(Net_2),
@@ -493,37 +489,96 @@ module top ;
         .tx_en_out(Net_13),
         .tx_out(Net_5));
 
-    TCPWM_Counter_PDL_v1_0_3 TX_COUNTER (
-        .capture(1'b0),
-        .clock(Net_23),
-        .compare(Net_36),
-        .count(1'b1),
-        .interrupt(Net_33),
-        .ovrflw(Net_34),
-        .reload(1'b0),
-        .start(1'b0),
-        .stop(1'b0),
-        .undrflw(Net_35));
+	wire [0:0] tmpFB_0__PDM_CLK_net;
+	wire [0:0] tmpIO_0__PDM_CLK_net;
+	electrical [0:0] tmpSIOVREF__PDM_CLK_net;
 
-
-	cy_clock_v1_0
-		#(.id("5c5df7a1-e16d-474a-a6f8-30e83a927114"),
-		  .source_clock_id("2FB4EC85-8328-4C5A-9ED9-8B63060178EB"),
-		  .divisor(0),
-		  .period("1000000000"),
-		  .is_direct(0),
-		  .is_digital(0))
-		CLK0
-		 (.clock_out(Net_23));
+	cy_mxs40_gpio_v1_0
+		#(.id("a61270bc-07ec-447d-ac9e-34cfe85c30e9"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("6"),
+		  .ibuf_enabled("0"),
+		  .init_dr_st("1"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("1"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("O"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("0"),
+		  .hotswap_needed("0"))
+		PDM_CLK
+		 (.oe({1'b1}),
+		  .y({Net_60}),
+		  .fb({tmpFB_0__PDM_CLK_net[0:0]}),
+		  .io({tmpIO_0__PDM_CLK_net[0:0]}),
+		  .siovref(tmpSIOVREF__PDM_CLK_net));
 
 
 
 	cy_mxs40_isr_v1_0
 		#(.deepsleep_required(0),
 		  .int_type(2'b10))
-		INT_TX
-		 (.int_signal(Net_33));
+		DMA_IRQ
+		 (.int_signal(Net_61));
 
+
+	wire [0:0] tmpIO_0__PDM_DATA_net;
+	electrical [0:0] tmpSIOVREF__PDM_DATA_net;
+
+	cy_mxs40_gpio_v1_0
+		#(.id("4cca878b-77b5-471d-8aeb-ad6925202455"),
+		  .width(1),
+		  .sio_grp_cnt(0),
+		  .drive_mode("0"),
+		  .ibuf_enabled("1"),
+		  .init_dr_st("0"),
+		  .input_sync("0"),
+		  .intr_mode("0"),
+		  .io_voltage(""),
+		  .output_conn("0"),
+		  .oe_conn("0"),
+		  .output_sync("0"),
+		  .oe_sync("0"),
+		  .drive_strength("0"),
+		  .max_frequency("100"),
+		  .i2c_mode("0"),
+		  .output_current_cap("8"),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .slew_rate("0"),
+		  .vtrip("0"),
+		  .use_annotation("0"),
+		  .hotswap_needed("0"))
+		PDM_DATA
+		 (.oe({1'b1}),
+		  .y({1'b0}),
+		  .fb({Net_59}),
+		  .io({tmpIO_0__PDM_DATA_net[0:0]}),
+		  .siovref(tmpSIOVREF__PDM_DATA_net));
+
+
+    PDM_PCM_PDL_v2_0_3 PDM_PCM (
+        .clock(1'b0),
+        .dma(Net_64),
+        .interrupt(Net_69),
+        .pdm_cko(Net_60),
+        .pdm_in(Net_59));
+
+    DMA_PDL_v2_0_4 DMA (
+        .interrupt(Net_61),
+        .tr_in(Net_64),
+        .tr_out(Net_65));
 
 
 
